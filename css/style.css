@@ -1,7 +1,53 @@
 
-/*font-family: 'Open Sans', sans-serif;
-font-family: 'Merriweather', serif;
+/*font-family: 'Open Sans', sans-serif; (Text)
+font-family: 'Merriweather', serif; (Headings)
 */
+
+
+/*
+Primary Colors:
+
+#F0F0F0 - lightGrey, Background
+#1C3045 - NavyBlue, Headings?
+
+Secondary Colors:
+#D7BCC8 - DarkPink, Header, Forms
+#A6C9C6 - WierdGreen, Sidebar
+#252525 - AlmostBlack, Text
+
+*/
+
+
+h1, h2, h3, h4 {
+	font-family: 'Merriweather', serif;
+}
+
+p {
+	font-family: 'Open Sans', sans-serif;
+}
+
+body {
+	background-color: #F0F0F0;
+}
+
+.register-box {
+	background-color: #D7BCC8;
+	border-radius: 5%;
+	padding: 20px;
+	max-width: 400px;
+}
+
+form {
+	text-align: center;
+}
+
+input {
+	margin-bottom: 10px;
+}
+
+a {
+	 color: #6E6BFC;
+}
 
 .ml-0 {
 	margin-left: 0 !important;
@@ -24,3 +70,4 @@ header {
 	max-width: 100%;
 	object-fit: cover;
 }
+
