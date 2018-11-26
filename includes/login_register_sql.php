@@ -1,6 +1,6 @@
 <?php
 session_start(); 
-include "database_connection.php";
+include 'database_connection.php';
 
 /**
 * 1. Koppla upp till databasen
@@ -40,21 +40,25 @@ if($is_password_correct){
     header('Location:../index.php?Fel användarnamn eller lösenord');
 } 
 }
+
 // register user if all fields are set
-elseif(isset($_POST["email"]) && isset($_POST["register_username"]) && isset($_POST["register_password"])){
+if(isset($_POST["first_name"]) && isset($_POST["last_name"]) && isset($_POST["email"]) && isset($_POST["date_of_birth"]) && isset($_POST["register_username"]) && isset($_POST["register_password"])){
        
 //skapar hashed lösenord för säker hantering
 $hashed_password = password_hash($_POST["register_password"], PASSWORD_DEFAULT);
 
 $register_user_to_database = $pdo->prepare("INSERT INTO users
-  (username, password, email) VALUES (:username, :password, :email)");
+  (username, password, email, first_name, last_name, date_of_birth) VALUES (:username, :password, :email, :first_name, :last_name, :date_of_birth)");
     
 // Executing the statement
 $register_user_to_database->execute(
   [
     ":username" => $_POST["register_username"],
     ":password" => $hashed_password,
-    ":email" => $_POST["email"]
+    ":email" => $_POST["email"],
+    ":first_name" => $_POST["first_name"],
+    ":last_name" => $_POST["last_name"],
+    ":date_of_birth" => $_POST["date_of_birth"]
   ]
 );  
     //prepare statement to select all from registered user

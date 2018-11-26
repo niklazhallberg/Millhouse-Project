@@ -1,6 +1,4 @@
-<?php
-include '../includes/head.php';
-?>
+<?php include '../includes/head.php'; ?>
 
 <body>
 
@@ -13,6 +11,8 @@ include '../includes/head.php';
 			<div class="col-12 col-md-4 register-box">
 
 				<h3>Welcome to Millhouse</h3>
+
+
 
 			<form action="../includes/login_register_sql.php" method="POST">
 
@@ -36,6 +36,7 @@ include '../includes/head.php';
 
 				<a href="login.php">Already a member? Go to login</a><br>
   				<input type="submit" value="Register">
+
 
 			</form>
 
