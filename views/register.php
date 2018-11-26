@@ -15,6 +15,16 @@ include '../includes/head.php';
 				<h3>Welcome to Millhouse</h3>
 
 			<form action="login_register_sql.php" method="POST">
+
+				<label for="firstname">Firstname</label>
+  				<input type="text" id="firstname" name="username">
+
+  				<label for="lastname">Lastname</label>
+  				<input type="text" id="lastname" name="username">
+
+  				<label for="age">Age</label>
+  				<input type="date" id="age" name="username">
+
   				<label for="username">Username</label>
   				<input type="text" id="username" name="username">
 
