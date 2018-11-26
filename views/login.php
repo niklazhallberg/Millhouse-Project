@@ -13,7 +13,7 @@ include '../includes/head.php';
 
 				<h3>Welcome to Millhouse</h3>
 
-			<form action="login_register_sql.php" method="POST">
+			<form action="../includes/login_register_sql.php" method="POST">
   				<p>Username</p>
   				<input type="text" name="username">
 

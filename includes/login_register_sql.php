@@ -31,7 +31,7 @@ $is_password_correct = password_verify($password, $fetched_user["password"]);
 if($is_password_correct){
     //save user globally to session
     $_SESSION["username"] = $fetched_user["username"];
-    $_SESSION["user_id"] = $fetched_user["user_id"];
+    $_SESSION["user_id"] = $fetched_user["id"];
     //go to product page
     header('Location: ../index.php ');
     
@@ -72,7 +72,7 @@ $register_user_to_database->execute(
     $fetched_user = $select_registered_user->fetch();
     //Save fetched user in to session
     $_SESSION["username"] = $fetched_user["username"];
-    $_SESSION["user_id"] = $fetched_user["user_id"];
+    $_SESSION["user_id"] = $fetched_user["id"];
     
     header('Location: ../index.php ');  
     
