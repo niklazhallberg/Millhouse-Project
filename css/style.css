@@ -1,6 +1,8 @@
+
 /*font-family: 'Open Sans', sans-serif; (Text)
 font-family: 'Merriweather', serif; (Headings)
 */
+
 
 /*
 Primary Colors:
@@ -14,6 +16,7 @@ Secondary Colors:
 #252525 - AlmostBlack, Text
 
 */
+
 
 h1, h2, h3, h4 {
 	font-family: 'Merriweather', serif;
@@ -45,3 +48,26 @@ input {
 a {
 	 color: #6E6BFC;
 }
+
+.ml-0 {
+	margin-left: 0 !important;
+}
+.mr-0 {
+	margin-right: 0 !important;
+}
+
+header {
+	min-height: 4em;
+	width: 100%;
+	background-color: #D7BCC8;
+}
+
+.header-logo {
+	margin: 1em 0;
+}
+
+.header-logo img {
+	max-width: 100%;
+	object-fit: cover;
+}
+
