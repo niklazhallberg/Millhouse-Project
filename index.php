@@ -1,3 +1,9 @@
+<?php session_start();
+
+if(empty($_SESSION["username"])){
+  header('location: ../views/login.php');
+}
+?>
 
 <?php include 'includes/head.php'; ?>
 
