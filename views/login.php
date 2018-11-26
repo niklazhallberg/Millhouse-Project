@@ -22,7 +22,7 @@ include '../includes/head.php';
   				<input type="submit" value="Login">
 			</form>
 
-			<a href="login.php">Not already a member? Register here</a>
+			<a href="register.php">Not already a member? Register here</a>
 
 		</div>
 
