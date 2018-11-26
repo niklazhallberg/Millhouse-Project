@@ -14,6 +14,7 @@ include '../includes/head.php';
 
 				<h3>Welcome to Millhouse</h3>
 
+
 			<form action="../includes/login_register_sql.php" method="POST">
 
 				<label for="first_name">First name</label>
