@@ -40,9 +40,8 @@ if($is_password_correct){
     header('Location:../index.php?Fel användarnamn eller lösenord');
 } 
 }
-
 // register user if all fields are set
-if(isset($_POST["first_name"]) && isset($_POST["last_name"]) && isset($_POST["email"]) && isset($_POST["date_of_birth"]) && isset($_POST["register_username"]) && isset($_POST["register_password"])){
+elseif(isset($_POST["first_name"]) && isset($_POST["last_name"]) && isset($_POST["email"]) && isset($_POST["date_of_birth"]) && isset($_POST["register_username"]) && isset($_POST["register_password"])){
        
 //skapar hashed lösenord för säker hantering
 $hashed_password = password_hash($_POST["register_password"], PASSWORD_DEFAULT);
