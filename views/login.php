@@ -1,14 +1,11 @@
 <?php
-include("../includes/head.php");
+include '../includes/head.php';
 ?>
 
 <body>
+	<?php include '../includes/header.php'; ?>
 
 <div class="container">
-
-	<?
-	include("../includes/header.php");
-	?>
 
 	<main class="row justify-content-center">
 
@@ -35,9 +32,7 @@ include("../includes/head.php");
 
 </div>
 
- <?
- include("../includes/javascript_tag.php");
- ?>
+ <?php include '../includes/javascript_tag.php'; ?>
 
 </body>
 
