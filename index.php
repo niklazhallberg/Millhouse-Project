@@ -1,13 +1,41 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Millhouse</title>
-</head>
+<?php
+include("includes/head.php");
+?>
+
 <body>
-    
+
+<div class="container-fluid">
+
+	<h1>Hej</h1>
+
+	<?
+	include("includes/header.php");
+	?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+ <?
+ include("includes/javascript_tag.php");
+ ?>
+
 </body>
+
 </html>

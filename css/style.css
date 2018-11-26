@@ -1,58 +1,47 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
+/*font-family: 'Open Sans', sans-serif; (Text)
+font-family: 'Merriweather', serif; (Headings)
 */
 
-/*font-family: 'Open Sans', sans-serif;
-font-family: 'Merriweather', serif;
+/*
+Primary Colors:
+
+#F0F0F0 - lightGrey, Background
+#1C3045 - NavyBlue, Headings?
+
+Secondary Colors:
+#D7BCC8 - DarkPink, Header, Forms
+#A6C9C6 - WierdGreen, Sidebar
+#252525 - AlmostBlack, Text
+
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+h1, h2, h3, h4 {
+	font-family: 'Merriweather', serif;
 }
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+
+p {
+	font-family: 'Open Sans', sans-serif;
 }
+
 body {
-	line-height: 1;
+	background-color: #F0F0F0;
 }
-ol, ul {
-	list-style: none;
+
+.register-box {
+	background-color: #D7BCC8;
+	border-radius: 5%;
+	padding: 20px;
+	max-width: 400px;
 }
-blockquote, q {
-	quotes: none;
+
+form {
+	text-align: center;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+
+input {
+	margin-bottom: 10px;
 }
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
+
+a {
+	 color: #6E6BFC;
 }
-html {
-    box-sizing: border-box;
-  }
-  *, *:before, *:after {
-    box-sizing: inherit;
-  }
