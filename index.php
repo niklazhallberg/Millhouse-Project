@@ -9,6 +9,22 @@ if(empty($_SESSION["user_id"])){
 <body>
   <?php include 'includes/header.php'; ?>
 
+<<<<<<< HEAD
+<main class="container index-main">
+   <div class="row">
+      <div class="col-12">
+         
+         <section class="col-12 col-md-8 blogpost-section">
+             
+         </section>
+          <sidebar class="col-12 col-md-4 index-sidebar">
+              
+          </sidebar>
+          
+      </div>   
+   </div>   
+</main>
+=======
   <main class="container-fluid">
   <div class="row">
      <div class="col-12">
@@ -58,6 +74,7 @@ if(empty($_SESSION["user_id"])){
   </div>
 </main>
 
+>>>>>>> c7dc019d2211a2f8454b11852d81a3a036acb5b2
   <?php include 'includes/javascript_tag.php'; ?>
 </body>
 
