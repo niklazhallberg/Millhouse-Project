@@ -18,7 +18,7 @@ include '../includes/head.php';
    					echo $_GET["error"];
  					} ?> </p>
 
-			<form action="../includes/login_register_sql.php" method="POST">
+			<form action="../includes/login_sql.php" method="POST">
   				<p>Username</p>
   				<input type="text" name="username">
 

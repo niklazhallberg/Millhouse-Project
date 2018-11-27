@@ -17,7 +17,7 @@
             echo $_GET["error"];
           } ?> </p>
 
-			<form action="../includes/login_register_sql.php" method="POST">
+			<form action="../includes/register_sql.php" method="POST">
 
 				<label for="first_name">First name</label>
   				<input type="text" id="first_name" name="first_name" required="true">
