@@ -27,7 +27,24 @@ p {
 }
 
 body {
-	background-color: #F0F0F0;
+	background-color: white;
+}
+
+img{
+	width: 100%;
+}
+
+main {
+	 max-width: 1024px;
+	 background-color: #F0F0F0;
+}
+
+.index-sidebar{
+		background-color: #A6C9C6;
+		padding:2em;
+}
+.blogpost-section{
+		padding: 2em;
 }
 
 .register-box {
@@ -58,7 +75,6 @@ a {
 }
 
 header {
-	min-height: 4em;
 	width: 100%;
 	background-color: #D7BCC8;
 }
@@ -68,30 +84,16 @@ header {
 }
 
 .header-logo img {
+	max-height: 200px;
 	max-width: 100%;
-	object-fit: cover;
 }
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: @screen-sm-min) {
-    .index-main{
-        width: 80%;
-        height: 1000px;
-        border: 1px solid black;
-    }
-    .index-sidebar{
-        background-color: #A6C9C6;
-        height: 1000px;
-        border: 1px solid black;
-    }
-    .blogpost-section{
-        height: 1000px;
-        border: 1px solid black;
-    }
-    
+
 }
 
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: @screen-md-min) {
-    
+
 }
