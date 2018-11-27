@@ -74,6 +74,20 @@ header {
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: @screen-sm-min) {
+    .index-main{
+        width: 80%;
+        height: 1000px;
+        border: 1px solid black;
+    }
+    .index-sidebar{
+        background-color: #A6C9C6;
+        height: 1000px;
+        border: 1px solid black;
+    }
+    .blogpost-section{
+        height: 1000px;
+        border: 1px solid black;
+    }
     
 }
 
