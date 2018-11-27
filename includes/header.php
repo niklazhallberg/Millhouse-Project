@@ -5,7 +5,7 @@
 
       <?php
       if(isset($_SESSION["user_id"])){
-      include 'logout_btn.php';
+      include 'logout_button.php';
       }
       ?>
 </header>
