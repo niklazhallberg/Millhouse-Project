@@ -32,10 +32,10 @@
   				<input type="date" id="date_of_birth" name="date_of_birth" required="true">
 
   				<label for="username">Username</label>
-  				<input type="text" id="username" name="register_username" required="true">
+  				<input type="text" id="username" name="username" required="true">
 
   				<label for="password">Password</label>
-  				<input type="password" id="password" name="register_password" required="true"><br>
+  				<input type="password" id="password" name="password" required="true"><br>
 
 				<a href="login.php">Already a member? Go to login</a><br>
   				<input type="submit" value="Register">
