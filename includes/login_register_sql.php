@@ -42,9 +42,28 @@ if($is_password_correct){
 }
 
 // register user if all fields are set
+
+elseif(isset($_POST["first_name"]) && isset($_POST["last_name"]) && isset($_POST["email"]) && isset($_POST["date_of_birth"]) && isset($_POST["register_username"]) && isset($_POST["register_password"])){
+    
+    $register_username = $_POST["register_username"];
+    
+    //Gets all user with post variable for registered username
+    $check_username_rows = $pdo->prepare("SELECT * FROM users WHERE username = :username");
+    $check_username_rows->execute(
+        [
+            ":username" => $register_username
+        ]
+        );
+    
+    //if nr of rows from db is larger than 0 send error msg
+    if($check_username_rows->rowCount() > 0){
+        header('Location:../index.php?error=This username is already registered, pick a new one.');
+    }
+    
+//create hashed password for better security
+
 if(isset($_POST["first_name"]) && isset($_POST["last_name"]) && isset($_POST["email"]) && isset($_POST["date_of_birth"]) && isset($_POST["register_username"]) && isset($_POST["register_password"])){
        
-//skapar hashed lösenord för säker hantering
 $hashed_password = password_hash($_POST["register_password"], PASSWORD_DEFAULT);
 
 $register_user_to_database = $pdo->prepare("INSERT INTO users

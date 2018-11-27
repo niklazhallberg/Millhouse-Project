@@ -75,11 +75,6 @@ header {
 /* Small devices (tablets, 768px and up) */
 @media (min-width: @screen-sm-min) {
     
-    .register_box{
-        width: 500px;
-        margin-top: 50px;;
-    }
-    
 }
 
 /* Medium devices (desktops, 992px and up) */
