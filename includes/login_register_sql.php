@@ -37,11 +37,12 @@ if($is_password_correct){
     
 }else{
     //handle errors, go back to front page and populate $_GET
-    header('Location:../index.php?Fel användarnamn eller lösenord');
-} 
+    header('Location: ../views/login.php?error=Your username or password is incorrect');
 }
+}
+
 // register user if all fields are set
-elseif(isset($_POST["first_name"]) && isset($_POST["last_name"]) && isset($_POST["email"]) && isset($_POST["date_of_birth"]) && isset($_POST["register_username"]) && isset($_POST["register_password"])){
+if(isset($_POST["first_name"]) && isset($_POST["last_name"]) && isset($_POST["email"]) && isset($_POST["date_of_birth"]) && isset($_POST["register_username"]) && isset($_POST["register_password"])){
        
 //skapar hashed lösenord för säker hantering
 $hashed_password = password_hash($_POST["register_password"], PASSWORD_DEFAULT);
@@ -76,5 +77,5 @@ $register_user_to_database->execute(
     header('Location: ../index.php ');  
     
 }else{
-    header('Location: ../index.php?Något gick fel');
+    header('Location: ../views/register.php?error=Please fill in all details');
 }
