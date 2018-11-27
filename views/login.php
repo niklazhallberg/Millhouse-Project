@@ -13,6 +13,11 @@ include '../includes/head.php';
 
 				<h3>Welcome to Millhouse</h3>
 
+				<p class="error-message">
+					<?php if (isset($_GET["error"])){
+   					echo $_GET["error"];
+ 					} ?> </p>
+
 			<form action="../includes/login_register_sql.php" method="POST">
   				<p>Username</p>
   				<input type="text" name="username">
