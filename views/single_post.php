@@ -17,6 +17,7 @@ include '../includes/database_connection.php';
       //looping through array and printing post
       foreach($post_to_print as $post){ ?>
           
+          
            <div class="col-12">
            <img  class="card-img-top" src="../images/<?= $post["image"]; ?>" alt="image not found">
            </div>
@@ -26,14 +27,18 @@ include '../includes/database_connection.php';
            <p class="card-text"> <?= $post["description"]; ?> </p>
            </div>
            
-           
-           <?php } ?>
+           <?php
+           $post_id = $post["id"];
+            } ?>
              
             <div class="col-12">
               
-              <form action="../includes/add_comment_sql.php" method="POST">
-              <label for="comment-field">Leave a comment as <?= $_SESSION["username"]; ?></label>
-              <input type="text-area" id="comment-field" name="comment-field" required>
+              <form class="comment-form" action="../includes/add_comment_sql.php" method="POST">
+              <label for="comment-field"><h3>Leave a comment as: <?= $_SESSION["username"]; ?></h3></label><br />
+              <textarea name="content"></textarea><br />
+              
+              <input type="hidden" name="id" value="<?= $post_id ?>">
+              
               <input type="submit" value="Comment">
               </form>
               
