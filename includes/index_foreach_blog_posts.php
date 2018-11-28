@@ -1,7 +1,7 @@
 <?php 
 
 foreach($posts as $post): ?>
-	<div class="row">
+	<div class="row post-row">
              <div class="col-12 col-md-6">
                <img src="<?= $post["image"]; ?>"/>
              </div>
