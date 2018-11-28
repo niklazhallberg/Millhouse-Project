@@ -23,14 +23,9 @@ if(empty($_SESSION["user_id"])){
            <?php include 'includes/index_foreach_blog_posts.php'; ?>
 
          </section>
-          <aside class="col-12 col-md-4 index-sidebar">
-            <h3>Recent posts</h3>
-            <ul>
-              <li>hej</li>
-              <li>hej</li>
-              <li>hej</li>
-              <li>hej</li>
-            </ul>
+
+          <?php include 'includes/index_sidebar_foreach_recent_post.php'; ?>
+
             <h3>Watches</h3>
             <ul>
               <li>hej</li>
