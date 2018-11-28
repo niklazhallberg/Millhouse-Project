@@ -92,9 +92,20 @@ input {
 	margin-right: 0 !important;
 }
 
+
+.add-post {
+	text-align: center;
+}
+
+.text-area-post input {
+	width: 500px;
+	height: 500px;
+}
+
 .post-row {
 	margin-bottom: 1.5em;
 }
+
 
 
 /* Small devices (tablets, 768px and up) */
