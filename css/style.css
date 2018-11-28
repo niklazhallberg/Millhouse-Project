@@ -31,12 +31,28 @@ p {
 	font-family: 'Open Sans', sans-serif;
 }
 
+a {
+	 color: #6E6BFC;
+}
+
 body {
 	background-color: white;
 }
 
+header {
+	background-color: #D7BCC8;
+}
+
+.header-logo {
+	margin: 1em 0;
+}
+
+.header-logo img {
+	max-height: 150px;
+}
+
 img{
-	width: 100%;
+	max-width: 100%;
 }
 
 main {
@@ -69,10 +85,6 @@ input {
 	margin-bottom: 10px;
 }
 
-a {
-	 color: #6E6BFC;
-}
-
 .ml-0 {
 	margin-left: 0 !important;
 }
@@ -80,23 +92,10 @@ a {
 	margin-right: 0 !important;
 }
 
-header {
-	width: 100%;
-	background-color: #D7BCC8;
-}
-
-.header-logo {
-	margin: 1em 0;
-}
-
-.header-logo img {
-	max-height: 200px;
-	max-width: 100%;
-}
-
 .post-row {
 	margin-bottom: 1.5em;
 }
+
 
 /* Small devices (tablets, 768px and up) */
 @media screen and (min-width: 768px) {
