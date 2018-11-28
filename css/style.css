@@ -97,11 +97,6 @@ input {
 	text-align: center;
 }
 
-.text-area-post input {
-	width: 500px;
-	height: 500px;
-}
-
 .post-row {
 	margin-bottom: 1.5em;
 }
@@ -119,5 +114,5 @@ input {
 
 /* Medium devices (desktops, 992px and up) */
 @media screen and (min-width: 992px) {
-	
+
 }
