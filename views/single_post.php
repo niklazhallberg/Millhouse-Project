@@ -10,35 +10,34 @@ include '../includes/database_connection.php';
 <main class="container-fluid">
   <div class="row">
 
-    <?php
-         $_SESSION["post_id"] = 2;
-         $post_id = $_SESSION["post_id"];
-         
-         $post_to_print = $pdo->prepare("SELECT * FROM posts WHERE id = :id");
-         $post_to_print->execute(
-             [
-                 ":id" => $post_id
-             ]
-         );
-            
-            //looping through array and printing post
-            foreach($post_to_print as $post){ ?>
-            <div class="card"> 
-            <img  class="card-img-top" src="../images/<?= $post["image"]; ?>" alt="image not found">
-            
-            <div class="card-body">
-            <h2 class="card-title"> <?= $post["title"]; ?> </h2>
-            <p class="card-text"> <?= $post["description"]; ?> </p>
-            </div>
-            
-            <div class="card-footer">
-            <small class="text-muted">Last updated on todays date</small>
-            </div>
-            
-            </div>
+    <?php 
+      include '../includes/single_post_sql.php';
+      
+      //looping through array and printing post
+      foreach($post_to_print as $post){ ?>
+          
+           <div class="col-12">
+           <img  class="card-img-top" src="../images/<?= $post["image"]; ?>" alt="image not found">
+           </div>
+           
+           <div class="col-12">
+           <h2 class="card-title"> <?= $post["title"]; ?> </h2>
+           <p class="card-text"> <?= $post["description"]; ?> </p>
+           </div>
+           
+           
            <?php } ?>
-
-      </div>
+             
+            <div class="col-12">
+              
+              <form action="../includes/add_comment_sql.php" method="POST">
+              <label for="comment-field">Leave a comment as <?= $_SESSION["username"]; ?></label>
+              <input type="text-area" id="comment-field" name="comment-field" required>
+              <input type="submit" value="Comment">
+              </form>
+              
+            </div> 
+   </div>
 </main>
 
 
