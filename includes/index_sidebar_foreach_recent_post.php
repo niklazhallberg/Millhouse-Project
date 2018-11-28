@@ -4,7 +4,7 @@
 
 foreach($posts as $post): ?>
 	
-              <li><a href="../includes/single_post_sql.php?post_id=<?=$post["id"]?>"> <?=$post["title"]?></a></li>
+              <li><a href="../views/single_post.php?post_id=<?=$post["id"]?>"> <?=$post["title"]?></a></li>
 
 	<?php
 	$i++;
