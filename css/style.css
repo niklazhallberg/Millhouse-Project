@@ -87,6 +87,15 @@ input {
 	margin-right: 0 !important;
 }
 
+.add-post {
+	text-align: center;
+}
+
+.text-area-post input {
+	width: 500px;
+	height: 500px;
+}
+
 /* Small devices (tablets, 768px and up) */
 @media (min-width: @screen-sm-min) {
 
