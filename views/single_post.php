@@ -11,6 +11,7 @@ include '../includes/database_connection.php';
   <div class="row">
 
     <?php 
+      
       include '../includes/single_post_sql.php';
       
       //looping through array and printing post
