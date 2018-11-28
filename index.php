@@ -15,14 +15,13 @@ if(empty($_SESSION["user_id"])){
      <div class="col-12">
        <div class="row">
          <section class="col-12 col-md-8 blogpost-section">
-           <div class="row">
-             <div class="col-12 col-md-6">
-               <img src="images/bildtest.jpg" alt="test">
-             </div>
-             <div class="col-12 col-md-6">
-               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-             </div>
-           </div>
+
+           <?php include 'includes/database_connection.php'; ?>
+
+           <?php include 'includes/index_fetch_all.php'; ?>
+
+           <?php include 'includes/index_foreach_blog_posts.php'; ?>
+
          </section>
           <aside class="col-12 col-md-4 index-sidebar">
             <h3>Recent posts</h3>
