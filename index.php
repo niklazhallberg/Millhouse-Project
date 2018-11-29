@@ -14,7 +14,6 @@ if(empty($_SESSION["user_id"])){
      <div class="col-12">
        <div class="row">
          <section class="col-12 col-md-8 blogpost-section">
-
            <?php include 'includes/database_connection.php'; ?>
 
            <?php include 'includes/index_fetch_all.php'; ?>
@@ -49,8 +48,8 @@ if(empty($_SESSION["user_id"])){
   </div>
 </main>
 
+<?php include 'includes/javascript_tag.php'; ?>
 
-  <?php include 'includes/javascript_tag.php'; ?>
 </body>
 
 </html>
