@@ -9,7 +9,6 @@ if(empty($_SESSION["user_id"])){
 <body>
   <?php include 'includes/header.php'; ?>
 
-
   <main class="container-fluid">
   <div class="row">
      <div class="col-12">
@@ -25,7 +24,9 @@ if(empty($_SESSION["user_id"])){
          </section>
 
             <aside class="col-12 col-md-4 index-sidebar">
-              <button class="go-to-add-page" type="button"><a href="../views/add_post.php" class="btn btn-default">Add post</a></button>
+              <?php if(isset($_SESSION["admin"])){
+                include 'includes/go_to_add_page_button.php';
+              }?>
             <h3>Recent</h3>
             <ul>
           <?php include 'includes/index_sidebar_foreach_recent_post.php'; ?>

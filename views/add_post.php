@@ -1,6 +1,10 @@
 <?php include '../includes/head.php' ?>
 <body>
-
+  <?php
+  if($_SESSION["admin"] === false){
+    header('Location: /');
+  }
+  ?>
   <?php include '../includes/header.php' ?>
 
   <main class="container-fluid">

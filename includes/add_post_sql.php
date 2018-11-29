@@ -9,6 +9,10 @@ $user_id = $_SESSION["user_id"];
 $image = $_FILES["image"];
 $category = $_POST["drone"];
 
+if(empty($blog_title) || empty($blog_description) || empty($image) || empty($category)){
+  header('Location: ../views/add_post.php?error= Fill in all fields, please!');
+} else {
+
 $temporary_location = $image["tmp_name"];
 
 $new_location = "../images/" . $image["name"];
@@ -28,4 +32,7 @@ $statement->execute(
 );
 // redirect
 header('location: ../');
+}else{
+  header('Location: ../views/add_post.php?error= Select a picture, please!');
+}
 }
