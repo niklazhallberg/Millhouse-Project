@@ -20,11 +20,15 @@ Secondary Colors:
 
 h1, h2, h3, h4 {
 	font-family: 'Merriweather', serif;
-	font-size: 1.2em;
+    padding: 0.5em;
 }
 
 h3 {
 	margin-top: 0.5rem;
+}
+
+h2 {
+    text-align: center;
 }
 
 p {
@@ -39,7 +43,7 @@ body {
 	background-color: white;
 }
 
-header {
+header, footer {
 	background-color: #D7BCC8;
 }
 
@@ -53,6 +57,19 @@ header {
 
 img{
 	max-width: 100%;
+    margin: 0 auto;
+}
+
+.sexy_line { 
+    margin: 25px auto;
+    height: 1px;
+    width: 100%;
+    background: black;
+    background: -webkit-gradient(linear, 0 0, 100% 0, from(#F0F0F0), to(#F0F0F0), color-stop(50%, black));
+}
+
+.single-post-img {
+    width: 100%;
 }
 
 main {
@@ -104,6 +121,10 @@ input {
 
 .post-row {
 	margin-bottom: 1.5em;
+}
+
+footer {
+    height: 5em;
 }
 
 

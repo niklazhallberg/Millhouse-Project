@@ -8,36 +8,52 @@ include '../includes/database_connection.php';
 <?php include '../includes/header.php'; ?>
 
 <main class="container-fluid">
-  <div class="row">
+  <div class="row justify-content-center">
 
+   <div class="col-12"><a href="../index.php">Back to startpage</a></div>
     <?php 
       
       include '../includes/single_post_sql.php';
       
-      //looping through array and printing post
+      //looping through array and printing post from databse
       foreach($post_to_print as $post){ ?>
           
-          
-           <div class="col-12">
-           <img  class="card-img-top" src="../images/<?= $post["image"]; ?>" alt="image not found">
+           <div class="col-10">
+           
+           <h2> <?= $post["title"]; ?> </h2>
+           <div class="sexy_line"></div>
+           
+           <img class="single-post-img" src="../images/<?= $post["image"]; ?>" alt="image not found">
            </div>
            
-           <div class="col-12">
-           <h2 class="card-title"> <?= $post["title"]; ?> </h2>
-           <p class="card-text"> <?= $post["description"]; ?> </p>
+           <div class="col-10">
+           <div class="sexy_line"></div>
+           <p> <?= $post["description"]; ?> </p>
            </div>
            
-           <?php
-           $post_id = $post["id"];
-            } ?>
+<?php } ?>
+            
+            <div class="col-10">
+            <div class="sexy_line"></div>
+            <?php foreach($comments_to_print as $comment){ ?>
+            
+            <p><?= $comment["content"]; ?></p>
+            <h5>Created by <?= $comment["created_by"]; ?></h5>
+            <!-- if loged in user is admin, show delet comment button -->
+            <?php if($_SESSION["admin"]){ ?>
+            <a href="#">Delete comment</a>
+<?php
+}    
+ } ?>
+            </div>
              
-            <div class="col-12">
-              
+            <div class="col-10">
+              <div class="sexy_line"></div>
               <form class="comment-form" action="../includes/add_comment_sql.php" method="POST">
-              <label for="comment-field"><h3>Leave a comment as: <?= $_SESSION["username"]; ?></h3></label><br />
+              <label for="comment-field"><h3>Leave a comment as <?= $_SESSION["username"]; ?></h3></label><br />
               <textarea name="content"></textarea><br />
               
-              <input type="hidden" name="id" value="<?= $post_id ?>">
+              <input type="hidden" name="id" value="<?= $_SESSION["post_id"] ?>">
               
               <input type="submit" value="Comment">
               </form>
@@ -48,8 +64,9 @@ include '../includes/database_connection.php';
 
 
 
-
+<?php include '../includes/footer.php'; ?>
 <?php include '../includes/javascript_tag.php'; ?>
 </body>
+
 
 </html>
