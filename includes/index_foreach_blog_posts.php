@@ -10,7 +10,7 @@ foreach($posts as $post): ?>
                <img src="../images/<?= $post["image"]; ?>">
              </div>
 
-             <div class="col-12 col-md-6 ellipsis">
+             <div class="col-12 col-md-6">
 			   <h3><?= $post["title"]; ?></h3>
 
 			   <? $str = $post["description"];

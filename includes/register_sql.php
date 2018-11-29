@@ -42,6 +42,17 @@ if(!empty($_POST["first_name"]) && !empty($_POST["last_name"]) && !empty($_POST[
         $_SESSION["username"] = $fetched_user["username"];
         $_SESSION["user_id"] = $fetched_user["id"];
 
+        //joins tables to see if user has admin rights
+        $statement = $pdo->prepare("SELECT id as admin_rights FROM users JOIN admin ON id = user_id");
+        $statement->execute();
+    
+        $is_admin = $statement->fetch();
+
+            //check if logged in user is admin, if so - stores admin in session to use on other pages
+            if ($_SESSION["user_id"] == (int)$is_admin) {
+                $_SESSION["admin"] = true;
+            }
+
         
         header('Location: ../index.php');
     } 
