@@ -15,6 +15,8 @@ $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
 //checks if all input fields are filled in
 if(!empty($_POST["first_name"]) && !empty($_POST["last_name"]) && !empty($_POST["email"]) && !empty($_POST["date_of_birth"]) && !empty($_POST["username"]) && !empty($_POST["password"])) {
+    
+    if(strlen($_POST["username"]) >= 7 && strlen($_POST["password"]) >= 7){
 
     //gets number of rows in database, if any, where the username exists in users
     $statement = $pdo->prepare("SELECT COUNT(username) AS user_exists FROM users WHERE username = :username");
@@ -25,7 +27,7 @@ if(!empty($_POST["first_name"]) && !empty($_POST["last_name"]) && !empty($_POST[
     //if user exists, send error message
     if ((int)$fetched_row["user_exists"] >= 1) {
 
-        header('Location: ../views/register.php?error=Username already exists. Please log in.');
+        header('Location: ../views/register.php?error=Username already exists. Please chose another one or log in.');
 
     } else {
         //registeres user, inserts details in database
@@ -57,7 +59,9 @@ if(!empty($_POST["first_name"]) && !empty($_POST["last_name"]) && !empty($_POST[
         header('Location: ../index.php');
     } 
     
-    
+    }else {
+        header('Location: ../views/register.php?error=Username and/or password must be atleast 7 characters.');
+    }
 } else {
     //if required had been erased from html - and not all input fields are filled in - populate GET with error message
     header('Location: ../views/register.php?error=Please fill in all fields to continue.');
