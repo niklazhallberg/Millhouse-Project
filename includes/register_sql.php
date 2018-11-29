@@ -51,6 +51,8 @@ if(!empty($_POST["first_name"]) && !empty($_POST["last_name"]) && !empty($_POST[
             //check if logged in user is admin, if so - stores admin in session to use on other pages
             if ($_SESSION["user_id"] == (int)$is_admin) {
                 $_SESSION["admin"] = true;
+            } else {
+                $_SESSION["admin"] = false;
             }
 
         

@@ -12,7 +12,7 @@
       <?php
 
 
-if(isset($_SESSION["admin"])){
+if($_SESSION["admin"] == true){
 
     echo "Congratulations! You have special privileges. Use them wisely.";
 }
