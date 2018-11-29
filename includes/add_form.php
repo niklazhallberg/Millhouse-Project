@@ -1,4 +1,9 @@
 <form enctype="multipart/form-data" class="add-post" action="../includes/add_post_sql.php" method="POST">
+  <?php
+    if (isset($_GET['error'])){
+      echo "<span style='color:red;font-weight:bold'> *" . $_GET['error'] . "</span><br>";
+  }
+  ?>
   <p>Choose your category:</p>
   <div>
     <input type="radio" id="watches" name="drone" value="1"
@@ -17,8 +22,7 @@
   </div>
   <input type="text" name="title" placeholder="Heading"><br>
     <textarea name="description" rows="10" cols="60"></textarea><br>
-
-  <input type="file" name="image" id="image">
-  <input type="submit" value="Send File">
+    <input type="file" name="image" id="image" accept="image/png, image/jpeg">
+    <input type="submit" value="Create post>
 
 </form>
