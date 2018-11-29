@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 	$i = 0;
 
@@ -13,7 +13,7 @@ foreach($posts as $post): ?>
              <div class="col-12 col-md-6">
 			   <h3><?= $post["title"]; ?></h3>
 
-			   <? $str = $post["description"];
+			   <?php $str = $post["description"];
 				if( strlen($post["description"]) > 150) {
    				$str = explode( "\n", wordwrap( $post["description"], 150));
    				$str = $str[0] . '...';
@@ -33,7 +33,6 @@ foreach($posts as $post): ?>
 	if($i==5) break;
 	?>
 
-<?php endforeach; 
+<?php endforeach;
 
 ?>
-
