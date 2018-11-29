@@ -1,6 +1,6 @@
 <?php
 
- $statement = $pdo->prepare("SELECT * FROM posts WHERE category_id = '1'");
+ $statement = $pdo->prepare("SELECT * FROM posts WHERE category_id = '2'");
 
     $statement->execute();
 
