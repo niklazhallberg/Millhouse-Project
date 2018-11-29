@@ -1,6 +1,7 @@
 <?php
 include '../includes/database_connection.php';
 
+
 //save post id with get to session 
 $_SESSION["post_id"] = $_GET["post_id"];
          
@@ -20,12 +21,8 @@ $comments_to_print->execute(
     ]
 );
 
-//selects user from users tabel where us_id is joined
-$commented_by = $pdo->prepare("SELECT username AS commented_by FROM users JOIN comments ON id = created_by");
-$commented_by->execute();
 
-$comment_username = $commented_by->fetch();
-$_SESSION["comment_username"] = $comment_username;
+
 
 
     

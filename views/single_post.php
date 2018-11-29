@@ -38,8 +38,8 @@ include '../includes/database_connection.php';
             <?php foreach($comments_to_print as $comment){ ?>
 
             <p><?= $comment["content"]; ?></p>
-            <h5>Created by <?= $_SESSION["comment_username"]; ?></h5>
-            <!-- if loged in user is admin, show delet comment button -->
+            <h5>Created by <?= $comment["created_by"]; ?></h5>
+            <!-- if loged in user is admin, show delete comment button -->
             <?php if(isset($_SESSION["admin"])){ ?>
             <a href="#">Delete comment</a>
 <?php
@@ -50,7 +50,7 @@ include '../includes/database_connection.php';
             <div class="col-10">
               <div class="sexy_line"></div>
               <form class="comment-form" action="../includes/add_comment_sql.php" method="POST">
-              <label for="comment-field"><h3>Leave a comment as <?= $_SESSION["username"]; ?></h3></label><br />
+              <label for="comment-field"><h3>Leave comment as <?= $_SESSION["username"]; ?></h3></label><br />
               <textarea name="content"></textarea><br />
 
               <input type="hidden" name="id" value="<?= $_SESSION["post_id"] ?>">

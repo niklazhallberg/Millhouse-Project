@@ -4,7 +4,7 @@ include 'database_connection.php';
 
 //save input to varible
 $content = $_POST["content"];
-$created_by = $_SESSION["user_id"];
+$created_by = $_SESSION["username"];
 $post_id = $_SESSION["post_id"];
 
 //
