@@ -8,4 +8,10 @@
       include 'logout_button.php';
       }
       ?>
+
+      <?php
+if ($_SESSION["admin"]) {
+    echo "Congratulations! You have special privileges. Use them wisely.";
+}
+?>
 </header>
