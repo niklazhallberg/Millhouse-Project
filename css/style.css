@@ -119,6 +119,9 @@ input {
 	margin-bottom: 1.5em;
 }
 
+.go-to-add-page a {
+	color: black;
+}
 
 /* Small devices (tablets, 768px and up) */
 @media screen and (min-width: 768px) {
@@ -126,7 +129,7 @@ input {
 .blogpost-section{
 		text-align: left;
 }
-    
+
 .comment-form textarea{
     height: 150px;
     width: 60%;

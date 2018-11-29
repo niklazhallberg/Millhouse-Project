@@ -27,5 +27,5 @@ $statement->execute(
   ]
 );
 // redirect
-header('location: ../views/add_post.php');
+header('location: ../');
 }

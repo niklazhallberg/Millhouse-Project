@@ -23,8 +23,9 @@ if(empty($_SESSION["user_id"])){
            <?php include 'includes/index_foreach_blog_posts.php'; ?>
 
          </section>
-         
+
             <aside class="col-12 col-md-4 index-sidebar">
+              <button class="go-to-add-page" type="button"><a href="../views/add_post.php" class="btn btn-default">Add post</a></button>
             <h3>Recent</h3>
             <ul>
           <?php include 'includes/index_sidebar_foreach_recent_post.php'; ?>
