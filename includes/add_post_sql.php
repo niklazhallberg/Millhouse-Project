@@ -16,14 +16,14 @@ $new_location = "../images/" . $image["name"];
 $upload_ok = move_uploaded_file($temporary_location, $new_location);
 
 if($upload_ok){
-$statement = $pdo->prepare("INSERT INTO posts (title, description, created_by, image, category) VALUES (:title, :description, :created_by, :image, :category)");
+$statement = $pdo->prepare("INSERT INTO posts (title, description, created_by, image, category_id) VALUES (:title, :description, :created_by, :image, :category_id)");
 $statement->execute(
   [
     ":title" => $blog_title,
     ":description" => $blog_description,
     ":created_by" => $user_id,
     ":image" => $new_location,
-    ":category" => $category
+    ":category_id" => $category
   ]
 );
 // redirect

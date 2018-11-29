@@ -10,7 +10,9 @@
       ?>
 
       <?php
+
 if(isset($_SESSION["admin"])){
+
     echo "Congratulations! You have special privileges. Use them wisely.";
 }
 ?>
