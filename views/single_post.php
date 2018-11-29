@@ -41,7 +41,7 @@ include '../includes/database_connection.php';
             <h5>Created by <?= $comment["created_by"]; ?></h5>
             <!-- if loged in user is admin, show delete comment button -->
             <?php if(isset($_SESSION["admin"])){ ?>
-            <a href="#">Delete comment</a>
+            <a href="../includes/delete_comment_sql.php?delete_comment=<?=$comment["comment_id"]?>">Delete comment</a>
 <?php
 }
  } ?>

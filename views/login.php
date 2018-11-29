@@ -20,10 +20,10 @@ include '../includes/head.php';
 
 			<form action="../includes/login_sql.php" method="POST">
   				<p>Username</p>
-  				<input type="text" name="username">
+  				<input type="text" name="username" required>
 
   				<p>Password</p>
-  				<input type="password" name="password"><br>
+  				<input type="password" name="password" required><br>
   				<input type="submit" value="Login">
 			</form>
 
