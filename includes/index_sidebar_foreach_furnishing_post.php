@@ -1,6 +1,6 @@
 <?php
 
- $statement = $pdo->prepare("SELECT * FROM posts WHERE category_id = '1'");
+ $statement = $pdo->prepare("SELECT * FROM posts WHERE category_id = '3'");
 
     $statement->execute();
 
@@ -8,7 +8,7 @@
 
 $i = 0;
 
-foreach(array_reverse($posts) as $post):?>
+foreach($posts as $post):?>
 
               <li>
               	<a href="../views/single_post.php?post_id=<?=$post["id"]?>"><?=$post["title"]?></a>
