@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 	$i = 0;
 
@@ -33,7 +33,6 @@ foreach(array_reverse($posts) as $post): ?>
 	if($i==5) break;
 	?>
 
-<?php endforeach; 
+<?php endforeach;
 
 ?>
-
