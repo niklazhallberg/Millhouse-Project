@@ -10,7 +10,7 @@ include 'database_connection.php';
 * fyllt i formuläret: password_verify
 */
 
-//if user fills in login fields
+//if user fills in both login fields
 if(!empty($_POST["username"]) && !empty($_POST["password"])){
     $username = $_POST["username"];
     $password = $_POST["password"];
@@ -20,7 +20,7 @@ if(!empty($_POST["username"]) && !empty($_POST["password"])){
 
     $fetched_user = $select_all_with_username->fetch();
 
-    // compare
+    // compare password
     $is_password_correct = password_verify($password, $fetched_user["password"]);
 
         if($is_password_correct){
@@ -28,12 +28,13 @@ if(!empty($_POST["username"]) && !empty($_POST["password"])){
             $_SESSION["username"] = $fetched_user["username"];
             $_SESSION["user_id"] = $fetched_user["id"];
 
-
+            //joins tables to see if user has admin rights
             $statement = $pdo->prepare("SELECT id as admin_rights FROM users JOIN admin ON id = user_id");
             $statement->execute();
 
             $is_admin = $statement->fetch();
 
+                //check if logged in user is admin, if so - stores admin in session to use on other pages
                 if ($_SESSION["user_id"] == (int)$is_admin) {
                     $_SESSION["admin"] = true;
                 }
@@ -45,7 +46,7 @@ if(!empty($_POST["username"]) && !empty($_POST["password"])){
             //handle errors, go back to front page and populate $_GET
             header('Location: ../views/login.php?error=Your username or password is incorrect');
         }
-//if post is missing input values
+//if post is missing input values, go back to page and populate $_GET
 } else {
     header('Location: ../views/login.php?error=Your need to fill in both fields to log in.');
 }
