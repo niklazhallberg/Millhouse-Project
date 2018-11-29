@@ -48,7 +48,9 @@ header {
 }
 
 .header-logo img {
-	max-height: 150px;
+	max-height: 50px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 img{
@@ -65,21 +67,32 @@ main {
     background-color: #A6C9C6;
     padding:2em;
 }
+
 .blogpost-section{
     padding: 2em;
-    text-align: center;
+    text-align: left;
 }
 
 .register-box {
+	text-align: center;
 	background-color: #D7BCC8;
 	border-radius: 5%;
 	padding: 20px;
 	max-width: 320px;
-    margin-top: 40px;
+    margin-top: 100px;
+    margin-bottom: 400px
+}
+
+.register-box p {
+	text-align: center;
+}
+
+.register-box input {
+	margin: 0px 20px;
 }
 
 form {
-	text-align: right;
+	text-align: center;
 }
 
 input {
