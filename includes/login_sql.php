@@ -37,9 +37,7 @@ if(!empty($_POST["username"]) && !empty($_POST["password"])){
                 //check if logged in user is admin, if so - stores admin in session to use on other pages
                 if ($_SESSION["user_id"] == (int)$is_admin) {
                     $_SESSION["admin"] = true;
-                } else {
-                    $_SESSION["admin"] = false;
-                }
+                } 
 
             //go to blog page
             header('Location: ../index.php');
