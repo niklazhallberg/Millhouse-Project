@@ -31,10 +31,7 @@ if(empty($_SESSION["user_id"])){
             </ul>
             <h3>Watches</h3>
             <ul>
-              <li>hej</li>
-              <li>hej</li>
-              <li>hej</li>
-              <li>hej</li>
+              <?php include 'includes/index_sidebar_foreach_watch_post.php'; ?>
             </ul>
             <h3>Sunglasses</h3>
             <ul>
