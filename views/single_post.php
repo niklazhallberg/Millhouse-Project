@@ -38,9 +38,9 @@ include '../includes/database_connection.php';
             <?php foreach($comments_to_print as $comment){ ?>
             
             <p><?= $comment["content"]; ?></p>
-            <h5>Created by <?= $comment["created_by"]; ?></h5>
+            <h5>Created by <?= $_SESSION["comment_username"]; ?></h5>
             <!-- if loged in user is admin, show delet comment button -->
-            <?php if($_SESSION["admin"]){ ?>
+            <?php if(isset($_SESSION["admin"])){ ?>
             <a href="#">Delete comment</a>
 <?php
 }    
