@@ -22,7 +22,10 @@ foreach(array_reverse($posts) as $post): ?>
 				echo $str;
 				?><br><br>
 
+
+			   <?php if( strlen($post["description"]) > 150) {?>
 				<a href="../views/single_post.php?post_id=<?=$post["id"]?>">Read more...</a>
+				<?php } ?>
 
                <input type="hidden" id="post-id" name="post-id" value="<?= $post["id"]; ?>">
              </div>
