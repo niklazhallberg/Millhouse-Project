@@ -48,7 +48,6 @@ header {
 }
 
 .header-logo img {
-	max-height: 50px;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -121,6 +120,15 @@ input {
 
 .go-to-add-page a {
 	color: black;
+}
+
+.logout-button{
+	text-align: right;
+}
+
+.logout-button a{
+	margin-right: 1.5em;
+	color: red;
 }
 
 /* Small devices (tablets, 768px and up) */
