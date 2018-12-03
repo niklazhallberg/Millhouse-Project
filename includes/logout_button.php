@@ -1,3 +1,1 @@
-<form class="logout-button" action="includes/logout_sql.php" method="post">
-  <input type="submit" name="logout" value="Logout">
-</form>
+<a href="../includes/logout_sql.php">Sign out <i class="fas fa-sign-out-alt"></i></a>

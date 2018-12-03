@@ -1,42 +1,34 @@
-<?php
-session_start(); 
-include 'database_connection.php';
+<?php 
+session_start();
+include '../classes/call.php';
 
-/**
-* 1. Koppla upp till databasen
-* 2. Hämta användaren från databasen
-* 3. Kolla så att lösenordet stämmer
-* överrens med lösenordet som användaren
-* fyllt i formuläret: password_verify
-*/
 
-//if user fills in login fields
-if(isset($_POST["username"]) && isset($_POST["password"])){
+if(!empty($_POST["username"]) && !empty($_POST["password"])){
+
     $username = $_POST["username"];
     $password = $_POST["password"];
-    
-    $select_all_with_username = $pdo->prepare("SELECT * FROM users WHERE username = :username");
-    
-    $select_all_with_username->execute(
-        [
-            ":username" => $username
-        ]
-);
 
-$fetched_user = $select_all_with_username->fetch();
 
-// compare
-$is_password_correct = password_verify($password, $fetched_user["password"]);
+    if ($user_array = $user->getUser($username)) {
+        if ($user->login($username, $password, $user_array)) {
 
-if($is_password_correct){
-    //save user globally to session
-    $_SESSION["username"] = $fetched_user["username"];
-    $_SESSION["user_id"] = $fetched_user["id"];
-    //go to product page
-    header('Location: ../index.php ');
-    
-}else{
-    //handle errors, go back to front page and populate $_GET
-    header('Location: ../views/login.php?error=Your username or password is incorrect');
-}
+            $_SESSION["username"] = $user_array["username"];
+            $_SESSION["user_id"] = $user_array["id"];
+        
+            // if ($user->isAdmin() == true) {
+            //     $_SESSION["admin"] = true;
+            // }
+
+            $user->redirect('../index.php');
+        
+        } else {
+            header('Location: ../views/login.php?error=Your username or password is incorrect');
+        }
+
+    } else {
+        header('Location: ../views/login.php?error=There is no user with that name, try registering first or check spelling');
+    }
+
+} else {
+    header('Location: ../views/login.php?error=You need to fill in both fields.');
 }

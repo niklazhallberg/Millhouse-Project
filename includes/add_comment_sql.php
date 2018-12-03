@@ -1,11 +1,11 @@
 <?php session_start();
 //connecting to database
-include 'database_connection.php';
+include '../classes/call.php';
 
 //save input to varible
 $content = $_POST["content"];
-$created_by = $_SESSION["user_id"];
-$post_id = $_POST["id"];
+$created_by = $_SESSION["username"];
+$post_id = $_SESSION["post_id"];
 
 //
 $statement = $pdo->prepare("INSERT INTO comments (content, created_by, post_id) VALUES (:content, :created_by, :post_id)");
@@ -17,5 +17,5 @@ $statement->execute(
   ]
 );
 // redirect
-header('location: ../views/index.php');
+header("location: ../views/single_post.php?post_id=$post_id");
 ?>
