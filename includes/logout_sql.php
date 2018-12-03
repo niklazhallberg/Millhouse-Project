@@ -1,6 +1,6 @@
 <?php 
 
-include '../classes/call.php';
+// include '../classes/call.php';
 
 $user->logout();
 $user->redirect('../index.php');
