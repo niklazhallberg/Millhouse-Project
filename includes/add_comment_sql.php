@@ -1,6 +1,6 @@
 <?php session_start();
 //connecting to database
-include 'database_connection.php';
+include '../classes/call.php';
 
 //save input to varible
 $content = $_POST["content"];
