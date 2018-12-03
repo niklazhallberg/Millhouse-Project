@@ -17,8 +17,9 @@ if(!$user->isLoggedIn()) {
             
            <?php 
 
-           $number_of_posts = 5;
 
+           $number_of_posts = 5;
+           
            $index_posts = $posts->getLatestPosts($number_of_posts);
 
            include 'includes/index_foreach_blog_posts.php'; ?>
