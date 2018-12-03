@@ -12,8 +12,10 @@ include '../classes/call.php';
 
    <div class="col-12"><a href="../index.php">Back to startpage</a></div>
     <?php
-
-      include '../includes/single_post_sql.php';
+      
+      //save post id from get to variable and call method in class posts
+      $post_id = $_GET["post_id"];
+      $post_to_print = $posts->getPostWithId($post_id);
 
       //looping through array and printing post from databse
       foreach($post_to_print as $post){ ?>
@@ -41,7 +43,10 @@ include '../classes/call.php';
 
             <div class="col-10">
             <div class="sexy_line"></div>
-            <?php foreach($comments_to_print as $comment){ ?>
+            <?php
+                $comments_to_print = $comments->getCommentsWithId($post_id);
+                
+                foreach($comments_to_print as $comment){ ?>
 
             <p><?= $comment["content"]; ?></p>
             <h5>Created by <?= $comment["created_by"]; ?></h5>

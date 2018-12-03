@@ -61,6 +61,26 @@ class Posts
            }
         
     }
+    
+    public function getPostWithId($post_id){
+       
+        try{
+            //selects all posts from db with correct post_id
+            $post_to_print = $this->pdo->prepare("SELECT * FROM posts WHERE id = :id");
+            $post_to_print->execute(
+                [
+                    ":id" => $post_id
+                ]
+            );
+            
+            return $post_to_print;  
+            
+        }catch(PDOException $error){
+            
+            echo $error->getMessage();
+        }
+        
+    }
 
     public function editPost() {
 
