@@ -1,7 +1,7 @@
 <?php 
 // session_start();
 // //connecting to database
-// include '../classes/call.php';
+include '../classes/call.php';
 
 //save input to varible
 $content = $_POST["content"];
