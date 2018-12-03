@@ -4,7 +4,6 @@ include 'classes/call.php';
 if(!$user->isLoggedIn()) {
     $user->redirect('views/login.php');
 } ?>
-?>
 
  <?php include 'includes/head.php'; ?>
 <body>
