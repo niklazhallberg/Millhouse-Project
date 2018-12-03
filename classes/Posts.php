@@ -42,12 +42,25 @@ class Posts
 
     }
 
+    public function uploadImage($image) {
+
+      try {
+
+          $temporary_location = $image["tmp_name"];
+
+          $new_location = "../images/" . $image["name"];
+
+          $upload_ok = move_uploaded_file($temporary_location, $new_location);
 
 
+            return $upload_ok;
 
 
-    public function uploadImage() {
-      
+         }
+         catch(PDOException $error)
+         {
+             echo $error->getMessage();
+         }
     }
 
     public function addPost($title, $description, $image, $user_id, $category) {
@@ -66,9 +79,9 @@ class Posts
            }
 
     }
-    
+
     public function getPostWithId($post_id){
-       
+
         try{
             //selects all posts from db with correct post_id
             $post_to_print = $this->pdo->prepare("SELECT * FROM posts WHERE id = :id");
@@ -77,14 +90,14 @@ class Posts
                     ":id" => $post_id
                 ]
             );
-            
-            return $post_to_print;  
-            
+
+            return $post_to_print;
+
         }catch(PDOException $error){
-            
+
             echo $error->getMessage();
         }
-        
+
     }
 
     public function editPost() {
