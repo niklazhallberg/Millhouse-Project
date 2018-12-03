@@ -15,6 +15,7 @@ include '../classes/call.php';
       
       //save post id from get to variable and call method in class posts
       $post_id = $_GET["post_id"];
+      $_SESSION["post_id"] = $post_id;
       $post_to_print = $posts->getPostWithId($post_id);
 
       //looping through array and printing post from databse
