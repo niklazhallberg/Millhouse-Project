@@ -3,7 +3,13 @@ session_start();
 include 'classes/call.php';
 if(!$user->isLoggedIn()) {
     $user->redirect('views/login.php');
-} ?>
+}
+
+if(isset($_GET["delete_post"])){
+    $post_id = $_GET["delete_post"];
+    $delete_post = $posts->deletePostWithId($post_id);
+}
+?>
 
  <?php include 'includes/head.php'; ?>
 <body>

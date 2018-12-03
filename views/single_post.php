@@ -15,6 +15,7 @@ include '../classes/call.php';
       
       //save post id from get to variable and call method in class posts
       $post_id = $_GET["post_id"];
+      $_SESSION["post_id"] = $post_id;
       $post_to_print = $posts->getPostWithId($post_id);
 
       //looping through array and printing post from databse
@@ -33,7 +34,7 @@ include '../classes/call.php';
            <p> <?= $post["description"]; ?> </p>
            <!-- if loged in user is admin, show delete post button -->
             <?php if($user->isAdmin()){ ?>
-            <a href="../includes/delete_post_sql.php">Delete this post</a>
+            <a href="../index.php?delete_post=<?= $post_id ?>">Delete this post</a>
 <?php
 } ?>
            

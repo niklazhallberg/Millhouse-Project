@@ -105,19 +105,23 @@ class Posts
 
     }
 
-    public function deletePost() {
-
+    public function deletePostWithId($post_id) {
+        try{
+            //selects all posts from db with correct post_id
+            $delete_post = $this->pdo->prepare("DELETE FROM posts WHERE id = :id");
+            $delete_post->execute(
+                [
+                    ":id" => $post_id
+                ]
+            );  
+            
+        }catch(PDOException $error){
+            
+            echo $error->getMessage();
+        }
     }
 
-    public function addComment() {
-
-
-    }
-
-    public function deleteComment() {
-
-
-    }
+    
 
 
 
