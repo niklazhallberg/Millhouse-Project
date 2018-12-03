@@ -1,10 +1,15 @@
-<?php session_start() ?>
+<?php
+session_start();
+include '../classes/call.php';
+if(!$user->isLoggedIn()) {
+    $user->redirect('login.php');
+} 
+if(!$user->isAdmin()) {
+    $user->redirect('../index.php');
+}
+?>
 <?php include '../includes/head.php' ?>
 <body>
-  <?php
-  if((empty($_SESSION["admin"]))){
-    header('Location: /');
-  } ?>
     <?php include '../includes/header.php'; ?>
     <main class="container-fluid">
     <div class="row">

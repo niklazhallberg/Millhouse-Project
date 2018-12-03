@@ -1,4 +1,11 @@
 <?php
+session_start();
+include '../classes/call.php';
+if($user->isLoggedIn()) {
+    $user->redirect('../index.php');
+}
+?>
+<?php
 include '../includes/head.php'; 
 ?>
 
