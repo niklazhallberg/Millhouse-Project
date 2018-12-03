@@ -23,6 +23,8 @@
   <input type="text" name="title" placeholder="Heading"><br>
     <textarea name="description" rows="10" cols="60"></textarea><br>
     <input type="file" name="image" id="image" accept="image/png, image/jpeg">
+
     <input type="submit" value="Create post">
+
 
 </form>
