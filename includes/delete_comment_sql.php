@@ -1,6 +1,6 @@
 <?php
 // session_start();
-// include '../classes/call.php';
+include '../classes/call.php';
 
 $delete_comment = $_GET["delete_comment"];
 $post_id = $_SESSION["post_id"];
