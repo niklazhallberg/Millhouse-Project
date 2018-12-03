@@ -122,6 +122,10 @@ input {
 	color: black;
 }
 
+.go-to-edit-page a {
+	color: black;
+}
+
 /* Small devices (tablets, 768px and up) */
 @media screen and (min-width: 768px) {
 
