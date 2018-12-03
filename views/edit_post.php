@@ -8,11 +8,11 @@ if(!$user->isAdmin()) {
     $user->redirect('../index.php');
 }
 ?>
-<?php include '../includes/head.inc.php' ?>
+<?php include '../includes/head.php' ?>
 
 <body>
   
-  <?php include '../includes/header.inc.php' ?>
+  <?php include '../includes/header.php' ?>
 
 
 </body>
