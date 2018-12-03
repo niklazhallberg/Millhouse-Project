@@ -25,10 +25,10 @@ class Posts
        }
     }
 
-    public function getFiveLatestPosts() {
+    public function getLatestPosts($number_of_posts) {
 
         try {
-            $statement = $this->pdo->prepare("SELECT * FROM posts ORDER BY id DESC LIMIT 5");
+            $statement = $this->pdo->prepare("SELECT * FROM posts ORDER BY id DESC LIMIT $number_of_posts");
             $statement->execute();
             $get_five_posts = $statement->fetchAll(PDO::FETCH_ASSOC);
 
@@ -41,6 +41,11 @@ class Posts
            }
 
     }
+
+
+
+
+
     public function uploadImage() {
       
     }
@@ -60,6 +65,26 @@ class Posts
                echo $error->getMessage();
            }
 
+    }
+    
+    public function getPostWithId($post_id){
+       
+        try{
+            //selects all posts from db with correct post_id
+            $post_to_print = $this->pdo->prepare("SELECT * FROM posts WHERE id = :id");
+            $post_to_print->execute(
+                [
+                    ":id" => $post_id
+                ]
+            );
+            
+            return $post_to_print;  
+            
+        }catch(PDOException $error){
+            
+            echo $error->getMessage();
+        }
+        
     }
 
     public function editPost() {

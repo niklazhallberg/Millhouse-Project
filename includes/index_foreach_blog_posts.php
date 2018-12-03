@@ -1,12 +1,10 @@
 <?php
 
-	$i = 0;
-
-foreach(array_reverse($posts) as $post): ?>
+foreach($index_posts as $post): ?>
 
 	<div class="row post-row">
 
-             <div class="col-12 col-md-6">
+             <div class="col-12 col-md-6 image-row">
                <img src="../images/<?= $post["image"]; ?>">
              </div>
 
@@ -14,18 +12,15 @@ foreach(array_reverse($posts) as $post): ?>
 			   <h3><?= $post["title"]; ?></h3>
 
 			   <?php $str = $post["description"];
-				if( strlen($post["description"]) > 150) {
-   				$str = explode( "\n", wordwrap( $post["description"], 150));
+				if( strlen($str) > 150) {
+   				$str = explode( "\n", wordwrap($str, 150));
    				$str = $str[0] . '...';
 				}
 
 				echo $str;
 				?><br><br>
 
-
-			   <?php if( strlen($post["description"]) > 150) {?>
 				<a href="../views/single_post.php?post_id=<?=$post["id"]?>">Read more...</a>
-				<?php } ?><br>
 
 				<hr>
 
@@ -38,11 +33,6 @@ foreach(array_reverse($posts) as $post): ?>
                <input type="hidden" id="post-id" name="post-id" value="<?= $post["id"]; ?>">
              </div>
 	</div>
-
-	<?php
-	$i++;
-	if($i==5) break;
-	?>
 
 <?php endforeach;
 
