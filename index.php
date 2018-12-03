@@ -23,11 +23,8 @@ if(isset($_GET["delete_post"])){
             
            <?php 
 
-
            $number_of_posts = 5;
-           
            $index_posts = $posts->getLatestPosts($number_of_posts);
-
            include 'includes/index_foreach_blog_posts.php'; ?>
 
          </section>
@@ -44,13 +41,16 @@ if(isset($_GET["delete_post"])){
 
             $number_of_posts = 10;
             $aside_posts = $posts->getLatestPosts($number_of_posts);
-
             include 'includes/index_sidebar_foreach_recent_post.php'; ?>
 
             </ul>
             <h3>Watches</h3>
             <ul>
-              <?php include 'includes/index_sidebar_foreach_watch_post.php'; ?>
+
+                <?php $number_of_watch_posts = 10;
+                  $watch_posts = $posts->getLatestPosts($number_of_posts);
+                  include 'includes/index_sidebar_foreach_watch_post.php'; ?>
+
             </ul>
             <h3>Sunglasses</h3>
             <ul>
