@@ -20,7 +20,6 @@ Secondary Colors:
 
 h1, h2, h3, h4 {
 	font-family: 'Merriweather', serif;
-	font-size: 1.2em;
 }
 
 h3 {
@@ -122,6 +121,7 @@ input {
 	color: black;
 }
 
+
 .logout-button{
 	text-align: right;
 }
@@ -129,6 +129,10 @@ input {
 .logout-button a{
 	margin-right: 1.5em;
 	color: red;
+
+.go-to-edit-page a {
+	color: black;
+
 }
 
 /* Small devices (tablets, 768px and up) */

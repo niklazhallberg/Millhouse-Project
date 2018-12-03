@@ -12,7 +12,7 @@ include '../includes/head.php';
 
 			<div class="col-12 col-md-4 register-box">
 
-				<h3>Welcome to Millhouse</h3>
+				<h3>Become a Millhouse Member</h3>
 
         <p class="error-message">
           <?php if (isset($_GET["error"])){
