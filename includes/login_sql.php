@@ -1,6 +1,6 @@
 <?php 
-session_start();
-include '../classes/call.php';
+// session_start();
+// include '../classes/call.php';
 
 
 if(!empty($_POST["username"]) && !empty($_POST["password"])){

@@ -15,6 +15,7 @@ if(!$user->isLoggedIn()) {
        <div class="row">
          <section class="col-12 col-md-8 blogpost-section">
 
+          
            <?php include 'includes/index_fetch_all.php'; ?>
 
            <?php include 'includes/index_foreach_blog_posts.php'; ?>
