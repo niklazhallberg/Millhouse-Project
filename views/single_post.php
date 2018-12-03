@@ -29,6 +29,12 @@ include '../includes/database_connection.php';
            <div class="col-10">
            <div class="sexy_line"></div>
            <p> <?= $post["description"]; ?> </p>
+           <!-- if loged in user is admin, show delete post button -->
+            <?php if(isset($_SESSION["admin"])){ ?>
+            <a href="../includes/delete_post_sql.php">Delete this post</a>
+<?php
+} ?>
+           
            </div>
 
 <?php } ?>
