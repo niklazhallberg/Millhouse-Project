@@ -25,10 +25,10 @@ class Posts
        }
     }
 
-    public function getFiveLatestPosts() {
+    public function getLatestPosts($number_of_posts) {
 
         try {
-            $statement = $this->pdo->prepare("SELECT * FROM posts ORDER BY id DESC LIMIT 5");
+            $statement = $this->pdo->prepare("SELECT * FROM posts ORDER BY id DESC LIMIT $number_of_posts");
             $statement->execute();
             $get_five_posts = $statement->fetchAll(PDO::FETCH_ASSOC);
       
@@ -41,6 +41,11 @@ class Posts
            }
 
     }
+
+
+
+
+
     public function uploadImage() {
 
     }

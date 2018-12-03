@@ -56,7 +56,7 @@ img{
 }
 
 main {
-    max-width: 1024px;
+    max-width: 1400px;
     background-color: #F0F0F0;
     margin: 0 auto;
 }
@@ -113,9 +113,26 @@ input {
     width: 80%;
 }
 
+/* För redigering  
+
 .post-row {
 	margin-bottom: 1.5em;
+	height: 15em;
 }
+
+.image-row{
+	min-height: 15em;
+	overflow: hidden;
+	background-position: center;
+}
+
+.image-row img{
+	object-fit: cover;
+	max-width: 100%;
+	min-height: 100%;
+}
+
+*/
 
 .go-to-add-page a {
 	color: black;

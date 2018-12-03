@@ -13,16 +13,20 @@ if(!$user->isLoggedIn()) {
   <div class="row">
      <div class="col-12">
        <div class="row">
-         <section class="col-12 col-md-8 blogpost-section">
+         <section class="col-12 col-md-9 blogpost-section">
+            
+           <?php 
 
-          
-           <?php include 'includes/index_fetch_all.php'; ?>
 
-           <?php include 'includes/index_foreach_blog_posts.php'; ?>
+           $number_of_posts = 5;
+           
+           $index_posts = $posts->getLatestPosts($number_of_posts);
+
+           include 'includes/index_foreach_blog_posts.php'; ?>
 
          </section>
 
-            <aside class="col-12 col-md-4 index-sidebar">
+            <aside class="col-12 col-md-3 index-sidebar">
 
             <?php if($user->isAdmin()) {
             include 'includes/go_to_add_page_button.php';
@@ -30,7 +34,13 @@ if(!$user->isLoggedIn()) {
               
             <h3>Recent</h3>
             <ul>
-          <?php include 'includes/index_sidebar_foreach_recent_post.php'; ?>
+            <?php   
+
+            $number_of_posts = 10;
+            $aside_posts = $posts->getLatestPosts($number_of_posts);
+
+            include 'includes/index_sidebar_foreach_recent_post.php'; ?>
+
             </ul>
             <h3>Watches</h3>
             <ul>
