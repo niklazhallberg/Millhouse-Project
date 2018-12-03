@@ -31,7 +31,7 @@ foreach(array_reverse($posts) as $post): ?>
 
 				<?php echo "Posted: " . date("Y/m/d") . "<br>"; ?>
 				<p>Created by: <?= $_SESSION["username"]; ?> from Millhouse</p>
-				<?php if(isset($_SESSION["admin"])){?>
+				<?php if($user->isAdmin()){?>
 				<button class="go-to-edit-page" type="button"><a href="../views/edit_post.php" class="btn btn-default">Edit post</a></button>
 				<?php } ?>
 

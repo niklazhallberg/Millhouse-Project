@@ -1,6 +1,6 @@
 <?php
 session_start();
-include '../includes/database_connection.php';
+include '../classes/call.php';
 ?>
 
 <?php include '../includes/head.php'; ?>
@@ -30,7 +30,7 @@ include '../includes/database_connection.php';
            <div class="sexy_line"></div>
            <p> <?= $post["description"]; ?> </p>
            <!-- if loged in user is admin, show delete post button -->
-            <?php if(isset($_SESSION["admin"])){ ?>
+            <?php if($user->isAdmin()){ ?>
             <a href="../includes/delete_post_sql.php">Delete this post</a>
 <?php
 } ?>
@@ -46,7 +46,7 @@ include '../includes/database_connection.php';
             <p><?= $comment["content"]; ?></p>
             <h5>Created by <?= $comment["created_by"]; ?></h5>
             <!-- if loged in user is admin, show delete comment button -->
-            <?php if(isset($_SESSION["admin"])){ ?>
+            <?php if($user->isAdmin()){ ?>
             <a href="../includes/delete_comment_sql.php?delete_comment=<?=$comment["comment_id"]?>">Delete comment</a>
 <?php
 }

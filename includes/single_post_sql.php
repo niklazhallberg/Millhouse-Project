@@ -1,5 +1,5 @@
 <?php
-include '../includes/database_connection.php';
+include '../classes/call.php';
 
 
 //save post id with get to session 

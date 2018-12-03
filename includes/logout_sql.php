@@ -1,5 +1,6 @@
-<?php
-session_start();
-session_destroy();
-header('location: /');
-?>
+<?php 
+
+include '../classes/call.php';
+
+$user->logout();
+$user->redirect('../index.php');

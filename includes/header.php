@@ -7,17 +7,18 @@
     <div class="row">
       <div class="col-8">
         <?php
-        if(isset($_SESSION["admin"])){
+
+
+        if($user->isAdmin()){
           echo "Congratulations! You have special privileges. Use them wisely.";
         }
         ?>
         </div>
         <div class="col-4 logout-button">
           <?php
-          if(isset($_SESSION["user_id"])){
-          include 'logout_button.php';
-          }
-          ?>
+          if($user->isLoggedIn()) {
+            include 'logout_button.php';
+        } ?>
       </div>
     </div>
 </header>
