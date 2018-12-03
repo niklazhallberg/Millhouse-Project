@@ -1,6 +1,6 @@
 <?php
-// session_start();
-// include '../classes/call.php';
+
+include '../classes/call.php';
 
 $post_id = $_SESSION["post_id"];
     
