@@ -33,7 +33,7 @@ include '../classes/call.php';
            <p> <?= $post["description"]; ?> </p>
            <!-- if loged in user is admin, show delete post button -->
             <?php if($user->isAdmin()){ ?>
-            <a href="../includes/delete_post_sql.php">Delete this post</a>
+            <a href="../index.php?delete_post=<?= $post_id ?>">Delete this post</a>
 <?php
 } ?>
            

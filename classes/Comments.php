@@ -8,6 +8,11 @@ class Comments
       $this->pdo = $pdo;
     }
     
+    public function addComment() {
+
+
+    }
+    
     public function getCommentsWithId($post_id){
         
         try{
@@ -26,4 +31,23 @@ class Comments
             echo $error->getMessage();
         }
     }
+    
+    public function deleteCommentWithId($comment_id){
+        try{
+            //selects all comments for correct post with post_id
+            $delete_comment = $this->pdo->prepare("DELETE * FROM comments WHERE comment_id = :comment_id");
+            $delete_comment->execute(
+                [
+                    ":comment_id" => $post_id
+                ]
+            );
+            
+            return $comments_to_print;
+            
+        }catch(PDOException $error){
+            
+            echo $error->getMessage();
+        }   
+    }
+
 }
