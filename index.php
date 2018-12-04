@@ -43,6 +43,8 @@ if(isset($_GET["delete_post"])){
   </div>
 </main>
 
+<?php include 'includes/footer.php'; ?>
+
 <?php include 'includes/javascript_tag.php'; ?>
 
 </body>

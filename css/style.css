@@ -206,6 +206,23 @@ main {
 	min-height: 100%;
 }
 
+/* FOOTER*/
+
+footer {
+	margin-top: 250px;
+	height: 250px;
+	background-color: #D7BCC8;
+}
+
+em.pinterest{
+	background: url(images/pinterest.png);
+    background-size: 24px;
+    background-position: center;
+    height: 24px;
+    width: 24px;
+    display: block;
+}
+
 /* ----------------------------FORM-----------------------------------------*/
 
 
