@@ -29,7 +29,7 @@ h4 {
 
 h3 {
 	margin-top: 0.5rem;
-	font-size: 1.5em;
+	font-size: 1em;
 }
 
 p,
@@ -40,6 +40,7 @@ span {
 
 a {
 	 color: #1C3045;
+	 font-size: 0.9em;
 }
 
 body {
@@ -167,14 +168,36 @@ input {
 }
 
 main {
-    max-width: 1300px;
+    max-width: 1500px;
     background-color: #F0F0F0;
     margin: 0 auto;
 }
 
+.card-img-top {
+    width: 100%;
+    height: 25vw;
+    object-fit: cover;
+}
+
+.date-text {
+
+    color: #6c757d!important;
+    font-size: 80%;
+    font-weight: 400;
+}
+
+
 .index-sidebar{
     background-color: #95B8D1;
 	padding:1em;
+	margin: 10px auto;
+	height: 1500px;
+	border-radius: 1%;
+}
+
+.h2-sidebar {
+	font-size: 1.5em;
+	margin-bottom: 1.5rem;
 }
 
 .post-row {
@@ -199,7 +222,7 @@ main {
 footer {
 	margin-top: 250px;
 	height: 250px;
-	background-color: #D7BCC8;
+	background-color: #1C3045;
 }
 
 em.pinterest{

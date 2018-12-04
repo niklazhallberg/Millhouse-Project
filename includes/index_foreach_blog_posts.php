@@ -17,8 +17,10 @@
 				<a href="../views/single_post.php?post_id=<?=$post["id"]?>">Read more...</a>
 
 				<hr>
+				<div class="date-text">
 				<?php echo "Posted: " . date("Y/m/d") . "<br>"; ?>
-				<p class="card-text"><small class="text-muted">Created by: <?= $_SESSION["username"]; ?> from Millhouse</small></p>
+				</div>
+				<p class="card-text"><small class="text-muted">By <?= $_SESSION["username"]; ?></small></p>
 
 				<?php if($user->isAdmin()){?>
 
