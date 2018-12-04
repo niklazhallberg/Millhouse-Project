@@ -1,15 +1,4 @@
 
-          <h3>Recent</h3>
-          <ul>
-            <?php   
-
-            /* NUMBER OF RECENT POSTS DISPLAYED IN SIDEBAR */ 
-
-            $number_of_posts = 10;
-            $aside_posts = $posts->getLatestPosts($number_of_posts);
-            include 'includes/index_sidebar_foreach_recent_post.php'; ?>
-
-          </ul>
           <h3>Watches</h3>
           <ul>
             <?php 
@@ -41,5 +30,17 @@
             $number_of_furnishing_posts = 10;
             $furnishing_posts = $posts->getLatestFurnishingPosts($number_of_furnishing_posts);
             include 'includes/index_sidebar_foreach_furnishing_post.php'; ?>
+
+          </ul>
+          
+         <h3>Most recent</h3>
+          <ul>
+            <?php   
+
+            /* NUMBER OF RECENT POSTS DISPLAYED IN SIDEBAR */ 
+
+            $number_of_posts = 10;
+            $aside_posts = $posts->getLatestPosts($number_of_posts);
+            include 'includes/index_sidebar_foreach_recent_post.php'; ?>
 
           </ul>
