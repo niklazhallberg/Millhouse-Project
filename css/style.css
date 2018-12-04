@@ -181,6 +181,11 @@ input {
 
 /* ----------------------------INDEX -----------------------------------------*/
 
+.card-columns {
+  @include media-breakpoint-only(md) {
+    column-count: 4;
+  }
+}
 
 main {
     max-width: 1300px;
