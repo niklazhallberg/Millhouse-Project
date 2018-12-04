@@ -1,6 +1,6 @@
 <div class="card-deck post-row">
     <?php foreach($index_posts as $post): ?>
-
+		<div class="col-12 col-md-6 col-lg-4">
              <div class="card">
                <img class="card-img-top" src="../images/<?= $post["image"]; ?>" alt="Blogpost image">
 
@@ -27,6 +27,7 @@
                <input type="hidden" id="post-id" name="post-id" value="<?= $post["id"]; ?>">
              </div>
              </div>
+         </div>
   
 
 
