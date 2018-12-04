@@ -8,7 +8,7 @@ $title = $_POST["title"];
 $description = $_POST["description"];
 $user_id = $_SESSION["user_id"];
 $image = $_FILES["image"];
-$category = $_POST["drone"];
+$category = $_POST["category"];
 
 if(empty($title) || empty($description) || empty($image) || empty($category)){
   header('Location: ../views/add_post.php?error= Fill in all fields, please!');
