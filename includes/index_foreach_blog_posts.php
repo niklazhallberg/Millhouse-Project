@@ -1,5 +1,4 @@
-<div class="card-deck justify-content-center post-row">
-    <?php foreach($index_posts as $post): ?>
+<?php foreach($index_posts as $post): ?>
 		<div class="col-12 col-md-6 col-lg-4">
              <div class="card">
                <img class="card-img-top" src="../images/<?= $post["image"]; ?>" alt="Blogpost image">
@@ -41,7 +40,4 @@
   
 
 
-<?php endforeach;
-
-?>
-</div>
+<?php endforeach;?>
