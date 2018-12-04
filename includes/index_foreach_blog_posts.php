@@ -20,11 +20,21 @@
 				<hr>
 				<?php echo "Posted: " . date("Y/m/d") . "<br>"; ?>
 				<p class="card-text"><small class="text-muted">Created by: <?= $_SESSION["username"]; ?> from Millhouse</small></p>
+
 				<?php if($user->isAdmin()){?>
-				<button class="go-to-edit-page" type="button"><a href="../views/edit_post.php" class="btn btn-default">Edit post</a></button>
+
+				<div class="card-footer">
+
+      			<button class="go-to-edit-page" type="button"><a href="../views/edit_post.php" class="btn btn-default">Edit post</a></button>
+
+      			<button class="go-to-edit-page" type="button"><a href="../views/edit_post.php" class="btn btn-default">Delete post</a></button>
+
+    	     	</div>
+
 				<?php } ?>
 
                <input type="hidden" id="post-id" name="post-id" value="<?= $post["id"]; ?>">
+               
              </div>
              </div>
          </div>
