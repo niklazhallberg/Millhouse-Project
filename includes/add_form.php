@@ -6,8 +6,7 @@
   ?>
   <p>Choose your category:</p>
   <div>
-    <input type="radio" id="watches" name="drone" value="1"
-           checked>
+    <input type="radio" id="watches" name="drone" value="1" checked>
     <label for="watches">Watches</label>
   </div>
 
@@ -20,9 +19,11 @@
     <input type="radio" id="furnishing" name="drone" value="3">
     <label for="furnishing">Furnishing</label>
   </div>
-  <input type="text" name="title" placeholder="Heading"><br>
-    <textarea name="description" rows="10" cols="60"></textarea><br>
-    <input type="file" name="image" id="image" accept="image/png, image/jpeg">
+    <label for="title">Title</label>
+    <input type="text" name="title" placeholder="Heading" required><br>
+    <label for="description">Description</label>
+    <textarea name="description" rows="10" cols="60" required></textarea><br>
+    <input type="file" name="image" id="image" accept="image/png, image/jpeg" required>
 
     <input type="submit" value="Create post">
 
