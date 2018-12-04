@@ -18,58 +18,135 @@ Secondary Colors:
 */
 
 
-h1, h2, h3, h4 {
+h1, 
+h2, 
+h3, 
+h4 {
 	font-family: 'Merriweather', serif;
 }
 
 h3 {
 	margin-top: 0.5rem;
+	font-size: 1.5em;
 }
 
-p {
+p,
+span {
 	font-family: 'Open Sans', sans-serif;
+	color: #252525;
 }
 
 a {
-	 color: #6E6BFC;
+	 color: #1C3045;
 }
 
 body {
-	background-color: white;
+	background-color: #F0F0F0;
 }
+
+.ml-0 {
+	margin-left: 0 !important;
+}
+.mr-0 {
+	margin-right: 0 !important;
+}
+
+
+/* ---------------------------------HEADER ----------------------------------*/
 
 header {
 	background-color: #D7BCC8;
+	height: 7em;
+	margin-bottom: 3em;
+}
+.header {
+	height: 7em;
 }
 
 .header-logo {
-	margin: 1em 0;
+    position: absolute;
+    display: block;
+	left: 50%;
+	transform: translate3d(-50%, 0, 0);
 }
 
 .header-logo img {
-	margin-left: auto;
-	margin-right: auto;
+	max-height: 4em;
+}
+.header-buttons {
+	margin-right: 1em;
 }
 
-img{
-	max-width: 100%;
+
+/* ----------------------------BUTTONS-----------------------------------------*/
+
+.button {
+	display: inline-block;
+	text-transform: uppercase;
+	border-radius: 4px;
+	background-color: transparent;
+	border: none;
+	color: #FFFFFF;
+	text-align: center;
+	font-size: 12px;
+	letter-spacing: 1px;
+	padding: 10px;
+	width: 120px;
+	transition: all 0.5s;
+	cursor: pointer;
+	margin: 5px;
+  }
+  
+  .button span {
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	transition: 0.5s;
+  }
+  
+  .button span:after {
+	content: '\00bb';
+	position: absolute;
+	opacity: 0;
+	top: 0;
+	right: -20px;
+	transition: 0.5s;
+	margin-top: -8px;
+    font-size: 20px;
+  }
+  
+  .button:hover span {
+	padding-right: 25px;
+  }
+  
+  .button:hover span:after {
+	opacity: 1;
+	right: 0;
+  }
+
+
+
+
+
+
+/* 
+.go-to-add-page a {
+	color: black;
 }
 
-main {
-    max-width: 1400px;
-    background-color: #F0F0F0;
-    margin: 0 auto;
+.logout-button{
+	text-align: right;
 }
 
-.index-sidebar{
-    background-color: #A6C9C6;
-    padding:2em;
-}
+.logout-button a{
+	margin-right: 1.5em;
+	color: red;
+} */
 
-.blogpost-section{
-    padding: 2em;
-    text-align: left;
-}
+
+
+
+/* ---------------------------REGISTER/LOGIN--------------------------- */
 
 .register-box {
 	text-align: center;
@@ -97,31 +174,28 @@ input {
 	margin-bottom: 10px;
 }
 
-.ml-0 {
-	margin-left: 0 !important;
-}
-.mr-0 {
-	margin-right: 0 !important;
+
+/* ----------------------------INDEX -----------------------------------------*/
+
+
+main {
+    max-width: 1300px;
+    background-color: #F0F0F0;
+    margin: 0 auto;
 }
 
-.add-post, .comment-form {
-	text-align: center;
+.index-sidebar{
+    background-color: #A6C9C6;
+	padding:1em;
 }
-.comment-form textarea{
-    height: 100px;
-    max-width: 500px;
-    width: 80%;
-}
-
-/* För redigering  
 
 .post-row {
 	margin-bottom: 1.5em;
-	height: 15em;
+	height: auto;
 }
 
 .image-row{
-	min-height: 15em;
+	height: 20em;
 	overflow: hidden;
 	background-position: center;
 }
@@ -132,37 +206,46 @@ input {
 	min-height: 100%;
 }
 
-*/
+/* ----------------------------FORM-----------------------------------------*/
 
-.go-to-add-page a {
-	color: black;
+
+.add-post, .comment-form {
+	text-align: center;
 }
-
-
-.logout-button{
-	text-align: right;
+.comment-form textarea{
+    height: 100px;
+    max-width: 500px;
+    width: 80%;
 }
+ 
 
-.logout-button a{
-	margin-right: 1.5em;
-	color: red;
 
-.go-to-edit-page a {
-	color: black;
+
+
+/* ----------------------------MEDIAQUERIES-----------------------------------------*/
+
+
+
+@media screen and (max-width: 768px) {
+
+	.header-logo {
+		left: 0;
+		transform: none;
+		margin-left: 1em;
+	}
+	.header-logo img {
+		max-height: 3em;
+	}
 
 }
 
 /* Small devices (tablets, 768px and up) */
 @media screen and (min-width: 768px) {
 
-.blogpost-section{
-		text-align: left;
-}
-
-.comment-form textarea{
-    height: 150px;
-    width: 60%;
-}
+	.comment-form textarea{
+		height: 150px;
+		width: 60%;
+	}
 
 }
 
