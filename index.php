@@ -34,7 +34,7 @@ if(isset($_GET["delete_post"])){
 
          <!-- ASIDE SECTION WITH ARTICLE CATERGORIES --> 
 
-         <aside class="col-12 col-md-3 index-sidebar">
+         <aside class="col-12 col-md-2 index-sidebar">
 
           <?php include 'includes/index_sidebar_blog_posts.php'; ?>
 
