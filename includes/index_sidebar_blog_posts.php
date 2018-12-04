@@ -1,8 +1,3 @@
-<?php 
-
-if($user->isAdmin()) {
-            include 'includes/go_to_add_page_button.php';
-          }?>
 
           <h3>Recent</h3>
           <ul>
