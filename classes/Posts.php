@@ -164,7 +164,7 @@ class Posts
                 [
                     ":id" => $post_id
                 ]
-            );  
+            );
             
         }catch(PDOException $error){
             

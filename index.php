@@ -6,8 +6,9 @@ if(!$user->isLoggedIn()) {
 }
 
 if(isset($_GET["delete_post"])){
-  $post_id = $_GET["delete_post"];
-  $delete_post = $posts->deletePostWithId($post_id);
+    $post_id = $_GET["delete_post"];
+    $delete_post = $posts->deletePostWithId($post_id);
+    $delete_comment_from_post = $comments->deleteCommentsWithPostId($post_id);
 }
 ?>
 

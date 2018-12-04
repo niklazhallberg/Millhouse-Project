@@ -61,5 +61,20 @@ class Comments
             echo $error->getMessage();
         }   
     }
+    
+    public function deleteCommentsWithPostId($post_id){
+        try{
+            //delets all comments with same post id 
+            $delete_comment_from_post = $this->pdo->prepare("DELETE FROM comments WHERE post_id = :post_id");
+            $delete_comment_from_post->execute(
+                [
+                    ":post_id" => $post_id
+                ]
+            );
+        }catch(PDOException $error){
+            
+            echo $error->getMessage();
+        }
+    }
 
 }
