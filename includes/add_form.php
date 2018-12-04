@@ -14,12 +14,11 @@
     </div>
     <p>Choose your category:</p>
     <div>
-      <input type="radio" id="watches" name="drone" value="1" checked>
-      <label for="watches">Watches</label>
-      <input type="radio" id="sunglasses" name="drone" value="2">
-      <label for="sunglasses">Sunglasses</label>
-      <input type="radio" id="furnishing" name="drone" value="3">
-      <label for="furnishing">Furnishing</label>
+      <select name="category">
+        <option value="1">Watches</option>
+        <option value="2">Sunglasses</option>
+        <option value="3">Furnishing</option>
+      </select>
     </div>
     <br>
     <input type="file" name="image" id="image" accept="image/png, image/jpeg" required>
