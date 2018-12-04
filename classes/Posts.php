@@ -42,6 +42,57 @@ class Posts
 
     }
 
+    public function getLatestWatchPosts($number_of_watch_posts) {
+
+        try {
+            $statement = $this->pdo->prepare("SELECT * FROM posts WHERE category_id = '1' ORDER BY id DESC LIMIT $number_of_watch_posts");
+            $statement->execute();
+            $get_five_posts = $statement->fetchAll(PDO::FETCH_ASSOC);
+
+            return $get_five_posts;
+
+           }
+           catch(PDOException $error)
+           {
+               echo $error->getMessage();
+           }
+
+    }
+
+      public function getLatestSunglassesPosts($number_of_sunglasses_posts) {
+
+        try {
+            $statement = $this->pdo->prepare("SELECT * FROM posts WHERE category_id = '2' ORDER BY id DESC LIMIT $number_of_sunglasses_posts");
+            $statement->execute();
+            $get_five_posts = $statement->fetchAll(PDO::FETCH_ASSOC);
+
+            return $get_five_posts;
+
+           }
+           catch(PDOException $error)
+           {
+               echo $error->getMessage();
+           }
+
+    }
+
+    public function getLatestFurnishingPosts($number_of_furnishing_posts) {
+
+        try {
+            $statement = $this->pdo->prepare("SELECT * FROM posts WHERE category_id = '3' ORDER BY id DESC LIMIT $number_of_furnishing_posts");
+            $statement->execute();
+            $get_five_posts = $statement->fetchAll(PDO::FETCH_ASSOC);
+
+            return $get_five_posts;
+
+           }
+           catch(PDOException $error)
+           {
+               echo $error->getMessage();
+           }
+
+    }
+
     public function uploadImage($image) {
 
       try {
