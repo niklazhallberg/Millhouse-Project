@@ -217,9 +217,15 @@ main {
     max-width: 500px;
     width: 80%;
 }
- 
 
+/* ----------------------------SINGLE POST-----------------------------------------*/
 
+.card{
+    margin: 10px auto !important;
+}
+.single-post p{
+    text-align: center;
+}
 
 
 /* ----------------------------MEDIAQUERIES-----------------------------------------*/

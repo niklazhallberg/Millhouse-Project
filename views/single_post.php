@@ -21,16 +21,15 @@ include '../classes/call.php';
       //looping through array and printing post from databse
       foreach($post_to_print as $post){ ?>
 
-           <div class="col-10">
+           <div class="col-6">
 
            <h2> <?= $post["title"]; ?> </h2>
-           <div class="sexy_line"></div>
 
            <img class="single-post-img" src="../images/<?= $post["image"]; ?>" alt="image not found">
            </div>
 
            <div class="col-10">
-           <div class="sexy_line"></div>
+           <hr>
            <p> <?= $post["description"]; ?> </p>
            <!-- if loged in user is admin, show delete post button -->
             <?php if($user->isAdmin()){ ?>
@@ -39,31 +38,35 @@ include '../classes/call.php';
 } ?>
            
            </div>
-
-<?php } ?>
-
+<?php } ?>   
             <div class="col-10">
-            <div class="sexy_line"></div>
+            <hr>
             <?php
                 $comments_to_print = $comments->getCommentsWithId($post_id);
-                
                 foreach($comments_to_print as $comment){ ?>
-
-            <p><?= $comment["content"]; ?></p>
-            <h5>Created by <?= $comment["created_by"]; ?></h5>
-            <!-- if loged in user is admin, show delete comment button -->
-            <?php if($user->isAdmin()){ ?>
-            <a href="../includes/delete_comment_sql.php?delete_comment=<?=$comment["comment_id"]?>">Delete comment</a>
+                
+                <div class="card border-light mb-2" style="max-width: 25rem;">
+                <div class="card-header">Commented by <?= $comment["created_by"]; ?></div>
+                <div class="card-body">
+                <p class="card-text"><?= $comment["content"]; ?></p>
+                </div>
+                
+                <!-- if loged in user is admin, show delete comment button -->
+        <?php if($user->isAdmin()){ ?>
+        <div class="card-footer bg-transparent">
+        <a href="../includes/delete_comment_sql.php?delete_comment=<?=$comment["comment_id"]?>"><span>Delete comment</span></a>
+        </div>
 <?php
-}
- } ?>
+}?>
+</div>
+ <?php } ?>
             </div>
 
             <div class="col-10">
-              <div class="sexy_line"></div>
+              <hr>
               <form class="comment-form" action="../includes/add_comment_sql.php" method="POST">
               <label for="comment-field"><h3>Leave comment as <?= $_SESSION["username"]; ?></h3></label><br />
-              <textarea name="content"></textarea><br />
+              <textarea name="content" placeholder="Start the discussion..."></textarea><br />
 
               <input type="hidden" name="id" value="<?= $_SESSION["post_id"] ?>">
 
@@ -71,6 +74,7 @@ include '../classes/call.php';
               </form>
 
             </div>
+            
    </div>
 </main>
 
