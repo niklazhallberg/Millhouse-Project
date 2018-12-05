@@ -1,4 +1,6 @@
 
+          <h2 class="h2-sidebar">Blog categories<h2>
+
           <h3>Watches</h3>
           <ul>
             <?php 
