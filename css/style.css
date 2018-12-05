@@ -220,6 +220,32 @@ main {
 /* FOOTER*/
 
 footer {
+	background-color: #1C3045;
+	margin-top: 3em;
+}
+
+.footer {
+	height: 7em;
+}
+
+.footer-logo {
+  position: absolute;
+  display: block;
+	left: 50%;
+	transform: translate3d(-50%, 0, 0);
+}
+
+.footer-logo img {
+	max-height: 4em;
+}
+
+.footer-icons i {
+	font-size: 3em;
+	color: white;
+	margin: 0 0.5em 0.5em 0.5em;
+}
+
+/*footer {
 	margin-top: 250px;
 	height: 250px;
 	background-color: #1C3045;
@@ -232,7 +258,7 @@ em.pinterest{
     height: 24px;
     width: 24px;
     display: block;
-}
+}*/
 
 /* ----------------------------FORM-----------------------------------------*/
 
