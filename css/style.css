@@ -40,7 +40,7 @@ span {
 
 a {
 	 color: #1C3045;
-	 font-size: 0.9em;
+	 font-size: 0.8em;
 }
 
 body {
@@ -179,6 +179,10 @@ main {
     object-fit: cover;
 }
 
+.card img:hover { 
+  opacity: 0.8; 
+}
+
 .date-text {
 
     color: #6c757d!important;
@@ -186,12 +190,15 @@ main {
     font-weight: 400;
 }
 
+.post-box{
+	padding-bottom: 25px;
+}
 
 .index-sidebar{
     background-color: #95B8D1;
 	padding:1em;
 	margin: 10px auto;
-	height: 1500px;
+	height: 1000px;
 	border-radius: 1%;
 }
 

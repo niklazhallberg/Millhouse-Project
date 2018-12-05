@@ -7,7 +7,7 @@
 
             /* NUMBER OF WATCH POSTS DISPLAYED IN SIDEBAR */ 
 
-            $number_of_watch_posts = 10;
+            $number_of_watch_posts = 5;
             $watch_posts = $posts->getLatestWatchPosts($number_of_watch_posts);
             include 'includes/index_sidebar_foreach_watch_post.php'; ?>
 
@@ -18,7 +18,7 @@
 
             /* NUMBER OF SUNGLASSES POSTS DISPLAYED IN SIDEBAR */ 
 
-            $number_of_sunglasses_posts = 10;
+            $number_of_sunglasses_posts = 5;
             $sunglasses_posts = $posts->getLatestSunglassesPosts($number_of_sunglasses_posts);
             include 'includes/index_sidebar_foreach_sunglasses_post.php'; ?>
 
@@ -29,13 +29,13 @@
 
             /* NUMBER OF FURNISHING POSTS DISPLAYED IN SIDEBAR */
 
-            $number_of_furnishing_posts = 10;
+            $number_of_furnishing_posts = 5;
             $furnishing_posts = $posts->getLatestFurnishingPosts($number_of_furnishing_posts);
             include 'includes/index_sidebar_foreach_furnishing_post.php'; ?>
 
           </ul>
           
-         <h3>Most recent</h3>
+         <h3>Recent Posts</h3>
           <ul>
             <?php   
 

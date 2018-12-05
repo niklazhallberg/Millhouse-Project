@@ -1,7 +1,9 @@
 <?php foreach($index_posts as $post): ?>
-		<div class="col-12 col-md-6 col-lg-4">
+		<div class="col-12 col-md-6 col-lg-4 post-box">
              <div class="card">
-               <img class="card-img-top" src="../images/<?= $post["image"]; ?>" alt="Blogpost image">
+               <a href="../views/single_post.php?post_id=<?=$post["id"]?>">
+			   <img class="card-img-top" src="../images/<?= $post["image"]; ?>" alt="Blogpost image">
+               </a>
 
              <div class="card-body">
 			   <h3 class="card-title"><?= $post["title"]; ?></h3>
