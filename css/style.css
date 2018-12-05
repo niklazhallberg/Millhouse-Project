@@ -245,6 +245,22 @@ footer {
 	margin: 0 0.5em 0.5em 0.5em;
 }
 
+.footer-links ul {
+	padding: 0 !important;
+}
+
+.footer-links li a {
+	color: white;
+	list-style: none;
+	margin-right: 0.5em;
+}
+
+.footer-links li {
+	color: white;
+	list-style: none;
+	display: inline;
+}
+
 /*footer {
 	margin-top: 250px;
 	height: 250px;
