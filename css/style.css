@@ -245,6 +245,10 @@ footer {
 	margin: 0 0.5em 0.5em 0.5em;
 }
 
+.footer-icons i:hover {
+	color: #95B8D1;
+}
+
 .footer-links ul {
 	padding: 0 !important;
 }
