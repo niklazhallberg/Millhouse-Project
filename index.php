@@ -5,6 +5,7 @@ if(!$user->isLoggedIn()) {
   $user->redirect('views/login.php');
 }
 
+//if get is sent from single_post to delete post, delete post and comments
 if(isset($_GET["delete_post"])){
     $post_id = $_GET["delete_post"];
     $delete_post = $posts->deletePostWithId($post_id);

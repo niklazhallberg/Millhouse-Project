@@ -11,12 +11,6 @@
         } ?>
       </div>
 
-      <div>
-        <?php if($user->isAdmin()){
-          include 'add_post_button.php';
-        } ?>
-      </div>
-
     </div>
   </div>
 </header>

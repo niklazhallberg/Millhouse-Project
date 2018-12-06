@@ -172,12 +172,14 @@ class Posts
     
     public function getRandomPosts($category){
             //selects 3 posts from db with category id
-            $random_posts = $this->pdo->prepare("SELECT * FROM posts WHERE category_id = :id ORDER BY RAND() LIMIT 3");
+            $random_posts = $this->pdo->prepare("SELECT * FROM posts WHERE category_id = :category_id ORDER BY RAND() LIMIT 3");
             $random_posts->execute(
                 [
-                    ":id" => $category
+                    ":category_id" => $category
                 ]
-            );       
+            );
+        
+        return $random_posts;
 }
 
 

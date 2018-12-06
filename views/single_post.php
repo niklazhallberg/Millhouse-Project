@@ -75,51 +75,35 @@ include '../classes/call.php';
             </div>
             
             <aside class="col-12 col-md-3">
+             <h2>Recommended</h2>
+             <div class="card-deck">
               <?php
-                $random_posts = $posts->getRandomPosts($category);
-                     var_dump($random_posts);
-                     
+    
+                $random_posts = $posts->getRandomPosts($category);     
                 foreach($random_posts as $rand)
-                {
-                    echo $rand["title"];
-                }
+                { ?>
+                
+                    <div class="col-12">
+                    <div class="card">
+                       <img class="card-img-top" src="<?= $rand["image"]; ?>" alt="Card image cap">
+                        <div class="card-body">
+                            <h3 class="card-title"> <?= $rand["title"]; ?> </h3>
+                            <?php $str = $rand["description"];
+                            if( strlen($str) > 100) {
+   				            $str = explode( "\n", wordwrap($str, 150));
+   				            $str = $str[0] . '...'; 
+                            }?>
+
+                       <p class="card-text"><?= $str; ?></p>
+                        </div>
+                    </div>
+                    </div>
+                    
+               <?php }
                 ?>
-               <h2>Recommended</h2>
-                <div class="card-deck">
-                  
-                   <div class="col-12">
-                    <div class="card">
-                       <img class="card-img-top" src="../images/bildtest.jpg" alt="Card image cap">
-                        <div class="card-body">
-                            <h3 class="card-title">Card</h3>
-                            <p>content vfnevounefjiv vfbjfaei vfeav vvbaiisx kxsnx </p>
-                        </div>
-                    </div>
-                    </div>
                     
-                    <div class="col-12">
-                    <div class="card">
-                       <img class="card-img-top" src="../images/bildtest.jpg" alt="Card image cap">
-                       
-                        <div class="card-body">
-                            <h3 class="card-title">Card</h3>
-                            <p>content vfnevounefjiv vfbjfaei vfeav vvbaiisx kxsnx </p>
-                        </div>
-                    </div>
-                    </div>
-                    
-                    <div class="col-12">
-                    <div class="card">
-                       <img class="card-img-top" src="../images/bildtest.jpg" alt="Card image cap">
-                        <div class="card-body">
-                            <h3 class="card-title">Card</h3>
-                            <p>content vfnevounefjiv vfbjfaei vfeav vvbaiisx kxsnx </p>
-                        </div>
-                    </div>
-                    </div>
-                    
-                </div>
-      </aside>
+         </div>
+         </aside>
             
         </div>
         </div>
