@@ -24,23 +24,22 @@
 				</div>
 				<p class="card-text"><small class="text-muted">By <?= $_SESSION["username"]; ?></small></p>
 
+            
+                 </div>
 				<?php if($user->isAdmin()){?>
 
 				<div class="card-footer">
 
-      			<button class="go-to-edit-page" type="button"><a href="../views/edit_post.php" class="btn btn-default">Edit post</a></button>
+                    <button class="go-to-edit-page" type="button"><a href="../views/edit_post.php" class="btn btn-default"><span>Edit post</span></a></button>
 
-      			<button class="go-to-edit-page" type="button"><a href="../views/edit_post.php" class="btn btn-default">Delete post</a></button>
+      			<button class="go-to-edit-page" type="button"><a href="../views/edit_post.php" class="btn btn-default"><span>Delete post</span></a></button>
 
     	     	</div>
 
 				<?php } ?>
-
-               <input type="hidden" id="post-id" name="post-id" value="<?= $post["id"]; ?>">
                
              </div>
              </div>
-         </div>
   
 
 

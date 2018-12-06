@@ -10,25 +10,26 @@ include '../classes/call.php';
 <main class="container-fluid">
   <div class="row justify-content-center">
 
-   <div class="col-12"><a href="../index.php">Back to startpage</a></div>
+  <div class="col-11">
+  
+  <a href="../index.php">Back to startpage</a>
+  
+  <div class="row justify-content-center">
+   <div class="col-12 col-md-8">
     <?php
       
       //save post id from get to variable and call method in class posts
       $post_id = $_GET["post_id"];
       $_SESSION["post_id"] = $post_id;
-      $post_to_print = $posts->getPostWithId($post_id);
-
+      $post_to_print = $posts->getPostWithId($post_id); 
+      
       //looping through array and printing post from databse
       foreach($post_to_print as $post){ ?>
 
-           <div class="col-6">
-
            <h2> <?= $post["title"]; ?> </h2>
 
-           <img class="single-post-img" src="../images/<?= $post["image"]; ?>" alt="image not found">
-           </div>
+           <img src="../images/<?= $post["image"]; ?>" alt="image not found">
 
-           <div class="col-10">
            <hr>
            <p> <?= $post["description"]; ?> </p>
            <!-- if loged in user is admin, show delete post button -->
@@ -36,10 +37,9 @@ include '../classes/call.php';
             <a href="../index.php?delete_post=<?= $post_id ?>">Delete this post</a>
 <?php
 } ?>
-           
-           </div>
+
 <?php } ?>   
-            <div class="col-10">
+
             <hr>
             <?php
                 $comments_to_print = $comments->getCommentsWithId($post_id);
@@ -60,9 +60,7 @@ include '../classes/call.php';
 }?>
 </div>
  <?php } ?>
-            </div>
 
-            <div class="col-10">
               <hr>
               <form class="comment-form" action="../includes/add_comment_sql.php" method="POST">
               <label for="comment-field"><h3>Leave comment as <?= $_SESSION["username"]; ?></h3></label><br />
@@ -72,10 +70,51 @@ include '../classes/call.php';
 
               <input type="submit" value="Comment">
               </form>
-
+              
             </div>
             
-   </div>
+            
+            <aside class="col-12 col-md-3">
+               <h2>Recomended posts</h2>
+                <div class="card-deck">
+                  
+                   <div class="col-12">
+                    <div class="card">
+                       <img class="card-img-top" src="../images/bildtest.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h3 class="card-title">Card</h3>
+                            <p>content vfnevounefjiv vfbjfaei vfeav vvbaiisx kxsnx </p>
+                        </div>
+                    </div>
+                    </div>
+                    
+                    <div class="col-12">
+                    <div class="card">
+                       <img class="card-img-top" src="../images/bildtest.jpg" alt="Card image cap">
+                       
+                        <div class="card-body">
+                            <h3 class="card-title">Card</h3>
+                            <p>content vfnevounefjiv vfbjfaei vfeav vvbaiisx kxsnx </p>
+                        </div>
+                    </div>
+                    </div>
+                    
+                    <div class="col-12">
+                    <div class="card">
+                       <img class="card-img-top" src="../images/bildtest.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h3 class="card-title">Card</h3>
+                            <p>content vfnevounefjiv vfbjfaei vfeav vvbaiisx kxsnx </p>
+                        </div>
+                    </div>
+                    </div>
+                    
+                </div>
+      </aside>
+            
+        </div>
+        </div>
+    </div>
 </main>
 
 

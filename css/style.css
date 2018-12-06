@@ -46,6 +46,9 @@ a {
 body {
 	background-color: #F0F0F0;
 }
+img{
+    width: 100%;
+}
 
 .ml-0 {
 	margin-left: 0 !important;
@@ -190,10 +193,6 @@ main {
     font-weight: 400;
 }
 
-.post-box{
-	padding-bottom: 25px;
-}
-
 .index-sidebar{
     background-color: #95B8D1;
 	padding:1em;
@@ -313,10 +312,7 @@ em.pinterest{
 /* ----------------------------SINGLE POST-----------------------------------------*/
 
 .card{
-    margin: 10px auto !important;
-}
-.single-post p{
-    text-align: center;
+    margin: 10px 0px !important;
 }
 
 
@@ -324,7 +320,7 @@ em.pinterest{
 
 
 
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
 
 	.header-logo {
 		left: 0;
@@ -340,6 +336,9 @@ em.pinterest{
 /* Small devices (tablets, 768px and up) */
 @media screen and (min-width: 768px) {
 
+    main{
+        width: 90% !important;
+    }
 	.comment-form textarea{
 		height: 150px;
 		width: 60%;
