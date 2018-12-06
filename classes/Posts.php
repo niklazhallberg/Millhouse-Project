@@ -30,9 +30,9 @@ class Posts
         try {
             $statement = $this->pdo->prepare("SELECT * FROM posts ORDER BY id DESC LIMIT $number_of_posts");
             $statement->execute();
-            $get_five_posts = $statement->fetchAll(PDO::FETCH_ASSOC);
+            $get_posts = $statement->fetchAll(PDO::FETCH_ASSOC);
 
-            return $get_five_posts;
+            return $get_posts;
 
            }
            catch(PDOException $error)
@@ -47,9 +47,9 @@ class Posts
         try {
             $statement = $this->pdo->prepare("SELECT * FROM posts WHERE category_id = '1' ORDER BY id DESC LIMIT $number_of_watch_posts");
             $statement->execute();
-            $get_five_posts = $statement->fetchAll(PDO::FETCH_ASSOC);
+            $get_watch_posts = $statement->fetchAll(PDO::FETCH_ASSOC);
 
-            return $get_five_posts;
+            return $get_watch_posts;
 
            }
            catch(PDOException $error)
@@ -64,9 +64,9 @@ class Posts
         try {
             $statement = $this->pdo->prepare("SELECT * FROM posts WHERE category_id = '2' ORDER BY id DESC LIMIT $number_of_sunglasses_posts");
             $statement->execute();
-            $get_five_posts = $statement->fetchAll(PDO::FETCH_ASSOC);
+            $get_sunglasses_posts = $statement->fetchAll(PDO::FETCH_ASSOC);
 
-            return $get_five_posts;
+            return $get_sunglasses_posts;
 
            }
            catch(PDOException $error)
@@ -81,9 +81,9 @@ class Posts
         try {
             $statement = $this->pdo->prepare("SELECT * FROM posts WHERE category_id = '3' ORDER BY id DESC LIMIT $number_of_furnishing_posts");
             $statement->execute();
-            $get_five_posts = $statement->fetchAll(PDO::FETCH_ASSOC);
+            $get_furnishing_posts = $statement->fetchAll(PDO::FETCH_ASSOC);
 
-            return $get_five_posts;
+            return $get_furnishing_posts;
 
            }
            catch(PDOException $error)
@@ -98,9 +98,7 @@ class Posts
       try {
 
           $temporary_location = $image["tmp_name"];
-
           $new_location = "../images/" . $image["name"];
-
           $upload_ok = move_uploaded_file($temporary_location, $new_location);
 
 
