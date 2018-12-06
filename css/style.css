@@ -23,7 +23,8 @@ Secondary Colors:
 h1,
 h2,
 h3,
-h4 {
+h4,
+label {
 	font-family: 'Merriweather', serif;
 }
 
@@ -46,6 +47,7 @@ a {
 body {
 	background-color: #F0F0F0;
 }
+
 
 .ml-0 {
 	margin-left: 0 !important;
@@ -74,7 +76,7 @@ header {
 }
 
 .header-logo img {
-	max-height: 4em;
+	max-height: 5em;
 }
 .header-buttons {
 	margin-right: 1em;
@@ -91,7 +93,7 @@ header {
 	border: none;
 	color: #F0F0F0;
 	text-align: center;
-	font-size: 12px;
+	font-size: 1em;
 	letter-spacing: 1px;
 	padding: 10px;
 	width: 120px;
@@ -133,7 +135,7 @@ header {
 /* ---------------------------REGISTER/LOGIN--------------------------- */
 
 .register-box {
-	text-align: center;
+	/* text-align: center; */
 	background-color: #D7BCC8;
 	border-radius: 5%;
 	padding: 20px;
@@ -142,17 +144,17 @@ header {
   margin-bottom: 400px;
 }
 
-.register-box p {
+/* .register-box p {
 	text-align: center;
-}
+} */
 
-.register-box input {
+/* .register-box input {
 	margin: 10px 20px;
-}
+} */
 
-form {
+/* form {
 	text-align: center;
-}
+} */
 
 input {
 	margin-bottom: 10px;
@@ -186,7 +188,6 @@ main {
     font-weight: 400;
 }
 
-
 .index-sidebar{
     background-color: #95B8D1;
 	padding:1em;
@@ -217,7 +218,7 @@ main {
 	min-height: 100%;
 }
 
-/* FOOTER*/
+/* ---------------------------------------FOOTER--------------------------------*/
 
 footer {
 	background-color: #1C3045;
@@ -283,7 +284,7 @@ em.pinterest{
 /* ----------------------------FORM-----------------------------------------*/
 
 
-.add-post, .comment-form {
+.add-post, .comment-form, .edit-post-form {
 	text-align: left;
 }
 
@@ -302,14 +303,52 @@ em.pinterest{
     max-width: 500px;
     width: 80%;
 }
+label {
+	display: block;
+}
+input[type=text],
+textarea,
+.input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 3px solid #ccc;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    resize: none;
+}
+
+input[type=text]:focus,
+textarea:focus {
+    border: 3px solid #60495A;
+} 
+.radio-buttons {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1em;
+}
+.textarea-add {
+    min-width: 100%;
+    height: 20em;
+}
+.radio {
+    margin-right: -2em;
+}
+.edit-post-form {
+	margin-bottom: 6em;
+}
+.edit-post-section {
+	min-width: 100%;
+}
 
 /* ----------------------------SINGLE POST-----------------------------------------*/
 
 .card{
-    margin: 10px auto !important;
+    margin: 10px 0px !important;
 }
-.single-post p{
-    text-align: center;
+.border-right{
+    border-right: 2px solid black;
 }
 
 
@@ -317,7 +356,7 @@ em.pinterest{
 
 
 
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
 
 	.header-logo {
 		left: 0;
@@ -325,7 +364,7 @@ em.pinterest{
 		margin-left: 1em;
 	}
 	.header-logo img {
-		max-height: 3em;
+		max-height: 4em;
 	}
 
 }
@@ -333,10 +372,21 @@ em.pinterest{
 /* Small devices (tablets, 768px and up) */
 @media screen and (min-width: 768px) {
 
+    main{
+        width: 90% !important;
+    }
 	.comment-form textarea{
 		height: 150px;
 		width: 60%;
 	}
+	.radio {
+        margin-right: -12em;
+    }
+    .radio-buttons {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
 
 }
 

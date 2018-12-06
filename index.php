@@ -17,9 +17,8 @@ if(isset($_GET["delete_post"])){
   <?php include 'includes/header.php'; ?>
 
   <main class="container-fluid">
-    <div class="row">
-     <div class="col-12">
-       <div class="row">
+    <div class="row justify-content-center">
+
          <section class="col-12 col-md-9 blogpost-section">
 
           <!-- VIEW ADD POST DEMO if user = admin -->
@@ -42,14 +41,13 @@ if(isset($_GET["delete_post"])){
 
          <!-- ASIDE SECTION WITH ARTICLE CATERGORIES -->
 
-         <aside class="col-12 col-md-2 index-sidebar">
+         <aside class="col-12 col-md-3 index-sidebar">
 
           <?php include 'includes/index_sidebar_blog_posts.php'; ?>
 
         </aside>
       </div>
-    </div>
-  </div>
+
 </main>
 
 <?php include 'includes/footer.php'; ?>
