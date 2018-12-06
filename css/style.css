@@ -57,6 +57,7 @@ body {
 }
 
 
+
 /* ---------------------------------HEADER ----------------------------------*/
 
 header {
@@ -250,10 +251,6 @@ footer {
 	color: #95B8D1;
 }
 
-.footer-links ul {
-	padding: 0 !important;
-}
-
 .footer-links li a {
 	color: white;
 	list-style: none;
@@ -322,7 +319,7 @@ textarea,
 input[type=text]:focus,
 textarea:focus {
     border: 3px solid #60495A;
-} 
+}
 .radio-buttons {
     display: flex;
     flex-direction: column;

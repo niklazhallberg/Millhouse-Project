@@ -33,7 +33,7 @@ if(isset($_GET["delete_post"])){
 
            /* NUMBER OF POSTS DISPLAYED IN MAIN BLOG */
 
-           $number_of_posts = 11;
+           $number_of_posts = 12;
            $index_posts = $posts->getLatestPosts($number_of_posts);
            include 'includes/index_foreach_blog_posts.php'; ?>
 
