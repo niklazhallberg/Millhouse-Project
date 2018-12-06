@@ -14,8 +14,8 @@ include '../classes/call.php';
   
   <a href="../index.php">Back to startpage</a>
   
-  <div class="row justify-content-center">
-   <div class="col-12 col-md-8">
+  <div class="row">
+   <div class="col-12 col-md-8 border-right">
     <?php
       
       //save post id from get to variable and call method in class posts
@@ -75,7 +75,7 @@ include '../classes/call.php';
             
             
             <aside class="col-12 col-md-3">
-               <h2>Recomended posts</h2>
+               <h2>Recommended</h2>
                 <div class="card-deck">
                   
                    <div class="col-12">

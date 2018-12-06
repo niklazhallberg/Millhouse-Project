@@ -171,6 +171,23 @@ class Posts
             echo $error->getMessage();
         }
     }
+    
+    public function getRandomPosts($category){
+        try{
+            //selects 3 posts from db with category id
+            $random_posts = $this->pdo->prepare("SELECT * FROM posts WHERE category_id = :id ORDER BY RAND() LIMIT 3");
+            $random_posts->execute(
+                [
+                    ":id" => $category
+                ]
+            );
+            
+        }catch(PDOException $error){
+            
+            echo $error->getMessage();
+        }
+        
+}
 
     
 
