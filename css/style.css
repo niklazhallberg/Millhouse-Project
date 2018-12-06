@@ -351,6 +351,9 @@ textarea:focus {
 .card{
     margin: 10px 0px !important;
 }
+.border-right{
+    border-right: 2px solid black;
+}
 
 
 /* ----------------------------MEDIAQUERIES-----------------------------------------*/
