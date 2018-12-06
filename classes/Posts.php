@@ -114,12 +114,12 @@ class Posts
          }
     }
 
-    public function addPost($title, $description, $image, $user_id, $category) {
+    public function addPost($title, $description, $image, $user_name, $category) {
 
         try {
 
             $statement = $this->pdo->prepare("INSERT INTO posts (title, description, created_by, image, category_id) VALUES (:title, :description, :created_by, :image, :category_id)");
-            $statement->execute([":title" => $title, ":description" => $description, ":created_by" => $user_id, ":image" => $image, ":category_id" => $category]);
+            $statement->execute([":title" => $title, ":description" => $description, ":created_by" => $user_name, ":image" => $image, ":category_id" => $category]);
 
             return $statement;
 
@@ -165,14 +165,14 @@ class Posts
                     ":id" => $post_id
                 ]
             );
-            
+
         }catch(PDOException $error){
-            
+
             echo $error->getMessage();
         }
     }
 
-    
+
 
 
 

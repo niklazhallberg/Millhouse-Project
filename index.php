@@ -22,25 +22,25 @@ if(isset($_GET["delete_post"])){
        <div class="row">
          <section class="col-12 col-md-9 blogpost-section">
 
-          <!-- VIEW ADD POST DEMO if user = admin --> 
+          <!-- VIEW ADD POST DEMO if user = admin -->
 
           <?php if($user->isAdmin()){
-          
-           include 'includes/index_add_post_demo.php'; 
+
+           include 'includes/index_add_post_demo.php';
 
            }?>
-    
-           <?php 
+
+           <?php
 
            /* NUMBER OF POSTS DISPLAYED IN MAIN BLOG */
 
-           $number_of_posts = 12;
+           $number_of_posts = 11;
            $index_posts = $posts->getLatestPosts($number_of_posts);
            include 'includes/index_foreach_blog_posts.php'; ?>
 
          </section>
 
-         <!-- ASIDE SECTION WITH ARTICLE CATERGORIES --> 
+         <!-- ASIDE SECTION WITH ARTICLE CATERGORIES -->
 
          <aside class="col-12 col-md-2 index-sidebar">
 
