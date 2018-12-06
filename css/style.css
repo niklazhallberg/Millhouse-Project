@@ -55,6 +55,12 @@ body {
 .mr-0 {
 	margin-right: 0 !important;
 }
+.pl-0 {
+	padding-left: 0 !important;
+}
+.pr-0 {
+	padding-right: 0 !important;
+}
 
 
 /* ---------------------------------HEADER ----------------------------------*/
@@ -348,9 +354,9 @@ textarea:focus {
 
 /* ----------------------------SINGLE POST-----------------------------------------*/
 
-.card{
+/* .card{
     margin: 10px 0px !important;
-}
+} */
 
 
 /* ----------------------------MEDIAQUERIES-----------------------------------------*/
