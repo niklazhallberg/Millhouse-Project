@@ -100,7 +100,7 @@ header {
 	border: none;
 	color: #F0F0F0;
 	text-align: center;
-	font-size: 1em;
+	font-size: .9em;
 	letter-spacing: 1px;
 	padding: 10px;
 	width: 120px;
@@ -146,9 +146,8 @@ header {
 	background-color: #D7BCC8;
 	border-radius: 5%;
 	padding: 20px;
-	max-width: 320px;
-  margin-top: 100px;
-  margin-bottom: 400px;
+  	margin-top: 2em;
+  	margin-bottom: 400px;
 }
 
 /* .register-box p {
@@ -170,11 +169,11 @@ input {
 
 /* ----------------------------INDEX -----------------------------------------*/
 
-.card-columns {
+/* .card-columns {
   @include media-breakpoint-only(md) {
     column-count: 4;
   }
-}
+} */
 
 main {
     max-width: 1500px;
@@ -372,9 +371,9 @@ textarea:focus {
 /* Small devices (tablets, 768px and up) */
 @media screen and (min-width: 768px) {
 
-    main{
+    /* main{
         width: 90% !important;
-    }
+    } */
 	.comment-form textarea{
 		height: 150px;
 		width: 60%;
@@ -386,7 +385,11 @@ textarea:focus {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-    }
+	}
+	.register-box {
+		max-width: 30em;
+
+	}
 
 }
 
