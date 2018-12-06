@@ -52,14 +52,17 @@ class User
 
     public function isAdmin() {
 
-        $statement = $this->pdo->prepare("SELECT * FROM users WHERE username = :username");
-        $statement->execute([":username" => $_SESSION['username']]);
+        if (isset($_SESSION['username'])) {
+            $statement = $this->pdo->prepare("SELECT * FROM users WHERE username = :username");
+            $statement->execute([":username" => $_SESSION['username']]);
 
-        $is_admin = $statement->fetch(PDO::FETCH_ASSOC);
+            $is_admin = $statement->fetch(PDO::FETCH_ASSOC);
 
         if ((int)$is_admin["is_admin"] == 1) {
             return true;
         }
+        }
+       
         
         // $statement = $this->pdo->prepare("SELECT id as admin_rights FROM users JOIN admin ON id = user_id");
         // $statement->execute();

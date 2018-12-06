@@ -26,11 +26,11 @@ include '../includes/head.php';
  					} ?> </p>
 
 			<form action="../includes/login_sql.php" method="POST">
-  				<p>Username</p>
-  				<input type="text" name="username" required>
+  				<label for="username">Username</label>
+  				<input type="text" name="username" id="username" required>
 
-  				<p>Password</p>
-  				<input type="password" name="password" required><br>
+  				<label for="password">Password</label>
+  				<input class="input" type="password" name="password" id="password" required>
   				<input type="submit" value="Login">
 			</form>
 
