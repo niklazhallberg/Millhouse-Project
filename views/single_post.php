@@ -24,7 +24,8 @@ include '../classes/call.php';
       $post_to_print = $posts->getPostWithId($post_id); 
       
       //looping through array and printing post from databse
-      foreach($post_to_print as $post){ ?>
+      foreach($post_to_print as $post){
+       $category = $post["category_id"]; ?>
 
            <h2> <?= $post["title"]; ?> </h2>
 
@@ -73,8 +74,16 @@ include '../classes/call.php';
               
             </div>
             
-            
             <aside class="col-12 col-md-3">
+              <?php
+                $random_posts = $posts->getRandomPosts($category);
+                     var_dump($random_posts);
+                     
+                foreach($random_posts as $rand)
+                {
+                    echo $rand["title"];
+                }
+                ?>
                <h2>Recommended</h2>
                 <div class="card-deck">
                   
