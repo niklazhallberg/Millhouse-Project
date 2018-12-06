@@ -1,4 +1,4 @@
-<div class="card-deck justify-content-center post-row">
+<div class="card-deck post-row">
   <div class="col-12 col-md-6 col-lg-4">
    <div class="card">
     <a href="../views/add_post.php">
