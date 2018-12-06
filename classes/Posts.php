@@ -112,12 +112,12 @@ class Posts
          }
     }
 
-    public function addPost($title, $description, $image, $user_id, $category) {
+    public function addPost($title, $description, $image, $user_name, $category, $post_date) {
 
         try {
 
-            $statement = $this->pdo->prepare("INSERT INTO posts (title, description, created_by, image, category_id) VALUES (:title, :description, :created_by, :image, :category_id)");
-            $statement->execute([":title" => $title, ":description" => $description, ":created_by" => $user_id, ":image" => $image, ":category_id" => $category]);
+            $statement = $this->pdo->prepare("INSERT INTO posts (title, description, created_by, image, category_id, post_date) VALUES (:title, :description, :created_by, :image, :category_id, :post_date)");
+            $statement->execute([":title" => $title, ":description" => $description, ":created_by" => $user_name, ":image" => $image, ":category_id" => $category, ":post_date" => $post_date]);
 
             return $statement;
 
@@ -163,14 +163,24 @@ class Posts
                     ":id" => $post_id
                 ]
             );
-            
+
         }catch(PDOException $error){
-            
+
             echo $error->getMessage();
         }
     }
-
     
+    public function getRandomPosts($category){
+            //selects 3 posts from db with category id
+            $random_posts = $this->pdo->prepare("SELECT * FROM posts WHERE category_id = :id ORDER BY RAND() LIMIT 3");
+            $random_posts->execute(
+                [
+                    ":id" => $category
+                ]
+            );       
+}
+
+
 
 
 

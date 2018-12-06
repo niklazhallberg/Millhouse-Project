@@ -41,7 +41,7 @@ span {
 
 a {
 	 color: #1C3045;
-	 font-size: 0.8em;
+	 font-size: 0.9em;
 }
 
 body {
@@ -146,8 +146,8 @@ header {
 	border-radius: 5%;
 	padding: 20px;
 	max-width: 320px;
-    margin-top: 100px;
-    margin-bottom: 400px;
+  margin-top: 100px;
+  margin-bottom: 400px;
 }
 
 /* .register-box p {
@@ -187,10 +187,6 @@ main {
     object-fit: cover;
 }
 
-.card img:hover { 
-  opacity: 0.8; 
-}
-
 .date-text {
 
     color: #6c757d!important;
@@ -202,7 +198,7 @@ main {
     background-color: #95B8D1;
 	padding:1em;
 	margin: 10px auto;
-	height: 1000px;
+	height: 1500px;
 	border-radius: 1%;
 }
 
@@ -354,9 +350,9 @@ textarea:focus {
 
 /* ----------------------------SINGLE POST-----------------------------------------*/
 
-/* .card{
-    margin: 10px 0px !important;
-} */
+.border-right{
+    border-right: 2px solid black;
+}
 
 
 /* ----------------------------MEDIAQUERIES-----------------------------------------*/
