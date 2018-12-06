@@ -15,9 +15,9 @@ include '../includes/head.php';
 
 <div class="container">
 
-	<main class="row justify-content-center">
+	<main class="row justify-content-center ml-0 mr-0">
 
-			<div class="col-12 col-md-4 register-box">
+			<div class="col-12 register-box">
 
 				<h3>Register</h3>
 
