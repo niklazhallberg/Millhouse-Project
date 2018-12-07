@@ -7,6 +7,9 @@ if(!$user->isLoggedIn()) {
 if(!$user->isAdmin()) {
     $user->redirect('../index.php');
 }
+$post_id = $_GET["post_id"];
+$_SESSION["post_id"] = $post_id;
+$post_to_print = $posts->getPostWithId($post_id);
 ?>
 <?php include '../includes/head.php' ?>
 
