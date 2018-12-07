@@ -10,11 +10,11 @@ include '../classes/call.php';
 <main class="container-fluid">
   <div class="row justify-content-center">
 
-  <div class="col-11">
+  <div class="col-12">
   
   <a href="../index.php">Back to startpage</a>
   
-  <div class="row">
+  <div class="row justify-content-center">
    <div class="col-12 col-md-8 border-right">
     <?php
       
@@ -27,9 +27,9 @@ include '../classes/call.php';
       foreach($post_to_print as $post){
        $category = $post["category_id"]; ?>
 
-           <h2> <?= $post["title"]; ?> </h2>
+           <h2 class="single-post-h2"> <?= $post["title"]; ?> </h2>
 
-           <img src="../images/<?= $post["image"]; ?>" alt="image not found">
+           <img class="single-post-img" src="../images/<?= $post["image"]; ?>" alt="image not found">
 
            <hr>
            <p> <?= $post["description"]; ?> </p>
@@ -43,24 +43,29 @@ include '../classes/call.php';
 
             <hr>
             <?php
+              //calls method to print comments and prints it with foreach loop
                 $comments_to_print = $comments->getCommentsWithId($post_id);
                 foreach($comments_to_print as $comment){ ?>
                 
+                <div class="comment-card">
                 <div class="card border-light mb-2" style="max-width: 25rem;">
-                <div class="card-header">Commented by <?= $comment["created_by"]; ?></div>
+                <div class="card-header blue-header">Commented by <?= $comment["created_by"]; ?></div>
                 <div class="card-body">
                 <p class="card-text"><?= $comment["content"]; ?></p>
+                <div class="small text-right"><?= $comment["comment_date"]; ?></div>
                 </div>
                 
-                <!-- if loged in user is admin, show delete comment button -->
-        <?php if($user->isAdmin()){ ?>
-        <div class="card-footer bg-transparent">
-        <a href="../includes/delete_comment_sql.php?delete_comment=<?=$comment["comment_id"]?>"><span>Delete comment</span></a>
-        </div>
-<?php
-}?>
-</div>
- <?php } ?>
+                <!-- if loged in user is admin, show delete comment button in card footer -->
+                <?php if($user->isAdmin()){ ?>
+                <div class="card-footer bg-transparent">
+                <a href="../includes/delete_comment_sql.php?delete_comment=<?=$comment["comment_id"]?>"><span>Delete comment</span></a>
+                </div>
+                 <?php
+                      }?>
+                </div>
+                </div>
+           
+          <?php } ?>
 
               <hr>
               <form class="comment-form" action="../includes/add_comment_sql.php" method="POST">
@@ -74,36 +79,7 @@ include '../classes/call.php';
               
             </div>
             
-            <aside class="col-12 col-md-3">
-             <h2>Recommended</h2>
-             <div class="card-deck">
-              <?php
-    
-                $random_posts = $posts->getRandomPosts($category);     
-                foreach($random_posts as $rand)
-                { ?>
-                
-                    <div class="col-12">
-                    <div class="card">
-                       <img class="card-img-top" src="<?= $rand["image"]; ?>" alt="Card image cap">
-                        <div class="card-body">
-                            <h3 class="card-title"> <?= $rand["title"]; ?> </h3>
-                            <?php $str = $rand["description"];
-                            if( strlen($str) > 100) {
-   				            $str = explode( "\n", wordwrap($str, 150));
-   				            $str = $str[0] . '...'; 
-                            }?>
-
-                       <p class="card-text"><?= $str; ?></p>
-                        </div>
-                    </div>
-                    </div>
-                    
-               <?php }
-                ?>
-                    
-         </div>
-         </aside>
+            <?php include '../includes/recommended_posts.php'; ?>
             
         </div>
         </div>
