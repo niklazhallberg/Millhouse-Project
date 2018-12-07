@@ -9,7 +9,7 @@ if(!$user->isAdmin()) {
 }
 $post_id = $_GET["post_id"];
 $_SESSION["post_id"] = $post_id;
-$post_to_print = $posts->getPostWithId($post_id);
+$post_to_edit = $posts->getPostWithId($post_id);
 ?>
 <?php include '../includes/head.php' ?>
 
@@ -27,14 +27,16 @@ $post_to_print = $posts->getPostWithId($post_id);
                     <?php if (isset($_GET["error"])){
                     echo $_GET["error"];
                     } ?> </p>
+                    <?php foreach ($post_to_edit as $post) { ?>
 
+                    
                     <form class ="edit-post-form" action="../includes/add_post.inc.php" method="POST" enctype="multipart/form-data">
         
                     <label class="form-label" for="heading">Post title</label>
-                    <input type="text" name="title" id="heading">
+                    <input type="text" name="title" id="heading" value="<?php echo $post['title']; ?>">
                     
                     <label class="form-label" for="post_content">Post description</label>
-                    <textarea class="textarea-add" id="post_content" name="description"></textarea>
+                    <textarea class="textarea-add" id="post_content" name="description" > <?php echo htmlspecialchars($post['description']); ?> </textarea>
 
                     <label class="form-label" for="image">Choose image</label>
                     <input type="file" name="image" id="image" accept="image/png, image/jpeg">
@@ -55,6 +57,7 @@ $post_to_print = $posts->getPostWithId($post_id);
                         <div class="button-container">
                             <button class="button-edit">Add post</button>
                         </div>
+                    <?php } ?>
                     </form>
 
                     
