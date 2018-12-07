@@ -307,8 +307,8 @@ em.pinterest{
 
 .comment-form textarea{
     height: 100px;
-    max-width: 500px;
-    width: 80%;
+    max-width: 600px;
+    width: 90%;
     margin: 0 auto;
 }
 label {
@@ -366,9 +366,10 @@ textarea:focus {
     width: 80%;
     margin: 0 10%;
 }
-.single-post-h2{
+.text-center{
     text-align: center;
 }
+
 
 
 /* ----------------------------MEDIAQUERIES-----------------------------------------*/

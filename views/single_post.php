@@ -9,7 +9,6 @@ include '../classes/call.php';
 
 <main class="container-fluid">
   <div class="row justify-content-center">
-
   <div class="col-12">
   
   <a href="../index.php">Back to startpage</a>
@@ -23,16 +22,33 @@ include '../classes/call.php';
       $_SESSION["post_id"] = $post_id;
       $post_to_print = $posts->getPostWithId($post_id); 
       
-      //looping through array and printing post from databse
+      //looping through array and printing post from database
       foreach($post_to_print as $post){
        $category = $post["category_id"]; ?>
 
-           <h2 class="single-post-h2"> <?= $post["title"]; ?> </h2>
+          
+           <h2 class="text-center"> <?= $post["title"]; ?> </h2>
+           <hr>
+           <div class="row text-center">
+           <div class="col-8">
+           <p>Created by: <?= $post["created_by"]; ?> - On <?= $post["post_date"]; ?></p>
+           </div>
+           <div class="col-4">
+           <p>Share:  <i class="fab fa-twitter-square"></i>
+           <i class="fab fa-facebook-square"></i>
+           <i class="fab fa-instagram"></i>
+           <i class="fab fa-pinterest-square"></i></p>
+           </div>
+           </div>
+           
+           <p class="text-center"><?= $category ?></p>
+           
 
            <img class="single-post-img" src="../images/<?= $post["image"]; ?>" alt="image not found">
 
            <hr>
            <p> <?= $post["description"]; ?> </p>
+           
            <!-- if loged in user is admin, show delete post button -->
             <?php if($user->isAdmin()){ ?>
             <a href="../index.php?delete_post=<?= $post_id ?>">Delete this post</a>
@@ -43,7 +59,7 @@ include '../classes/call.php';
 
             <hr>
             <?php
-              //calls method to print comments and prints it with foreach loop
+              //calls method to print comments and prints it with foreach loop inside a bootstrap card
                 $comments_to_print = $comments->getCommentsWithId($post_id);
                 foreach($comments_to_print as $comment){ ?>
                 
@@ -62,23 +78,25 @@ include '../classes/call.php';
                 </div>
                  <?php
                       }?>
-                </div>
-                </div>
+                </div><!--card-->
+                </div><!--comment-card-->
            
           <?php } ?>
 
+             <!-- form for user to add a comment to the post-->
               <hr>
               <form class="comment-form" action="../includes/add_comment_sql.php" method="POST">
               <label for="comment-field"><h3>Leave comment as <?= $_SESSION["username"]; ?></h3></label><br />
               <textarea name="content" placeholder="Start the discussion..."></textarea><br />
-
-              <input type="hidden" name="id" value="<?= $_SESSION["post_id"] ?>">
+              
+              
 
               <input type="submit" value="Comment">
               </form>
               
             </div>
             
+            <!--aside for recommended posts-->
             <?php include '../includes/recommended_posts.php'; ?>
             
         </div>
