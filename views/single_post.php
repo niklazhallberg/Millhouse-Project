@@ -11,10 +11,8 @@ include '../classes/call.php';
   <div class="row justify-content-center">
   <div class="col-12">
   
-  <a href="../index.php">Back to startpage</a>
-  
   <div class="row justify-content-center">
-   <div class="col-12 col-md-8 border-right">
+   <div class="col-12 col-md-7 col-lg-8 border-right">
     <?php
       
       //save post id from get to variable and call method in class posts
@@ -24,25 +22,21 @@ include '../classes/call.php';
       
       //looping through array and printing post from database
       foreach($post_to_print as $post){
-       $category = $post["category_id"]; ?>
-
+       $category = $post["category_id"];  ?>
           
-           <h2 class="text-center"> <?= $post["title"]; ?> </h2>
+           <h1 class="text-center"> <?= $post["title"]; ?> </h1>
            <hr>
            <div class="row text-center">
-           <div class="col-8">
-           <p>Created by: <?= $post["created_by"]; ?> - On <?= $post["post_date"]; ?></p>
+           <div class="col-12">
+               <p><small class="text-muted">Created by: <?= $post["created_by"]; ?> &nbsp; &#9679; &nbsp; <?= $post["post_date"]; ?></small></p>
            </div>
-           <div class="col-4">
-           <p>Share:  <i class="fab fa-twitter-square"></i>
+           <div class="col-12 text-center">
+           <i class="fab fa-twitter-square"></i>
            <i class="fab fa-facebook-square"></i>
            <i class="fab fa-instagram"></i>
-           <i class="fab fa-pinterest-square"></i></p>
+           <i class="fab fa-pinterest-square"></i>
            </div>
-           </div>
-           
-           <p class="text-center"><?= $category ?></p>
-           
+           </div>           
 
            <img class="single-post-img" src="../images/<?= $post["image"]; ?>" alt="image not found">
 

@@ -379,10 +379,16 @@ textarea:focus {
 }
 .single-post-img{
     width: 80%;
-    margin: 0 10%;
+    margin: 20px 10%;
 }
 .text-center{
     text-align: center;
+}
+.card-img-top{
+    height: 40vh !important;
+}
+i{
+    font-size: 1.5em;
 }
 
 
@@ -393,39 +399,40 @@ textarea:focus {
 
 @media (max-width: 768px) {
 
-	.header-logo {
-		left: 0;
-		transform: none;
-		margin-left: 1em;
-	}
-	.header-logo img {
-		max-height: 4em;
-	}
+.header-logo {
+    left: 0;
+    transform: none;
+    margin-left: 1em;
+}
+    
+.header-logo img {
+    max-height: 4em;
+}
 
 }
 
 /* Small devices (tablets, 768px and up) */
 @media screen and (min-width: 768px) {
 
-    /* main{
-        width: 90% !important;
-    } */
-	.comment-form textarea{
-		height: 150px;
-		width: 60%;
-	}
-	.radio {
-        margin-right: -12em;
-    }
-    .radio-buttons {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-	}
-	.register-box {
-		max-width: 30em;
-
-	}
+.card-img-top{
+    height: 35vh !important;
+}
+.comment-form textarea{
+    height: 150px;
+    width: 60%;
+}
+.radio {
+    margin-right: -12em;
+}
+.radio-buttons {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+    
+.register-box {
+    max-width: 30em;
+}
 
 }
 
