@@ -23,3 +23,4 @@ if(!$user->isAdmin()) {
       </div>
     </main>
 </body>
+<?php include '../includes/wysiwyg.php'; ?>
