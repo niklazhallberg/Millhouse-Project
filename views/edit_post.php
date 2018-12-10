@@ -38,8 +38,9 @@ $post_to_edit = $posts->getPostWithId($post_id);
                     <label class="form-label" for="post_content">Post description</label>
                     <textarea class="textarea-add" id="post_content" name="description" > <?php echo htmlspecialchars($post['description']); ?> </textarea>
 
+                    <h3>Current image</h3>
                     <div class="edit-post-image"><img src="../images/<?php echo $post['image']; ?>" /></div>
-                    <label class="form-label" for="image">Choose image</label>
+                    <label class="form-label" for="image">Choose new image</label>
                     <input type="file" name="image" id="image" accept="image/png, image/jpeg">
                     
                     <h3>Choose category</h3>
