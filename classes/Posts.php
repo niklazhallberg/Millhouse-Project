@@ -116,8 +116,12 @@ class Posts
 
     }
 
-    public function editPost() {
+    public function editPost($title, $description, $image, $category, $post_id) {
 
+        $statement = $this->pdo->prepare("UPDATE posts SET title = :title, description = :description, image = :image, category_id = :category WHERE id = :id");
+        $statement->execute([":title" => $title, ":description" => $description, ":image" => $image, ":category" => $category, ":id" => $post_id]);
+
+            return $statement;
 
     }
 

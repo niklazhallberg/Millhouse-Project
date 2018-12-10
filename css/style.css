@@ -340,8 +340,11 @@ textarea:focus {
 .edit-post-form {
 	margin-bottom: 6em;
 }
-.edit-post-section {
+/* .edit-post-section {
 	min-width: 100%;
+} */
+.edit-post-image img {
+	max-width: 30em;
 }
 
 /* ----------------------------SINGLE POST-----------------------------------------*/
