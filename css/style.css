@@ -243,6 +243,10 @@ footer {
 	transform: translate3d(-50%, 0, 0);
 }
 
+.footer-links ul {
+	padding: 0 !important;
+}
+
 .footer-logo img {
 	max-height: 4em;
 }
