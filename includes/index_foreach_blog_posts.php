@@ -20,11 +20,11 @@
 
 				<hr>
 				<div class="date-text">
-				<?php echo "Posted: " . date("Y/m/d") . "<br>"; ?>
+				<?php echo "Posted: " . $post["post_date"] . "<br>"; ?>
 				</div>
 				<p class="card-text"><small class="text-muted">By <?= $_SESSION["username"]; ?></small></p>
 
-            
+
                  </div>
 				<?php if($user->isAdmin()){?>
 
@@ -37,10 +37,10 @@
     	     	</div>
 
 				<?php } ?>
-               
+
              </div>
              </div>
-  
+
 
 
 <?php endforeach;?>
