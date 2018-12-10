@@ -23,14 +23,12 @@ if(isset($_GET["delete_post"])){
          <section class="col-12 col-md-9 blogpost-section">
        
           <div class="row mr-0 ml-0">
+        
+            <div class="col-12 card-columns pr-0">
           <!-- VIEW ADD POST DEMO if user = admin --> 
 
 
-          <?php if($user->isAdmin()){
-
-           include 'includes/index_add_post_demo.php';
-
-           }?>
+          
 
            <?php
 
@@ -40,6 +38,7 @@ if(isset($_GET["delete_post"])){
            $index_posts = $posts->getLatestPosts($number_of_posts);
            include 'includes/index_foreach_blog_posts.php'; ?>
            </div>
+          </div>
          </section>
 
          <!-- ASIDE SECTION WITH ARTICLE CATERGORIES -->

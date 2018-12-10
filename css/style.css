@@ -30,7 +30,7 @@ label {
 
 h3 {
 	margin-top: 0.5rem;
-	font-size: 1em;
+	font-size: 1.3em;
 }
 
 p,
@@ -183,8 +183,8 @@ main {
 
 .card-img-top {
     width: 100%;
-    height: 25vw;
-    object-fit: cover;
+    height: auto;
+    /* object-fit: cover; */
 }
 
 .card-img-top:hover {
