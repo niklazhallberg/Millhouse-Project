@@ -187,6 +187,10 @@ main {
     object-fit: cover;
 }
 
+.card-img-top:hover {
+    opacity: 20%;
+}
+
 .date-text {
 
     color: #6c757d!important;
