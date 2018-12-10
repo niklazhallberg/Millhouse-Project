@@ -24,13 +24,11 @@ if(isset($_GET["delete_post"])){
        
           <div class="row mr-0 ml-0">
           <!-- VIEW ADD POST DEMO if user = admin --> 
-
-
+           <div class="col-12 col-md-6 col-lg-4 d-none d-lg-block">
           <?php if($user->isAdmin()){
-
            include 'includes/index_add_post_demo.php';
-
            }?>
+              </div>
 
            <?php
 

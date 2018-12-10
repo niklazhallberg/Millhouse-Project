@@ -152,6 +152,14 @@ class Posts
         
         return $random_posts;
 }
+    public function getCategory($category){
+            //get category
+            $get_category = $this->pdo->prepare("SELECT category FROM categories INNER JOIN posts ON categories.id=posts.category_id");
+            $get_category->execute();
+        
+        return $get_category;
+
+    }
 
 
 
