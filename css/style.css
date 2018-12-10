@@ -225,7 +225,7 @@ main {
 }
 
 .category-box h3 {
-	font-size: 0.6em;
+	font-size: 0.55em;
 }
 
 .category-box li a {
@@ -237,9 +237,8 @@ main {
 	text-decoration: underline;
 }
 
-
 .category-box {
-	padding: 20px;
+	padding: 10px;
 }
 
 .post-row {
@@ -414,6 +413,7 @@ textarea:focus {
 .text-center-related{
 	font-size: 1.3em;
 	text-align: center;
+	margin-top: 0.5em;
 }
 
 i{
