@@ -399,7 +399,11 @@ textarea:focus {
 	}
 
 }
-
+@media (min-width: 570px) {
+	.card-columns {
+		column-count: 2;
+	}
+}
 /* Small devices (tablets, 768px and up) */
 @media screen and (min-width: 768px) {
 
@@ -422,10 +426,16 @@ textarea:focus {
 		max-width: 30em;
 
 	}
+	.card-columns {
+		column-count: 2;
+	}
 
 }
 
 /* Medium devices (desktops, 992px and up) */
 @media screen and (min-width: 992px) {
+	.card-columns {
+		column-count: 3;
+	}
 
 }
