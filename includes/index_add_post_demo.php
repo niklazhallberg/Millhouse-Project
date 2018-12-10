@@ -1,3 +1,5 @@
+
+  <div class="col-12 col-md-6 col-lg-4 demo-card">
    <div class="card">
     <a href="../views/add_post.php">
         <img class="card-img-top" src="images/Demo_picture.png" alt="Add New Post">
