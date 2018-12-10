@@ -1,7 +1,11 @@
 
-          <h2 class="h2-sidebar">Blog categories<h2>
+          <h2 class="h2-sidebar">Blog feed<h2>
+          <p class="p-sidebar">by product category</p>
 
-          <h3>Watches</h3>
+          <hr>
+
+          <div class="category-box">
+          <h3 class="category-h3">Watches</h3>
           <ul class="list-unstyled">
             <?php 
 
@@ -13,7 +17,10 @@
             include 'includes/index_sidebar_foreach_category_post.php'; ?>
 
           </ul>
-          <h3>Sunglasses</h3>
+          </div>
+
+          <div class="category-box">
+          <h3 class="category-h3">Sunglasses</h3>
           <ul class="list-unstyled">
             <?php 
 
@@ -25,7 +32,10 @@
             include 'includes/index_sidebar_foreach_category_post.php'; ?>
 
           </ul>
-          <h3>Furnishing articles</h3>
+          </div>
+
+          <div class="category-box">
+          <h3 class="category-h3">Furnishing articles</h3>
           <ul class="list-unstyled">
             <?php 
 
@@ -37,8 +47,10 @@
             include 'includes/index_sidebar_foreach_category_post.php'; ?>
 
           </ul>
-          
-         <h3>Recent Posts</h3>
+          </div>
+
+          <div class="category-box">
+          <h3>Recent Posts</h3>
           <ul class="list-unstyled">
             <?php   
 
@@ -49,3 +61,4 @@
             include 'includes/index_sidebar_foreach_category_post.php'; ?>
 
           </ul>
+          </div>

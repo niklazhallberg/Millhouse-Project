@@ -28,7 +28,7 @@ include '../classes/call.php';
            <hr>
            <div class="row text-center">
            <div class="col-12">
-               <p><small class="text-muted">By <?= $post["created_by"]; ?> &nbsp; &#9679; &nbsp; <?= $post["post_date"]; ?> &nbsp; &#9679; &nbsp;</small></p>
+               <p><small class="text-muted">By <?= $post["created_by"]; ?> &nbsp; &#9679; &nbsp; <?= $post["post_date"]; ?></small></p>
            </div>
            <div class="col-12 text-center">
            <i class="fab fa-twitter-square"></i>
