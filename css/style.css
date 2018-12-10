@@ -301,10 +301,15 @@ em.pinterest{
 	width: 100%;
 }
 
+.comment-form{
+    text-align: center;
+}
+
 .comment-form textarea{
     height: 100px;
-    max-width: 500px;
-    width: 80%;
+    max-width: 600px;
+    width: 90%;
+    margin: 0 auto;
 }
 label {
 	display: block;
@@ -350,6 +355,21 @@ textarea:focus {
 .border-right{
     border-right: 2px solid black;
 }
+.comment-card .card{
+    margin: 0 auto;
+    float: none;
+}
+.blue-header{
+    background-color: #95B8D1 !important;
+}
+.single-post-img{
+    width: 80%;
+    margin: 0 10%;
+}
+.text-center{
+    text-align: center;
+}
+
 
 
 /* ----------------------------MEDIAQUERIES-----------------------------------------*/
