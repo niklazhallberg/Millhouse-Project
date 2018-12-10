@@ -15,6 +15,11 @@
            ?><button class="button d-lg-none"><a href="../includes/add_post.php"><span>add post </span></a></button>
          <?php }?>
       </div>
+      <div>
+        <?php if($user->isAdmin()) {
+            include 'add_post_button.php';
+        } ?>
+      </div>
 
     </div>
   </div>

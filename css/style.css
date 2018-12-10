@@ -30,7 +30,7 @@ label {
 
 h3 {
 	margin-top: 0.5rem;
-	font-size: 1em;
+	font-size: 1.3em;
 }
 
 p,
@@ -183,8 +183,8 @@ main {
 
 .card-img-top {
     width: 100%;
-    height: 25vw;
-    object-fit: cover;
+    height: auto;
+    /* object-fit: cover; */
 }
 
 .card {
@@ -410,13 +410,37 @@ i{
 }
 
 }
-
+@media (min-width: 570px) {
+	.card-columns {
+		column-count: 2;
+	}
+}
 /* Small devices (tablets, 768px and up) */
 @media screen and (min-width: 768px) {
 
-.card-img-top{
-    height: 35vh !important;
-}
+    /* main{
+        width: 90% !important;
+    } */
+	.comment-form textarea{
+		height: 150px;
+		width: 60%;
+	}
+	.radio {
+        margin-right: -12em;
+    }
+    .radio-buttons {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+	}
+	.register-box {
+		max-width: 30em;
+
+	}
+	.card-columns {
+		column-count: 2;
+	}
+  
 .comment-form textarea{
     height: 150px;
     width: 60%;
@@ -438,5 +462,8 @@ i{
 
 /* Medium devices (desktops, 992px and up) */
 @media screen and (min-width: 992px) {
+	.card-columns {
+		column-count: 3;
+	}
 
 }
