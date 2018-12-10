@@ -143,7 +143,7 @@ header {
 
 .register-box {
 	/* text-align: center; */
-	background-color: #D7BCC8;
+	background-color: #95B8D1;
 	border-radius: 5%;
 	padding: 20px;
   	margin-top: 2em;
@@ -187,8 +187,12 @@ main {
     /* object-fit: cover; */
 }
 
-.card-img-top:hover {
-    opacity: 20%;
+.card {
+	margin: 20px 0px;
+}
+
+.card img:hover {
+    opacity: 0.7;
 }
 
 .date-text {
@@ -202,7 +206,7 @@ main {
     background-color: #95B8D1;
     opacity: 20%;
 	padding:1em;
-	margin: 10px auto;
+	margin: 20px auto;
 	height: 1500px;
 	border-radius: 1%;
 }
@@ -375,10 +379,16 @@ textarea:focus {
 }
 .single-post-img{
     width: 80%;
-    margin: 0 10%;
+    margin: 20px 10%;
 }
 .text-center{
     text-align: center;
+}
+.card-img-top{
+    height: 40vh !important;
+}
+i{
+    font-size: 1.5em;
 }
 
 
@@ -389,14 +399,15 @@ textarea:focus {
 
 @media (max-width: 768px) {
 
-	.header-logo {
-		left: 0;
-		transform: none;
-		margin-left: 1em;
-	}
-	.header-logo img {
-		max-height: 4em;
-	}
+.header-logo {
+    left: 0;
+    transform: none;
+    margin-left: 1em;
+}
+    
+.header-logo img {
+    max-height: 4em;
+}
 
 }
 @media (min-width: 570px) {
@@ -429,6 +440,23 @@ textarea:focus {
 	.card-columns {
 		column-count: 2;
 	}
+  
+.comment-form textarea{
+    height: 150px;
+    width: 60%;
+}
+.radio {
+    margin-right: -12em;
+}
+.radio-buttons {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+    
+.register-box {
+    max-width: 30em;
+}
 
 }
 

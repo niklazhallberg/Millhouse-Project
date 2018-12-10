@@ -28,7 +28,6 @@ if(isset($_GET["delete_post"])){
           <!-- VIEW ADD POST DEMO if user = admin --> 
 
 
-          
 
            <?php
 

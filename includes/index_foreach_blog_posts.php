@@ -32,7 +32,7 @@
 
                     <button class="go-to-edit-page" type="button"><a href="../views/edit_post.php?post_id=<?=$post["id"]?>" class="btn btn-default"><span>Edit post</span></a></button>
 
-      			<button class="go-to-edit-page" type="button"><a href="../views/edit_post.php?post_id=<?=$post["id"]?>" class="btn btn-default"><span>Delete post</span></a></button>
+      			<button class="go-to-edit-page" type="button"><a href="../index.php?delete_post=<?=$post["id"]?>" class="btn btn-default"><span>Delete post</span></a></button>
 
     	     	</div>
 
