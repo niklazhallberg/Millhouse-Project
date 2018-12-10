@@ -8,21 +8,18 @@ class Comments
       $this->pdo = $pdo;
     }
     
-    public function addComment($content, $created_by, $post_id) {
-        try{
-            $statement = $this->pdo->prepare("INSERT INTO comments (content, created_by, post_id) VALUES (:content, :created_by, :post_id)");
+    public function addComment($content, $created_by, $post_id, $post_date) {
+ 
+            $statement = $this->pdo->prepare("INSERT INTO comments (content, created_by, post_id, comment_date) VALUES (:content, :created_by, :post_id, :comment_date)");
             $statement->execute(
                 [
                     ":content" => $content,
                     ":created_by" => $created_by,
-                    ":post_id" => $post_id
+                    ":post_id" => $post_id,
+                    ":comment_date" => $post_date
                 ]
             );
         
-        }catch(PDOException $error){
-            
-            echo $error->getMessage();
-        }
     }
     
     public function getCommentsWithId($post_id){

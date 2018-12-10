@@ -196,6 +196,7 @@ main {
 
 .index-sidebar{
     background-color: #95B8D1;
+    opacity: 20%;
 	padding:1em;
 	margin: 10px auto;
 	height: 1500px;
@@ -240,6 +241,10 @@ footer {
   display: block;
 	left: 50%;
 	transform: translate3d(-50%, 0, 0);
+}
+
+.footer-links ul {
+	padding: 0 !important;
 }
 
 .footer-logo img {
@@ -300,10 +305,15 @@ em.pinterest{
 	width: 100%;
 }
 
+.comment-form{
+    text-align: center;
+}
+
 .comment-form textarea{
     height: 100px;
-    max-width: 500px;
-    width: 80%;
+    max-width: 600px;
+    width: 90%;
+    margin: 0 auto;
 }
 label {
 	display: block;
@@ -352,6 +362,21 @@ textarea:focus {
 .border-right{
     border-right: 2px solid black;
 }
+.comment-card .card{
+    margin: 0 auto;
+    float: none;
+}
+.blue-header{
+    background-color: #95B8D1 !important;
+}
+.single-post-img{
+    width: 80%;
+    margin: 0 10%;
+}
+.text-center{
+    text-align: center;
+}
+
 
 
 /* ----------------------------MEDIAQUERIES-----------------------------------------*/
