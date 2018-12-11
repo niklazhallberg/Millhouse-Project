@@ -21,9 +21,9 @@ if(isset($_GET["delete_post"])){
     <div class="row justify-content-center">
 
          <section class="col-12 col-md-9 blogpost-section">
-       
+
           <div class="row mr-0 ml-0">
-        
+
             <div class="col-12 card-columns pr-0">
 
            <?php

@@ -10,7 +10,7 @@
     </div>
     <div class="add-description">
       <label for="description">Description</label><br>
-      <textarea id="summernote" name="description" required></textarea><br>
+      <textarea id="summernote" name="description"></textarea><br>
     </div>
     <p>Choose your category:</p>
     <div>

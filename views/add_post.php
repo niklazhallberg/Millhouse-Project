@@ -30,4 +30,5 @@ if(!$user->isAdmin()) {
         height: 500
       });
     </script>
+    <?php include '../includes/footer.php'; ?>
 </body>
