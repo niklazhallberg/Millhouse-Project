@@ -5,11 +5,11 @@
   }
   ?>
     <div class="add-title">
-      <label for="title">Title</label><br>
+      <label for="title">Title</label>
       <input type="text" name="title" required><br>
     </div>
     <div class="add-description">
-      <label for="description">Description</label><br>
+      <label for="description">Description</label>
       <textarea id="summernote" name="description"></textarea><br>
     </div>
     <p>Choose your category:</p>
