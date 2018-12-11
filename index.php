@@ -25,10 +25,7 @@ if(isset($_GET["delete_post"])){
           <div class="row mr-0 ml-0">
         
             <div class="col-12 card-columns pr-0">
-          <!-- VIEW ADD POST DEMO if user = admin --> 
-
-
-
+      
            <?php
 
            /* NUMBER OF POSTS DISPLAYED IN MAIN BLOG */
