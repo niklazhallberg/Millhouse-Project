@@ -45,7 +45,9 @@ include '../classes/call.php';
            
            <!-- if loged in user is admin, show delete post button -->
             <?php if($user->isAdmin()){ ?>
-            <a href="../index.php?delete_post=<?= $post_id ?>">Delete this post</a>
+            <hr>
+       <i class="far fa-trash-alt"><a href="../index.php?delete_post=<?= $post_id ?>"><span> Delete post</span></a></i>
+       <i class="far fa-trash-alt"><a href="../views/edit_post.php?delete_post=<?= $post_id ?>"><span> Edit post</span></a></i>
 <?php
 } ?>
 
@@ -68,7 +70,7 @@ include '../classes/call.php';
                 <!-- if loged in user is admin, show delete comment button in card footer -->
                 <?php if($user->isAdmin()){ ?>
                 <div class="card-footer bg-transparent">
-                <a href="../includes/delete_comment_sql.php?delete_comment=<?=$comment["comment_id"]?>"><span>Delete comment</span></a>
+                    <i class="far fa-trash-alt"><a href="../includes/delete_comment_sql.php?delete_comment=<?=$comment["comment_id"]?>"><span> Delete comment</span></a></i>
                 </div>
                  <?php
                       }?>
