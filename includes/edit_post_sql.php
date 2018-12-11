@@ -16,15 +16,24 @@ if(empty($title) || empty($description) || empty($image) || empty($category)){
   header('Location: ../views/edit_post.php?error= Fill in all fields, please!');
 } else {
 
-$temporary_location = $image["tmp_name"];
-$new_location = "../images/" . $image["name"];
-$upload_ok = move_uploaded_file($temporary_location, $new_location);
+  if ((strlen($title)) <= 100) {
 
-if($upload_ok){
-$posts->editPost($title, $description, $new_location, $category, $post_id);
-// redirect
-$user->redirect('../index.php');
-}else{
-  header('Location: ../views/edit_post.php?error= Select a picture, please!');
-}
+    $temporary_location = $image["tmp_name"];
+      $new_location = "../images/" . $image["name"];
+      $upload_ok = move_uploaded_file($temporary_location, $new_location);
+
+      if($upload_ok){
+      $posts->editPost($title, $description, $new_location, $category, $post_id);
+      // redirect
+      $user->redirect('../index.php');
+  
+      }else{
+        header('Location: ../views/edit_post.php?error= Select a picture, please!');
+      }
+
+
+  } else {
+    header('Location: ../views/edit_post.php?error= The title cannot be longer than 100 characters, please try again.');
+  }
+      
 }
