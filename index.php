@@ -25,7 +25,10 @@ if(isset($_GET["delete_post"])){
           <div class="row mr-0 ml-0">
         
             <div class="col-12 card-columns pr-0">
+<<<<<<< HEAD
       
+=======
+>>>>>>> 52678f85fcf7a89f38e65755069fe8eb4a950934
            <?php
 
            /* NUMBER OF POSTS DISPLAYED IN MAIN BLOG */

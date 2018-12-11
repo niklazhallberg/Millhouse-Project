@@ -22,7 +22,7 @@
 				<div class="date-text">
 				<?php echo "Posted: " . $post["post_date"] . "<br>"; ?>
 				</div>
-				<p class="card-text"><small class="text-muted">By <?= $_SESSION["username"]; ?></small></p>
+				<p class="card-text"><small class="text-muted">By <?= $post["created_by"]; ?></small></p>
 
 
                  </div>
