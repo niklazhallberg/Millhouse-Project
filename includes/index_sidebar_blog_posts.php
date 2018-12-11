@@ -1,11 +1,11 @@
 
-          <h2 class="h2-sidebar">Blog feed<h2>
+          <h2 class="h2-sidebar">Blog feed</h2>
           <p class="p-sidebar">by product category</p>
 
           <hr>
 
           <div class="category-box">
-          <h3 class="category-h3">Watches</h3>
+          <h3>Watches</h3>
           <ul class="list-unstyled">
             <?php 
 
@@ -20,7 +20,7 @@
           </div>
 
           <div class="category-box">
-          <h3 class="category-h3">Sunglasses</h3>
+          <h3>Sunglasses</h3>
           <ul class="list-unstyled">
             <?php 
 
@@ -35,7 +35,7 @@
           </div>
 
           <div class="category-box">
-          <h3 class="category-h3">Furnishing articles</h3>
+          <h3>Furnishing articles</h3>
           <ul class="list-unstyled">
             <?php 
 

@@ -66,12 +66,10 @@ body {
 
 /* ---------------------------------HEADER ----------------------------------*/
 
-header {
+
+.header {
 	background-color: #1C3045;
 	height: 8em;
-}
-.header {
-	height: 7em;
 }
 
 .header-logo {
@@ -141,7 +139,6 @@ header {
 /* ---------------------------REGISTER/LOGIN--------------------------- */
 
 .register-box {
-	/* text-align: center; */
 	background-color: #95B8D1;
 	border-radius: 5%;
 	padding: 20px;
@@ -176,9 +173,7 @@ main {
 }
 
 .card-img-top {
-    width: 100%;
     height: auto;
-    /* object-fit: cover; */
 }
 
 .card {
@@ -194,7 +189,6 @@ main {
 }
 
 .date-text {
-
     color: #6c757d!important;
     font-size: 80%;
     font-weight: 400;
@@ -210,29 +204,27 @@ main {
 }
 
 .h2-sidebar {
-	font-size: 1.5em;
+	font-size: 1.6rem;
 	margin-bottom: 0.5rem;
 }
 
-.p-sidebar {
-	font-size: 0.5em;
-}
 
 .category-box h3 {
-	font-size: 0.55em;
+	font-size: 1.3rem;
 }
 
 .category-box li a {
-	font-size: 0.4em;
+	color: #1C3045;
 }
 
+
 .category-box li {
-	line-height: 0.6em;
-	text-decoration: underline;
+	line-height: 1.4em;
+	/* text-decoration: underline; */
 }
 
 .category-box {
-	padding: 10px;
+	padding: 10px 0;
 }
 
 .post-row {
@@ -251,6 +243,7 @@ main {
 	max-width: 100%;
 	min-height: 100%;
 }
+
 
 /* ---------------------------------------FOOTER--------------------------------*/
 
@@ -419,8 +412,8 @@ i{
 /* ----------------------------MEDIAQUERIES-----------------------------------------*/
 
 
-@media screen and (min-width: 570px) {
-	.card-columns {
+@media screen and (min-width: 576px) {
+	.card-columns.count {
 		column-count: 2;
 	}
 }
@@ -482,9 +475,7 @@ i{
 	.register-box {
 		max-width: 30em;
 	}
-	.card-columns {
-		column-count: 2;
-	}
+
 
 	
 }
@@ -497,7 +488,7 @@ i{
 
 }
 @media screen and (min-width: 1024px) {
-	.card-columns {
+	.card-columns.count {
 		column-count: 3;
 	}
 
