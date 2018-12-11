@@ -5,7 +5,7 @@ include '../classes/call.php';
 
 //save input to varible
 $title = $_POST["title"];
-$description = $_POST["description"];
+$description = strip_tags($_POST["description"]);
 $user_name = $_SESSION["username"];
 $image = $_FILES["image"];
 $category = $_POST["category"];
