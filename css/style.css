@@ -197,6 +197,10 @@ main {
     opacity: 0.7;
 }
 
+.blogpost-section {
+	padding-right: 40px;
+}
+
 .date-text {
 
     color: #6c757d!important;
@@ -215,7 +219,28 @@ main {
 
 .h2-sidebar {
 	font-size: 1.5em;
-	margin-bottom: 1.5rem;
+	margin-bottom: 0.5rem;
+}
+
+.p-sidebar {
+	font-size: 0.5em;
+}
+
+.category-box h3 {
+	font-size: 0.55em;
+}
+
+.category-box li a {
+	font-size: 0.4em;
+}
+
+.category-box li {
+	line-height: 0.6em;
+	text-decoration: underline;
+}
+
+.category-box {
+	padding: 10px;
 }
 
 .post-row {
@@ -385,6 +410,13 @@ textarea:focus {
 .text-center{
     text-align: center;
 }
+
+.text-center-related{
+	font-size: 1.3em;
+	text-align: center;
+	margin-top: 0.5em;
+}
+
 i{
     font-size: 1.5em;
 }
