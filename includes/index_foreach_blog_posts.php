@@ -9,7 +9,7 @@
 			   <h3 class="card-title"><?= $post["title"]; ?></h3>
 
 			   <?php $str = $post["description"];
-				if( strlen($str) > 300) {
+				if( strlen($str) > 3000) {
    				$str = explode( "\n", wordwrap($str, 150));
    				$str = $str[0] . '...';
 				} ?>
