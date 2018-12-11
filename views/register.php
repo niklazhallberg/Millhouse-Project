@@ -13,7 +13,7 @@ include '../includes/head.php';
 
 <?php include '../includes/header.php';?>
 
-<div class="container">
+<div class="container-fluid">
 
 	<main class="row justify-content-center ml-0 mr-0">
 

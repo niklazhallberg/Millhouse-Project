@@ -47,7 +47,7 @@ include '../classes/call.php';
             <?php if($user->isAdmin()){ ?>
             <hr>
        <i class="far fa-trash-alt"><a href="../index.php?delete_post=<?= $post_id ?>"><span> Delete post</span></a></i>
-       <i class="far fa-trash-alt"><a href="../views/edit_post.php?delete_post=<?= $post_id ?>"><span> Edit post</span></a></i>
+       <i class="fas fa-wrench"><a href="../views/edit_post.php?delete_post=<?= $post_id ?>"><span> Edit post</span></a></i>
 <?php
 } ?>
 
