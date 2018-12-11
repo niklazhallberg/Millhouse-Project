@@ -46,9 +46,9 @@ include '../classes/call.php';
            <!-- if loged in user is admin, show delete post button -->
             <?php if($user->isAdmin()){ ?>
             <hr>
-            <i class="fas fa-wrench"><a href="../views/edit_post.php?post_id=<?= $post_id ?>"><span> Edit post</span></a></i>
+            <a href="../views/edit_post.php?post_id=<?= $post_id ?>"><span><i class="fas fa-wrench"></i> Edit post</span></a>
             
-            <i class="far fa-trash-alt"><a href="../index.php?delete_post=<?= $post_id ?>"><span> Delete post</span></a></i>
+            <a href="../index.php?delete_post=<?= $post_id ?>"><span><i class="far fa-trash-alt"></i> Delete post</span></a>
        
 <?php
 } ?>
@@ -59,7 +59,9 @@ include '../classes/call.php';
             <?php
               //calls method to print comments and prints it with foreach loop inside a bootstrap card
                 $comments_to_print = $comments->getCommentsWithId($post_id);
+       
                 foreach($comments_to_print as $comment){ ?>
+                
 
                 <div class="comment-card">
                 <div class="card border-light mb-2" style="max-width: 25rem;">
@@ -72,7 +74,7 @@ include '../classes/call.php';
                 <!-- if loged in user is admin, show delete comment button in card footer -->
                 <?php if($user->isAdmin()){ ?>
                 <div class="card-footer bg-transparent">
-                    <i class="far fa-trash-alt"><a href="../includes/delete_comment_sql.php?delete_comment=<?=$comment["comment_id"]?>"><span> Delete comment</span></a></i>
+                    <a href="../includes/delete_comment_sql.php?delete_comment=<?=$comment["comment_id"]?>"><span><i class="far fa-trash-alt"> Delete comment</i></span></a>
                 </div>
                  <?php
                       }?>
@@ -83,7 +85,7 @@ include '../classes/call.php';
 
              <!-- form for user to add a comment to the post-->
               <hr>
-              <form class="comment-form" action="../includes/add_comment_sql.php" method="POST">
+              <form class="comment-form" id="commentarea" action="../includes/add_comment_sql.php" method="POST">
               <label for="comment-field"><h3>Leave comment as <?= $_SESSION["username"]; ?></h3></label><br />
               <textarea name="content" placeholder="Start the discussion..."></textarea><br />
 
