@@ -68,8 +68,7 @@ body {
 
 header {
 	background-color: #1C3045;
-	height: 7em;
-	margin-bottom: 3em;
+	height: 8em;
 }
 .header {
 	height: 7em;
@@ -169,11 +168,11 @@ input {
 
 /* ----------------------------INDEX -----------------------------------------*/
 
-
 main {
     max-width: 1500px;
     background-color: #F0F0F0;
     margin: 0 auto;
+    padding: 2em 0;
 }
 
 .card-img-top {
@@ -188,6 +187,10 @@ main {
 
 .card img:hover {
     opacity: 0.7;
+}
+
+.blogpost-section {
+	padding-right: 40px;
 }
 
 .date-text {
@@ -208,7 +211,28 @@ main {
 
 .h2-sidebar {
 	font-size: 1.5em;
-	margin-bottom: 1.5rem;
+	margin-bottom: 0.5rem;
+}
+
+.p-sidebar {
+	font-size: 0.5em;
+}
+
+.category-box h3 {
+	font-size: 0.55em;
+}
+
+.category-box li a {
+	font-size: 0.4em;
+}
+
+.category-box li {
+	line-height: 0.6em;
+	text-decoration: underline;
+}
+
+.category-box {
+	padding: 10px;
 }
 
 .post-row {
@@ -232,7 +256,6 @@ main {
 
 footer {
 	background-color: #1C3045;
-	margin-top: 3em;
 }
 
 .footer {
@@ -379,17 +402,28 @@ textarea:focus {
 .text-center{
     text-align: center;
 }
+
+.text-center-related{
+	font-size: 1.3em;
+	text-align: center;
+	margin-top: 0.5em;
+}
+
 i{
     font-size: 1.5em;
 }
-.card-columns {
-	
-}
+
 
 
 
 /* ----------------------------MEDIAQUERIES-----------------------------------------*/
 
+
+@media screen and (min-width: 570px) {
+	.card-columns {
+		column-count: 2;
+	}
+}
 
 
 @media (max-width: 768px) {
@@ -405,11 +439,10 @@ i{
 }
 
 }
-@media (min-width: 570px) {
-	.card-columns {
-		column-count: 2;
-	}
-}
+
+
+
+
 /* Small devices (tablets, 768px and up) */
 @media screen and (min-width: 768px) {
 
@@ -432,34 +465,35 @@ i{
 		max-width: 30em;
 
 	}
+  
+	.comment-form textarea{
+		height: 150px;
+		width: 60%;
+	}
+	.radio {
+		margin-right: -12em;
+	}
+	.radio-buttons {
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+	}
+		
+	.register-box {
+		max-width: 30em;
+	}
 	.card-columns {
 		column-count: 2;
 	}
-  
-.comment-form textarea{
-    height: 150px;
-    width: 60%;
-}
-.radio {
-    margin-right: -12em;
-}
-.radio-buttons {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-    
-.register-box {
-    max-width: 30em;
-}
 
+	
 }
 
 /* Medium devices (desktops, 992px and up) */
 @media screen and (min-width: 992px) {
-	/* .card-columns {
+	.card-columns {
 		column-count: 2;
-	} */
+	}
 
 }
 @media screen and (min-width: 1024px) {

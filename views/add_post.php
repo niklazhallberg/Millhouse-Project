@@ -22,5 +22,12 @@ if(!$user->isAdmin()) {
         </div>
       </div>
     </main>
+    <?php include '../includes/javascript_tag.php' ?>
+    <script>
+      $('#summernote').summernote({
+        placeholder: 'Description..',
+        tabsize: 2,
+        height: 500
+      });
+    </script>
 </body>
-<?php include '../includes/wysiwyg.php'; ?>

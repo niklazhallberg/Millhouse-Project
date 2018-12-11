@@ -10,10 +10,11 @@
         <?php if($user->isLoggedIn()) {
             include 'logout_button.php';
         } ?>
-        <!--shows add post button when admin is logged in-->
+       
         
       </div>
       <div>
+       <!--shows add post button when admin is logged in-->
         <?php if($user->isAdmin()) {
             include 'add_post_button.php';
         } ?>
