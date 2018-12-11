@@ -1,9 +1,9 @@
-<?php 
+<?php
 session_start();
 include '../classes/call.php';
 
 $title = $_POST["title"];
-$description = $_POST["description"];
+$description = strip_tags($_POST["description"]);
 $image = $_FILES["image"];
 $category = $_POST["category"];
 $post_id = $_SESSION["post_id"];
