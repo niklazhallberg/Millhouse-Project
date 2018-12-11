@@ -24,10 +24,6 @@ if(!empty($_POST["first_name"]) && !empty($_POST["last_name"]) && !empty($_POST[
             $_SESSION["username"] = $user_array["username"];
             $_SESSION["user_id"] = $user_array["id"];
 
-            // if ($user->isAdmin() == true) {
-            //    $_SESSION["admin"] = true;
-            // }
-
             $user->redirect('../index.php');
           }
    }

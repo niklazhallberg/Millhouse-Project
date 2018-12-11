@@ -6,7 +6,7 @@
                </a>
 
              <div class="card-body">
-			   <h3 class="card-title"><?= $post["title"]; ?></h3>
+			   <h2 class="card-title"><?= $post["title"]; ?></h2>
 
 			   <?php $str = $post["description"];
 				if( strlen($str) > 3000) {
