@@ -24,7 +24,7 @@ if(isset($_GET["delete_post"])){
 
           <div class="row mr-0 ml-0">
 
-            <div class="col-12 card-columns count pr-0 pl-0">
+            <div class="col-12 card-columns pr-0 pl-0">
       
            <?php
 
@@ -39,7 +39,7 @@ if(isset($_GET["delete_post"])){
 
          <!-- ASIDE SECTION WITH ARTICLE CATERGORIES -->
 
-         <aside class="col-12 col-md-3 index-sidebar">
+         <aside class="col-12 col-md-3 sidebar">
 
           <?php include 'includes/index_sidebar_blog_posts.php'; ?>
 

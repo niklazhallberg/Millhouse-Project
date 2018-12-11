@@ -1,11 +1,11 @@
 
           <h2 class="h2-sidebar">Blog feed</h2>
-          <p class="p-sidebar">by product category</p>
+          <p>by product category</p>
 
           <hr>
 
           <div class="category-box">
-          <h3>Watches</h3>
+          <h3><a href="views/watches.php">Watches</a></h3>
           <ul class="list-unstyled">
             <?php 
 
@@ -20,7 +20,7 @@
           </div>
 
           <div class="category-box">
-          <h3>Sunglasses</h3>
+          <h3><a href="views/sunglasses.php">Sunglasses</a></h3>
           <ul class="list-unstyled">
             <?php 
 
@@ -35,7 +35,7 @@
           </div>
 
           <div class="category-box">
-          <h3>Furnishing articles</h3>
+          <h3><a href="views/furnishing.php">Furnishing articles</a></h3>
           <ul class="list-unstyled">
             <?php 
 
@@ -50,15 +50,6 @@
           </div>
 
           <div class="category-box">
-          <h3>Recent Posts</h3>
-          <ul class="list-unstyled">
-            <?php   
-
-            /* NUMBER OF RECENT POSTS DISPLAYED IN SIDEBAR */ 
-
-            $number_of_posts = 5;
-            $category_posts = $posts->getLatestPosts($number_of_posts);
-            include 'includes/index_sidebar_foreach_category_post.php'; ?>
-
-          </ul>
+          <h3><a href="views/all_posts.php">View all posts</a></h3>
+          
           </div>
