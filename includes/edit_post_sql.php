@@ -37,4 +37,3 @@ if(empty($title) || empty($description) || empty($image) || empty($category)){
   }
       
 }
-
