@@ -168,14 +168,6 @@ input {
 
 /* ----------------------------INDEX -----------------------------------------*/
 
-/* .card-columns {
-  @include media-breakpoint-only(md) {
-    column-count: 4;
-  }
-} */
-body{
-    background-color: #F0F0F0;
-}
 main {
     max-width: 1500px;
     background-color: #F0F0F0;
@@ -423,8 +415,15 @@ i{
 
 
 
+
 /* ----------------------------MEDIAQUERIES-----------------------------------------*/
 
+
+@media screen and (min-width: 570px) {
+	.card-columns {
+		column-count: 2;
+	}
+}
 
 
 @media (max-width: 768px) {
@@ -440,11 +439,10 @@ i{
 }
 
 }
-@media (min-width: 570px) {
-	.card-columns {
-		column-count: 2;
-	}
-}
+
+
+
+
 /* Small devices (tablets, 768px and up) */
 @media screen and (min-width: 768px) {
 
@@ -467,33 +465,70 @@ i{
 		max-width: 30em;
 
 	}
+  
+	.comment-form textarea{
+		height: 150px;
+		width: 60%;
+	}
+	.radio {
+		margin-right: -12em;
+	}
+	.radio-buttons {
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+	}
+		
+	.register-box {
+		max-width: 30em;
+	}
 	.card-columns {
 		column-count: 2;
 	}
-  
-.comment-form textarea{
-    height: 150px;
-    width: 60%;
-}
-.radio {
-    margin-right: -12em;
-}
-.radio-buttons {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-    
-.register-box {
-    max-width: 30em;
-}
 
+	
 }
 
 /* Medium devices (desktops, 992px and up) */
 @media screen and (min-width: 992px) {
 	.card-columns {
+		column-count: 2;
+	}
+
+}
+@media screen and (min-width: 1024px) {
+	.card-columns {
 		column-count: 3;
 	}
 
 }
+
+
+
+/* .card-columns { 
+	display: flex;
+	flex-flow: row wrap;
+	margin-left: -8px; 
+  } */
+  
+  /* .card {
+	flex: auto; 
+	min-height: 100px;
+	max-width: 30%;
+	margin: 0 8px 8px 0; 
+  } */
+
+  
+	/* .card:nth-child(4n+1){
+	   width: 250px;
+	}
+	.card:nth-child(4n+2){
+	   width: 325px;
+	}
+	.card:nth-child(4n+3){
+	   width: 180px;
+	}
+	.card:nth-child(4n+4){
+	   width: 380px;
+	} */
+  
