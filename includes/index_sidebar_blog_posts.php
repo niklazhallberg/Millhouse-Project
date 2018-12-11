@@ -56,7 +56,7 @@
 
             /* NUMBER OF RECENT POSTS DISPLAYED IN SIDEBAR */ 
 
-            $number_of_posts = 10;
+            $number_of_posts = 5;
             $category_posts = $posts->getLatestPosts($number_of_posts);
             include 'includes/index_sidebar_foreach_category_post.php'; ?>
 
