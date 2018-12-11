@@ -14,12 +14,21 @@
                         <div class="card-body">
                             <h3 class="card-title"> <?= $rand["title"]; ?> </h3>
                             <?php $str = $rand["description"];
-                            if( strlen($str) > 100) {
+                            if( strlen($str) > 150) {
    				            $str = explode( "\n", wordwrap($str, 150));
    				            $str = $str[0] . '...'; 
                             }?>
 
                        <p class="card-text"><?= $str; ?></p>
+                       
+                       <a href="/single_post.php?post_id=<?=$post["id"]?>">Read more...</a>
+                       
+                       <hr>
+                       <small class="text-muted">
+                       <?= "Posted: " . $post["post_date"] . "<br>"; ?>
+                       </small>
+                       <p class="card-text"><small class="text-muted">By <?= $post["created_by"]; ?></small></p>
+                       <a href="../views/single_post.php?post_id=<?=$post["id"]?>#commentarea"><small class="text-muted"><i class="far fa-comment-alt"></i></small></a>
                         </div>
                     </div>
                     </div>
