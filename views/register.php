@@ -6,7 +6,7 @@ if($user->isLoggedIn()) {
 }
 ?>
 <?php
-include '../includes/head.php'; 
+include '../includes/head.php';
 ?>
 
 <body>
@@ -17,7 +17,7 @@ include '../includes/head.php';
 
 	<main class="row justify-content-center ml-0 mr-0">
 
-			<div class="col-12 register-box">
+			<div class="col-11 col-md-6 register-box">
 
 				<h3>Register</h3>
 
@@ -60,7 +60,5 @@ include '../includes/head.php';
 </div>
 
  <?php include '../includes/javascript_tag.php';?>
-
+ <?php include '../includes/footer.php'; ?>
 </body>
-
-</html>

@@ -81,5 +81,5 @@ $post_to_edit = $posts->getPostWithId($post_id);
         height: 500
       });
     </script>
+    <?php include '../includes/footer.php'; ?>
 </body>
-</html>
