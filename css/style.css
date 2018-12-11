@@ -143,20 +143,12 @@ body {
 	border-radius: 5%;
 	padding: 20px;
   	margin-top: 2em;
-  	margin-bottom: 400px;
+	  margin-bottom: 400px;
 }
-
-/* .register-box p {
-	text-align: center;
-} */
-
-/* .register-box input {
-	margin: 10px 20px;
-} */
-
-/* form {
-	text-align: center;
-} */
+.register-box h3,
+.register-box label {
+	font-family: 'Merriweather', serif;
+}
 
 input {
 	margin-bottom: 10px;
@@ -178,6 +170,10 @@ main {
 
 .card {
 	margin: 20px 0px;
+}
+.card h2 {
+	font-family: 'Merriweather', serif;
+	font-size: 1.6rem;
 }
 
 .card img:hover {
@@ -201,6 +197,10 @@ main {
 	margin: 20px auto;
 	height: 1500px;
 	border-radius: 1%;
+}
+.index-sidebar h2,
+.index-sidebar h3 {
+	font-family: 'Merriweather', serif;
 }
 
 .h2-sidebar {
