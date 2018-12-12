@@ -1,5 +1,5 @@
 
-            <aside class="col-12 col-md-5 col-lg-3">
+            <aside class="col-10 col-md-4 col-lg-3">
              <h2 class="text-center-related">Recommended posts</h2>
              <div class="card-deck">
               <?php
@@ -25,10 +25,10 @@
 
                        <hr>
                        <small class="text-muted">
-                       <?= "Posted: " . $post["post_date"] . "<br>"; ?>
+                       <?= "Posted: " . $rand["post_date"] . "<br>"; ?>
                        </small>
                        <p class="card-text"><small class="text-muted">By <?= $post["created_by"]; ?></small></p>
-                       <a href="../views/single_post.php?post_id=<?=$post["id"]?>#commentarea"><small class="text-muted"><i class="far fa-comment-alt"></i></small></a>
+                       <a href="../views/single_post.php?post_id=<?=$rand["id"]?>#commentarea"><small class="text-muted"><i class="far fa-comment-alt"></i></small></a>
                         </div>
                     </div>
                     </div>
