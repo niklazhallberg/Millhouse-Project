@@ -21,7 +21,7 @@
 
                        <p class="card-text"><?= $str; ?></p>
 
-                       <a href="../views/single_post.php?post_id=<?=$post["id"]?>">Read more...</a>
+                       <a href="../views/single_post.php?post_id=<?=$rand["id"]?>">Read more...</a>
 
                        <hr>
                        <small class="text-muted">
