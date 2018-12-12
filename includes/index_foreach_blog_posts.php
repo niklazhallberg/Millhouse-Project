@@ -23,8 +23,7 @@
 				<?= "Posted: " . $post["post_date"] . "<br>"; ?>
 				</small>
 				<p class="card-text"><small class="text-muted">By <?= $post["created_by"]; ?></small></p>
-                <a href="../views/single_post.php?post_id=<?=$post["id"]?>#commentarea"><small class="text-muted"><i class="far fa-comment-alt"></i>   
-                </small></a>
+                <a href="../views/single_post.php?post_id=<?=$post["id"]?>#commentarea"><small class="text-muted"><i class="far fa-comment-alt"></i></small></a>
 
 
                  </div>
