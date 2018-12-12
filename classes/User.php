@@ -9,20 +9,7 @@ class User
     }
 
 
-    public function checkIfUserExists($username) {
-        try{
-            $statement = $this->pdo->prepare("SELECT COUNT(username) AS user_exists FROM users WHERE username = :username");
-            $statement->execute([":username" => $username]);
-            $fetched_row = $statement->fetch();
-
-            if ((int)$fetched_row["user_exists"] >= 1) {
-                return true;
-            } 
-
-        } catch(PDOExeception $error) {
-            echo $error->getMessage();
-        }
-    }
+    
 
     public function register($first_name,$last_name,$date_of_birth,$email,$username,$password)
     {

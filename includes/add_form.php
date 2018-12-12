@@ -1,9 +1,8 @@
 <form enctype="multipart/form-data" class="add-post" action="../includes/add_post_sql.php" method="POST">
-  <?php
-    if (isset($_GET['error'])){
-      echo "<span style='color:red;font-weight:bold'> *" . $_GET['error'] . "</span><br>";
-  }
-  ?>
+<p class="error-message">
+          <?php if (isset($_GET["error"])){
+            echo "* ". $_GET["error"];
+          } ?> </p>
     <div class="add-title">
       <label for="title">Title</label>
       <input type="text" name="title" required><br>
