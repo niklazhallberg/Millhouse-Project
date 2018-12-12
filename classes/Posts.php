@@ -77,11 +77,23 @@ class Posts
 
     public function editPost($title, $description, $image, $category, $post_id) 
     {
-        //updates current post in database with new input from user
-        $statement = $this->pdo->prepare("UPDATE posts SET title = :title, description = :description, image = :image, category_id = :category WHERE id = :id");
-        $statement->execute([":title" => $title, ":description" => $description, ":image" => $image, ":category" => $category, ":id" => $post_id]);
+        if ($image == false) 
+        {
+            $statement = $this->pdo->prepare("UPDATE posts SET title = :title, description = :description, category_id = :category WHERE id = :id");
+            $statement->execute([":title" => $title, ":description" => $description, ":category" => $category, ":id" => $post_id]);
 
-        return $statement;
+            return $statement;
+
+            
+        } else {
+
+            //updates current post in database with new input from user
+            $statement = $this->pdo->prepare("UPDATE posts SET title = :title, description = :description, image = :image, category_id = :category WHERE id = :id");
+            $statement->execute([":title" => $title, ":description" => $description, ":image" => $image, ":category" => $category, ":id" => $post_id]);
+
+            return $statement;
+
+        }
 
     }
 
