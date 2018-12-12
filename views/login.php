@@ -21,9 +21,9 @@ include '../includes/head.php';
 				<h3>Welcome to Millhouse</h3>
 
 				<p class="error-message">
-					<?php if (isset($_GET["error"])){
-   					echo $_GET["error"];
- 					} ?> </p>
+				<?php if (isset($_GET["error"])){
+					echo "* ". $_GET["error"];
+				} ?> </p>
 
 			<form action="../includes/login_sql.php" method="POST">
   				<label for="username">Username</label>

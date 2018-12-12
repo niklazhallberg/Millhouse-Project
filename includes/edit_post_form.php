@@ -1,10 +1,9 @@
 <form class="edit-post-form" action="../includes/edit_post_sql.php" method="POST" enctype="multipart/form-data">
 
-                    <?php
-                    if (isset($_GET['error'])){
-                    echo "<span style='color:red;font-weight:bold'> *" . $_GET['error'] . "</span><br>";
-                    }
-                    ?>
+                    <p class="error-message">
+                    <?php if (isset($_GET["error"])){
+                        echo "* ". $_GET["error"];
+                    } ?> </p>
                     <?php foreach ($post_to_edit as $post) { ?>
 
                     <label class="form-label" for="heading">Post title</label>

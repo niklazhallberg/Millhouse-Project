@@ -23,7 +23,7 @@ include '../includes/head.php';
 
         <p class="error-message">
           <?php if (isset($_GET["error"])){
-            echo $_GET["error"];
+            echo "* ". $_GET["error"];
           } ?> </p>
 
 			<form action="../includes/register_sql.php" method="POST">
