@@ -3,11 +3,11 @@
              <h2 class="text-center-related">Recommended posts</h2>
              <div class="card-deck">
               <?php
-    
-                $random_posts = $posts->getRandomPosts($category);     
+
+                $random_posts = $posts->getRandomPosts($category);
                 foreach($random_posts as $rand)
                 { ?>
-                
+
                     <div class="col-12">
                     <div class="card">
                        <img class="card-img-top" src="<?= $rand["image"]; ?>" alt="Card image cap">
@@ -16,13 +16,13 @@
                             <?php $str = $rand["description"];
                             if( strlen($str) > 150) {
    				            $str = explode( "\n", wordwrap($str, 150));
-   				            $str = $str[0] . '...'; 
+   				            $str = $str[0] . '...';
                             }?>
 
                        <p class="card-text"><?= $str; ?></p>
-                       
-                       <a href="/single_post.php?post_id=<?=$post["id"]?>">Read more...</a>
-                       
+
+                       <a href="../views/single_post.php?post_id=<?=$post["id"]?>">Read more...</a>
+
                        <hr>
                        <small class="text-muted">
                        <?= "Posted: " . $post["post_date"] . "<br>"; ?>
@@ -32,9 +32,9 @@
                         </div>
                     </div>
                     </div>
-                    
+
                <?php }
                 ?>
-                    
+
           </div>
           </aside>
