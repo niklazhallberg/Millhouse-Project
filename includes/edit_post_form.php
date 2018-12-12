@@ -8,10 +8,10 @@
     <?php foreach ($post_to_edit as $post) { ?>
 
     <label class="form-label" for="heading">Post title</label>
-    <input type="text" name="title" id="heading" value="<?php echo $post['title']; ?>" required="true">
+    <input type="text" name="title" id="heading" value="<?php echo $post['title']; ?>" required>
 
     <label class="form-label" for="post_content">Post description</label>
-    <textarea class="textarea-add" id="summernote" id="post_content" name="description" > <?php echo htmlspecialchars($post['description']); ?> </textarea>
+    <textarea class="textarea-add" id="summernote" id="post_content" name="description" required> <?php echo htmlspecialchars($post['description']); ?> </textarea>
 
     <h3>Current image</h3>
     <div class="edit-post-image"><img src="../images/<?php echo $post['image']; ?>" /></div>
