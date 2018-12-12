@@ -367,6 +367,9 @@ textarea:focus {
 	position: relative !important;
 }
 
+.add-post-submit{
+	float: right;
+}
 /* ----------------------------SINGLE POST-----------------------------------------*/
 
 .border-right{

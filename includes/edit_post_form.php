@@ -17,18 +17,15 @@
                     <label class="form-label" for="image">Choose new image</label>
                     <input type="file" name="image" id="image" accept="image/png, image/jpeg">
 
-                    <h3>Choose category</h3>
-
-                    <div class="radio-buttons">
-                    <input class="radio" type="radio" name="category" id="watches" value="1" checked>
-                    <label class="form-label" for="watches">Watches</label>
-
-                    <input class="radio" type="radio" name="category" id="sunglasses" value="2">
-                    <label class="form-label" for="sunglasses">Sunglasses</label>
-
-                    <input class="radio" type="radio" name="category" id="furnishing" value="3">
-                    <label class="form-label" for="furnishing">Furnishing</label>
+                    <div>
+                      <label for="category">Choose your category:</label>
+                      <select name="category">
+                        <option value="1">Watches</option>
+                        <option value="2">Sunglasses</option>
+                        <option value="3">Furnishing</option>
+                      </select>
                     </div>
+
 
                     <!-- <input type="hidden" name="post_id" value="<?php $post['id']; ?>"> -->
                     <!-- <input type="hidden" name="created_by" value="<?php $post['created_by']; ?>">

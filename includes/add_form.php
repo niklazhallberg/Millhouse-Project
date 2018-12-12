@@ -11,8 +11,8 @@
       <label for="description">Description</label>
       <textarea id="summernote" name="description"></textarea><br>
     </div>
-    <p>Choose your category:</p>
     <div>
+      <label for="category">Choose your category:</label>
       <select name="category">
         <option value="1">Watches</option>
         <option value="2">Sunglasses</option>
@@ -21,7 +21,9 @@
     </div>
     <br>
     <input type="file" name="image" id="image" accept="image/png, image/jpeg" required>
-    <input type="submit" value="Create post">
+    <div class="add-post-submit">
+      <input type="submit" value="Create post">
+    </div>
 
 
 </form>
