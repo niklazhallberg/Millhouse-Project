@@ -1,34 +1,27 @@
 <?php
-class User
+class User 
 {
     private $pdo;
  
-    function __construct($pdo)
+    function __construct($pdo) 
     {
       $this->pdo = $pdo;
     }
 
-
     
 
-    public function register($first_name,$last_name,$date_of_birth,$email,$username,$password)
+    public function register($first_name,$last_name,$date_of_birth,$email,$username,$password) 
     {
-       try
-       {
-           $hashed_password = password_hash($password, PASSWORD_DEFAULT);
-   
-           $statement = $this->pdo->prepare("INSERT INTO users (username, password, email, first_name, last_name, date_of_birth, is_admin) VALUES (:username, :password, :email, :first_name, :last_name, :date_of_birth, :is_admin)");            
-           $statement->execute([":username" => $username, ":password" => $hashed_password, ":email" => $email, ":first_name" => $first_name, ":last_name" => $last_name, ":date_of_birth" => $date_of_birth, ":is_admin" => 0]);
-        
-           return $statement; 
-       }
-       catch(PDOException $error)
-       {
-           echo $error->getMessage();
-       }    
+        $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+
+        $statement = $this->pdo->prepare("INSERT INTO users (username, password, email, first_name, last_name, date_of_birth, is_admin) VALUES (:username, :password, :email, :first_name, :last_name, :date_of_birth, :is_admin)");            
+        $statement->execute([":username" => $username, ":password" => $hashed_password, ":email" => $email, ":first_name" => $first_name, ":last_name" => $last_name, ":date_of_birth" => $date_of_birth, ":is_admin" => 0]);
+    
+        return $statement; 
     }
 
-    public function getUser($username) {
+    public function getUser($username) 
+    {
         $statement = $this->pdo->prepare("SELECT * FROM users WHERE username = :username");
         $statement->execute([":username" => $username]);
     
@@ -37,7 +30,8 @@ class User
         return $get_user;
     }
 
-    public function isAdmin() {
+    public function isAdmin() 
+    {
 
         if (isset($_SESSION['username'])) {
             $statement = $this->pdo->prepare("SELECT * FROM users WHERE username = :username");
@@ -61,42 +55,37 @@ class User
         // }
     }
 
-    public function login($username,$password,$user_array)
+    public function login($username,$password,$user_array) 
     {
-       try
-       {
-          if((int)$user_array > 0)
-          {
-             if(password_verify($password, $user_array['password']))
-             {
-
+        if((int)$user_array > 0) 
+        {
+            if(password_verify($password, $user_array['password'])) 
+            {
                 return true;
-             }
-             
-          }
-       }
-       catch(PDOException $error)
-       {
-           echo $error->getMessage();
-       }
+            }  
+        }
+       
    }
 
 
-   public function isLoggedIn() {
+   public function isLoggedIn() 
+   {
     // if (!(isset($_SESSION['user_id']) && $_SESSION['user_id'] != ''))
-      if(isset($_SESSION['user_id']))
+      if(isset($_SESSION['user_id'])) 
       {
-         return true;
+        return true;
       }
    }
 
-   public function redirect($url) {
+   public function redirect($url) 
+   {
        header("Location: $url");
    }
  
-   public function logout() {
+   public function logout() 
+   {
         session_destroy();
-        // session_unset();
         return true;
    }
+
 }

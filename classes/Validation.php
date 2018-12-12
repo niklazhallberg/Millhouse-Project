@@ -1,68 +1,75 @@
 <?php
-class Validation {
+class Validation 
+{
 
     private $pdo;
  
-    function __construct($pdo) {
+    function __construct($pdo) 
+    {
       $this->pdo = $pdo;
     }
 
 
-    public function password($password) {
-
-        if (strlen($password) >= 7) {
+    public function password($password) 
+    {
+        if (strlen($password) >= 7) 
+        {
             return true;
         }
     }
 
-    public function username($username) {
-
-        if (strlen($username) >= 5) {
+    public function username($username) 
+    {
+        if (strlen($username) >= 5) 
+        {
             return true;
         }
     }
 
-    public function email($email) {
-        
-        if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    public function email($email) 
+    {    
+        if (filter_var($email, FILTER_VALIDATE_EMAIL)) 
+        {
         return true;
-
         }
     }
 
-    public function checkIfEmailExists($email) {
-
+    public function checkIfEmailExists($email) 
+    {
         $statement = $this->pdo->prepare("SELECT COUNT(email) AS user_exists FROM users WHERE email = :email");
-            $statement->execute([":email" => $email]);
-            $fetched_row = $statement->fetch();
+        $statement->execute([":email" => $email]);
+        $fetched_row = $statement->fetch();
 
-
-            if ((int)$fetched_row["user_exists"] >= 1) {
-                return true;
-            } 
+        if ((int)$fetched_row["user_exists"] >= 1) 
+        {
+            return true;
+        } 
     }
 
-    public function checkIfUsernameExists($username) {
-
+    public function checkIfUsernameExists($username) 
+    {
         $statement = $this->pdo->prepare("SELECT COUNT(username) AS user_exists FROM users WHERE username = :username");
-            $statement->execute([":username" => $username]);
-            $fetched_row = $statement->fetch();
+        $statement->execute([":username" => $username]);
+        $fetched_row = $statement->fetch();
 
 
-            if ((int)$fetched_row["user_exists"] >= 1) {
-                return true;
-            } 
+        if ((int)$fetched_row["user_exists"] >= 1) 
+        {
+            return true;
+        } 
     }
 
-    public function isAdmin() {
-
-        if (isset($_SESSION['username'])) {
+    public function isAdmin() 
+    {
+        if (isset($_SESSION['username'])) 
+        {
             $statement = $this->pdo->prepare("SELECT * FROM users WHERE username = :username");
             $statement->execute([":username" => $_SESSION['username']]);
 
             $is_admin = $statement->fetch(PDO::FETCH_ASSOC);
 
-            if ((int)$is_admin["is_admin"] == 1) {
+            if ((int)$is_admin["is_admin"] == 1) 
+            {
                 return true;
             }
         }
@@ -81,7 +88,8 @@ class Validation {
 
 
 
-    public function isLoggedIn() {
+    public function isLoggedIn() 
+    {
     // if (!(isset($_SESSION['user_id']) && $_SESSION['user_id'] != ''))
       if(isset($_SESSION['user_id']))
       {
@@ -89,7 +97,8 @@ class Validation {
       }
     }
 
-    public function redirect($url) {
+    public function redirect($url) 
+    {
        header("Location: $url");
     }
 
