@@ -12,6 +12,7 @@ class Validation
 
     public function password($password) 
     {
+        //checks if password is at least 7 characters
         if (strlen($password) >= 7) 
         {
             return true;
@@ -20,6 +21,7 @@ class Validation
 
     public function username($username) 
     {
+        //checks if username is at least 5 characters
         if (strlen($username) >= 5) 
         {
             return true;
@@ -28,6 +30,7 @@ class Validation
 
     public function email($email) 
     {    
+        //if type="email" has been removed - checks if email input by user is valid - ie contains @ and .
         if (filter_var($email, FILTER_VALIDATE_EMAIL)) 
         {
         return true;
@@ -36,6 +39,7 @@ class Validation
 
     public function checkIfEmailExists($email) 
     {
+        //compares if email input from user exists in table to avoid duplicates
         $statement = $this->pdo->prepare("SELECT COUNT(email) AS user_exists FROM users WHERE email = :email");
         $statement->execute([":email" => $email]);
         $fetched_row = $statement->fetch();
@@ -48,6 +52,7 @@ class Validation
 
     public function checkIfUsernameExists($username) 
     {
+        //compares if username input from user exists in table to avoid duplicates
         $statement = $this->pdo->prepare("SELECT COUNT(username) AS user_exists FROM users WHERE username = :username");
         $statement->execute([":username" => $username]);
         $fetched_row = $statement->fetch();
@@ -61,8 +66,10 @@ class Validation
 
     public function isAdmin() 
     {
+        //if user is set in session
         if (isset($_SESSION['username'])) 
         {
+            //get user from table and check if user has admin rights
             $statement = $this->pdo->prepare("SELECT * FROM users WHERE username = :username");
             $statement->execute([":username" => $_SESSION['username']]);
 

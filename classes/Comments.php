@@ -10,6 +10,7 @@ class Comments
     
     public function addComment($content, $created_by, $post_id, $post_date) 
     {
+        //insert comment into database table
         $statement = $this->pdo->prepare("INSERT INTO comments (content, created_by, post_id, comment_date) VALUES (:content, :created_by, :post_id, :comment_date)");
         $statement->execute(
             [
@@ -52,7 +53,7 @@ class Comments
     
     public function deleteCommentsWithPostId($post_id)
     {
-        //delets all comments with same post id 
+        //deletes all comments with same post id 
         $delete_comment_from_post = $this->pdo->prepare("DELETE FROM comments WHERE post_id = :post_id");
         $delete_comment_from_post->execute(
             [

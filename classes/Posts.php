@@ -9,18 +9,19 @@ class Posts
     }
 
 
-    public function getAllPosts() 
-    {
-        $statement = $this->pdo->prepare("SELECT * FROM posts");
-        $statement->execute();
-        $get_all_posts = $statement->fetchAll(PDO::FETCH_ASSOC);
+    // public function getAllPosts() 
+    // {
+    //     $statement = $this->pdo->prepare("SELECT * FROM posts");
+    //     $statement->execute();
+    //     $get_all_posts = $statement->fetchAll(PDO::FETCH_ASSOC);
 
-        return $get_all_posts;
+    //     return $get_all_posts;
 
-    }
+    // }
 
     public function getLatestPosts($number_of_posts)
     {
+        //get posts from all categories and order them in descending order, newest on top, limit to number of posts inserted with method call
         $statement = $this->pdo->prepare("SELECT * FROM posts ORDER BY id DESC LIMIT $number_of_posts");
         $statement->execute();
         $get_posts = $statement->fetchAll(PDO::FETCH_ASSOC);
@@ -31,6 +32,7 @@ class Posts
 
     public function getLatestCategoryPosts($category_id, $number_of_posts) 
     {
+        //get posts from selected category and seleceted amount, and display newest to latest
         $statement = $this->pdo->prepare("SELECT * FROM posts WHERE category_id = $category_id ORDER BY id DESC LIMIT $number_of_posts");
         $statement->execute();
         $get_category_posts = $statement->fetchAll(PDO::FETCH_ASSOC);
@@ -52,6 +54,7 @@ class Posts
 
     public function addPost($title, $description, $image, $user_name, $category, $post_date) 
     {
+        //gets input from user and inserts into database as new post in posts table
         $statement = $this->pdo->prepare("INSERT INTO posts (title, description, created_by, image, category_id, post_date) VALUES (:title, :description, :created_by, :image, :category_id, :post_date)");
         $statement->execute([":title" => $title, ":description" => $description, ":created_by" => $user_name, ":image" => $image, ":category_id" => $category, ":post_date" => $post_date]);
 
@@ -74,6 +77,7 @@ class Posts
 
     public function editPost($title, $description, $image, $category, $post_id) 
     {
+        //updates current post in database with new input from user
         $statement = $this->pdo->prepare("UPDATE posts SET title = :title, description = :description, image = :image, category_id = :category WHERE id = :id");
         $statement->execute([":title" => $title, ":description" => $description, ":image" => $image, ":category" => $category, ":id" => $post_id]);
 

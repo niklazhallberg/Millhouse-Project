@@ -12,6 +12,7 @@ class User
 
     public function register($first_name,$last_name,$date_of_birth,$email,$username,$password) 
     {
+        //inserts the password as hashed into database for security
         $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
         $statement = $this->pdo->prepare("INSERT INTO users (username, password, email, first_name, last_name, date_of_birth, is_admin) VALUES (:username, :password, :email, :first_name, :last_name, :date_of_birth, :is_admin)");            
@@ -32,7 +33,7 @@ class User
 
     public function isAdmin() 
     {
-
+        //if session is set with user - get user and check column to see if user has admin rights
         if (isset($_SESSION['username'])) {
             $statement = $this->pdo->prepare("SELECT * FROM users WHERE username = :username");
             $statement->execute([":username" => $_SESSION['username']]);
@@ -57,8 +58,10 @@ class User
 
     public function login($username,$password,$user_array) 
     {
+        //if user exists
         if((int)$user_array > 0) 
-        {
+        {   
+            //check if password matches user
             if(password_verify($password, $user_array['password'])) 
             {
                 return true;

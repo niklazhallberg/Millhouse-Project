@@ -2,9 +2,11 @@
 session_start();
 include '../classes/call.php';
 
+//all input fields need to be filled in to continue
 if(!empty($_POST["first_name"]) && !empty($_POST["last_name"]) && !empty($_POST["date_of_birth"]) && !empty($_POST["email"]) && !empty($_POST["username"]) && !empty($_POST["password"])) 
 {
     
+   //stores input from user in variable
    $first_name = $_POST["first_name"];
    $last_name = $_POST["last_name"];
    $date_of_birth = $_POST["date_of_birth"];
@@ -12,7 +14,7 @@ if(!empty($_POST["first_name"]) && !empty($_POST["last_name"]) && !empty($_POST[
    $username = $_POST["username"];
    $password = $_POST["password"];
    
-
+   //validates input from user, sends error message if validation fails
    if (!$val->email($email)) 
    {
       $user->redirect('../views/register.php?error=Enter a valid email.');
@@ -30,9 +32,10 @@ if(!empty($_POST["first_name"]) && !empty($_POST["last_name"]) && !empty($_POST[
       $user->redirect('../views/register.php?error=Password needs to be at least 7 characters.');
    } else 
    {
-
+      
       if($user->register($first_name,$last_name,$date_of_birth,$email,$username,$password)) 
       {
+         //if user is registered, get user and store in session for future usage
          $user_array = $user->getUser($username);
          $_SESSION["username"] = $user_array["username"];
          $_SESSION["user_id"] = $user_array["id"];
