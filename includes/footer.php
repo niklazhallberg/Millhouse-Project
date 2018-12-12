@@ -2,7 +2,7 @@
 	<div class="container-fluid">
 		<div class="row footer justify-content-center align-items-center mr-0 ml-0">
 			<div class="footer-logo justify-content-center align-items-center">
-				<img src="../images/logo_light.png" alt="Logo">
+				<img src="../images/logo_light.png" alt="Millhouse-Logo">
 			</div>
 		</div>
 			<div class="row justify-content-center align-items-center mr-0 ml-0">
