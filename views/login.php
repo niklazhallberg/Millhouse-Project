@@ -1,8 +1,8 @@
 <?php
 session_start();
 include '../classes/call.php';
-if($user->isLoggedIn()) {
-    $user->redirect('../index.php');
+if($val->isLoggedIn()) {
+    $val->redirect('../index.php');
 }
 ?>
 <?php

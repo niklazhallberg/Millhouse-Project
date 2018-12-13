@@ -1,11 +1,11 @@
 <?php
 session_start();
 include '../classes/call.php';
-if(!$user->isLoggedIn()) {
-    $user->redirect('login.php');
+if(!$val->isLoggedIn()) {
+    $val->redirect('login.php');
 }
-if(!$user->isAdmin()) {
-    $user->redirect('../index.php');
+if(!$val->isAdmin()) {
+    $val->redirect('../index.php');
 }
 $post_id = $_GET["post_id"];
 $_SESSION["post_id"] = $post_id;

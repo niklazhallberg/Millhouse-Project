@@ -1,13 +1,7 @@
 
-          <h2>All posts</h2>
+          <h2><a href="../index.php">Back to home</a></h2>
 
           <hr>
-
-
-        <div class="category-box">
-          <h3><a href="../index.php">Home page</a></h3>
-          
-          </div>
 
 
           <div class="category-box">

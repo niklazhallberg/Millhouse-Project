@@ -10,4 +10,4 @@ $post_id = $_SESSION["post_id"];
 $comments_to_delete = $comments->deleteCommentWithId($delete_comment);
 
 //back to single_post
-header("location: ../views/single_post.php?post_id=$post_id");
+$val->redirect("../views/single_post.php?post_id=$post_id");

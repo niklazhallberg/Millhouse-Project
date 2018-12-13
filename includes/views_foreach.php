@@ -27,7 +27,7 @@
 
 
                  </div>
-				<?php if($user->isAdmin()){?>
+				<?php if($val->isAdmin()){?>
 
 				<div class="card-footer">
 

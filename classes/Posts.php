@@ -8,17 +8,6 @@ class Posts
       $this->pdo = $pdo;
     }
 
-
-    // public function getAllPosts() 
-    // {
-    //     $statement = $this->pdo->prepare("SELECT * FROM posts");
-    //     $statement->execute();
-    //     $get_all_posts = $statement->fetchAll(PDO::FETCH_ASSOC);
-
-    //     return $get_all_posts;
-
-    // }
-
     public function getLatestPosts($number_of_posts)
     {
         //get posts from all categories and order them in descending order, newest on top, limit to number of posts inserted with method call

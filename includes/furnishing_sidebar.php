@@ -1,12 +1,9 @@
 
-          <h2>Furniture articles</h2>
+          <h2><a href="../index.php">Back to home</a></h2>
 
           <hr>
 
-          <div class="category-box">
-          <h3><a href="../index.php">Home page</a></h3>
-          </div>
-
+      
           <div class="category-box">
           <h3><a href="watches.php">Watches</a></h3>
           <ul class="list-unstyled">

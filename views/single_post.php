@@ -52,7 +52,7 @@ include '../classes/call.php';
            <p> <?= $post["description"]; ?> </p>
 
            <!-- if loged in user is admin, show delete post button -->
-            <?php if($user->isAdmin()){ ?>
+            <?php if($val->isAdmin()){ ?>
             <div class="margin-top">
             <a class="margin-right" href="../views/edit_post.php?post_id=<?= $post_id ?>"><span><i class="fas fa-wrench"></i> Edit post</span></a>
             <a href="../index.php?delete_post=<?= $post_id ?>"><span><i class="far fa-trash-alt"></i> Delete post</span></a>
@@ -89,7 +89,7 @@ include '../classes/call.php';
                 </div>
 
                 <!-- if loged in user is admin, show delete comment button in card footer -->
-                <?php if($user->isAdmin()){ ?>
+                <?php if($val->isAdmin()){ ?>
                 <div class="card-footer bg-transparent">
                     <a href="../includes/delete_comment_sql.php?delete_comment=<?=$comment["comment_id"]?>"><span><i class="far fa-trash-alt"></i> Delete comment</span></a>
                 </div>

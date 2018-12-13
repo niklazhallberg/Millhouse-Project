@@ -1,8 +1,8 @@
 <?php
 session_start();
 include 'classes/call.php';
-if(!$user->isLoggedIn()) {
-  $user->redirect('views/login.php');
+if(!$val->isLoggedIn()) {
+  $val->redirect('views/login.php');
 }
 
 //if get is sent from single_post to delete post, delete post and comments
