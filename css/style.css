@@ -142,16 +142,25 @@ body {
 /* ---------------------------REGISTER/LOGIN--------------------------- */
 
 .register-box {
+	/* text-align: center; */
 	background-color: #95B8D1;
 	border-radius: 5%;
 	padding: 20px;
   	margin-top: 2em;
-	  margin-bottom: 400px;
+  	margin-bottom: 400px;
 }
-.register-box h3,
-.register-box label {
-	font-family: 'Merriweather', serif;
-}
+
+/* .register-box p {
+	text-align: center;
+} */
+
+/* .register-box input {
+	margin: 10px 20px;
+} */
+
+/* form {
+	text-align: center;
+} */
 
 input {
 	margin-bottom: 10px;
@@ -179,6 +188,7 @@ main {
 .card {
 	margin: 20px 0px;
 }
+
 .card h2 {
 	font-family: 'Merriweather', serif;
 	font-size: 1.6rem;
@@ -188,11 +198,8 @@ main {
     opacity: 0.7;
 }
 
-/* .blogpost-section {
-	padding-right: 40px;
-} */
 
-.index-sidebar{
+.sidebar{
     background-color: #95B8D1;
     opacity: 20%;
 	padding:1em;
@@ -200,8 +207,8 @@ main {
 	height: 1500px;
 	border-radius: 1%;
 }
-.index-sidebar h2,
-.index-sidebar h3 {
+.sidebar h2,
+.sidebar h3 {
 	font-family: 'Merriweather', serif;
 }
 
@@ -226,7 +233,7 @@ main {
 }
 
 .category-box {
-	padding: 10px 0;
+	padding: 10px;
 }
 
 .post-row {
@@ -245,7 +252,9 @@ main {
 	max-width: 100%;
 	min-height: 100%;
 }
-
+.test-ish {
+	margin-top: 4.8rem;
+}
 
 /* ---------------------------------------FOOTER--------------------------------*/
 
@@ -362,7 +371,6 @@ textarea:focus {
 .edit-post-image img {
 	max-width: 30em;
 }
-
 .card-header {
 	position: relative !important;
 }
@@ -407,8 +415,8 @@ i{
 /* ----------------------------MEDIAQUERIES-----------------------------------------*/
 
 
-@media screen and (min-width: 576px) {
-	.card-columns.count {
+@media screen and (min-width: 570px) {
+	.card-columns {
 		column-count: 2;
 	}
 }
@@ -421,7 +429,7 @@ i{
     transform: none;
     margin-left: 1em;
 }
-
+    
 .header-logo img {
     max-height: 4em;
 }
@@ -453,7 +461,7 @@ i{
 		max-width: 30em;
 
 	}
-
+  
 	.comment-form textarea{
 		height: 150px;
 		width: 60%;
@@ -466,13 +474,18 @@ i{
 		justify-content: space-between;
 		align-items: center;
 	}
-
+		
 	.register-box {
 		max-width: 30em;
 	}
+	.card-columns {
+		column-count: 2;
+	}
+	.all-count {
+		column-count: 3;
+	}
 
-
-
+	
 }
 
 /* Medium devices (desktops, 992px and up) */
@@ -480,31 +493,36 @@ i{
 	.card-columns {
 		column-count: 2;
 	}
-
-}
-@media screen and (min-width: 1024px) {
-	.card-columns.count {
-		column-count: 3;
+	.all-count {
+		column-count: 4;
 	}
 
 }
+@media screen and (min-width: 1200px) {
+	.card-columns {
+		column-count: 3;
+	}
+	.all-count {
+		column-count: 4;
+	}
+}
 
 
 
-/* .card-columns {
+/* .card-columns { 
 	display: flex;
 	flex-flow: row wrap;
-	margin-left: -8px;
+	margin-left: -8px; 
   } */
-
+  
   /* .card {
-	flex: auto;
+	flex: auto; 
 	min-height: 100px;
 	max-width: 30%;
-	margin: 0 8px 8px 0;
+	margin: 0 8px 8px 0; 
   } */
 
-
+  
 	/* .card:nth-child(4n+1){
 	   width: 250px;
 	}
@@ -517,3 +535,4 @@ i{
 	.card:nth-child(4n+4){
 	   width: 380px;
 	} */
+  
