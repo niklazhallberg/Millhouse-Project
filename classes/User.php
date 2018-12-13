@@ -15,7 +15,7 @@ class User
         //inserts the password as hashed into database for security
         $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
-        $statement = $this->pdo->prepare("INSERT INTO users (username, password, email, first_name, last_name, date_of_birth, is_admin) VALUES (:username, :password, :email, :first_name, :last_name, :date_of_birth)");            
+        $statement = $this->pdo->prepare("INSERT INTO users (username, password, email, first_name, last_name, date_of_birth) VALUES (:username, :password, :email, :first_name, :last_name, :date_of_birth)");            
         $statement->execute([":username" => $username, ":password" => $hashed_password, ":email" => $email, ":first_name" => $first_name, ":last_name" => $last_name, ":date_of_birth" => $date_of_birth]);
     
         return $statement; 
@@ -33,31 +33,21 @@ class User
 
     public function isAdmin() 
     {
-        //if session is set with user - get user and check column to see if user has admin rights
-        if (isset($_SESSION['username'])) {
-               
-        $statement = $this->pdo->prepare("SELECT id as admin_rights FROM users JOIN admin ON id = user_id");
-        $statement->execute();
+        //if session is set with user - get user and join with admin table to see if session is a match
+        if (isset($_SESSION['username'])) 
+        {
+            $statement = $this->pdo->prepare("SELECT id as admin_rights FROM users JOIN admin ON id = user_id");
+            $statement->execute();
 
-        $is_admin = $statement->fetch();
+            $is_admin = $statement->fetch();
 
-        if ($_SESSION["user_id"] == (int)$is_admin) {
-            return true;
-        }
+            if ($_SESSION["user_id"] == (int)$is_admin) 
+            {
+                return true;
+            }
             
         }
-       
-     
 
-
-        // $statement = $this->pdo->prepare("SELECT * FROM users WHERE username = :username");
-        //     $statement->execute([":username" => $_SESSION['username']]);
-
-        //     $is_admin = $statement->fetch(PDO::FETCH_ASSOC);
-
-        //     if ((int)$is_admin["is_admin"] == 1) {
-        //         return true;
-        //     }
     }
 
     public function login($username,$password,$user_array) 
