@@ -2,7 +2,7 @@
 session_start();
 include '../classes/call.php';
 
-$title = $_POST["title"];
+$title = strip_tags($_POST["title"]);
 $description = strip_tags($_POST["description"]);
 $image = $_FILES["image"];
 $category = $_POST["category"];
