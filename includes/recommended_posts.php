@@ -3,6 +3,11 @@
              <h2 class="text-center-related">Recommended posts</h2>
              <div class="card-deck">
               <?php
+                 
+                 //calling method to get all comments with post id
+                 $comments_to_print = $comments->getCommentsWithId($post_id);
+                 //calls method to count comments
+                 $counter = $comments->countingComments($comments_to_print);
 
                 $random_posts = $posts->getRandomPosts($category);
                 foreach($random_posts as $rand)
@@ -30,7 +35,7 @@
                        <?= "Posted: " . $rand["post_date"] . "<br>"; ?>
                        </small>
                        <p class="card-text"><small class="text-muted">By <?= $post["created_by"]; ?></small></p>
-                       <a href="../views/single_post.php?post_id=<?=$rand["id"]?>#commentarea"><small class="text-muted"><i class="far fa-comment-alt"></i></small></a>
+                       <a href="../views/single_post.php?post_id=<?=$rand["id"]?>#commentarea"><small class="text-muted"><i class="far fa-comment-alt d-inline"></i></small><p class="d-inline"> <?= $counter; ?></p></a>
                         </div>
                     </div>
                     </div>
