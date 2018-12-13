@@ -122,19 +122,4 @@ class Posts
         return $random_posts;
     }
 
-    public function getCategory($category) 
-    {
-        //get category
-        $get_category = $this->pdo->prepare("SELECT category FROM categories JOIN posts ON categories.id = posts.category_id WHERE category_id = :category");
-        $get_category->execute(
-            [
-                ":category" => $category
-            ]
-        );
-
-        return $get_category;
-
-    }
-
-
 }

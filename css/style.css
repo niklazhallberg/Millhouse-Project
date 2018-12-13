@@ -383,8 +383,8 @@ textarea:focus {
     background-color: #95B8D1 !important;
 }
 .single-post-img{
-    width: 80%;
-    margin: 20px 10%;
+    width: 100%;
+    margin: 20px auto;
 }
 .text-center{
     text-align: center;
@@ -400,8 +400,9 @@ i{
     font-size: 1.5em;
 }
 
-
-
+.social-media-logo{
+    max-width: 2em;
+}
 
 /* ----------------------------MEDIAQUERIES-----------------------------------------*/
 

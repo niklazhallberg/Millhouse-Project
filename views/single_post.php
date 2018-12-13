@@ -31,13 +31,19 @@ include '../classes/call.php';
                <p><small class="text-muted">By <?= $post["created_by"]; ?> &nbsp; &#9679; &nbsp; <?= $post["post_date"]; ?></small></p>
            </div>
            <div class="col-12 text-center">
-           <i class="fab fa-twitter-square"></i>
-           <i class="fab fa-facebook-square"></i>
-           <i class="fab fa-instagram"></i>
-           <i class="fab fa-pinterest-square"></i>
+           <!--social media logos-->
+           <a href="#"><img class="d-inline social-media-logo" src="../images/CircleColor/Facebook.svg" alt="facebook-logo"></a>
+           
+           <a href="#"><img class="d-inline social-media-logo" src="../images/CircleColor/Instagram.svg" alt="insta-logo"></a>
+           
+           <a href="#"><img class="d-inline social-media-logo" src="../images/CircleColor/Pinterest.svg" alt="pinterest-logo"></a>
+           
+           <a href="#"><img class="d-inline social-media-logo" src="../images/CircleColor/Twitter.svg" alt="twitter-logo"></a>
+           
            </div>
            </div>
-
+           <div class="row justify-content-center">
+          <div class="col-12 col-md-11">
            <img class="single-post-img" src="../images/<?= $post["image"]; ?>" alt="image not found">
 
            <hr>
@@ -45,22 +51,27 @@ include '../classes/call.php';
 
            <!-- if loged in user is admin, show delete post button -->
             <?php if($user->isAdmin()){ ?>
-            <hr>
+            
             <a href="../views/edit_post.php?post_id=<?= $post_id ?>"><span><i class="fas fa-wrench"></i> Edit post</span></a>
             
             <a href="../index.php?delete_post=<?= $post_id ?>"><span><i class="far fa-trash-alt"></i> Delete post</span></a>
        
 <?php
 } ?>
-
+</div>
+</div>
 <?php } ?>
-
-            <hr>
+           <hr>
             <?php
               //calls method to print comments and prints it with foreach loop inside a bootstrap card
                 $comments_to_print = $comments->getCommentsWithId($post_id);
+              //calls method to count the comments for this post
+               // $counter = $comments->countingComments($comments_to_print);
+            ?>
+                
+                <!--<h3 class="text-center">This post has <?= $counter; ?> comments.</h3>-->
        
-                foreach($comments_to_print as $comment){ ?>
+            <?php foreach($comments_to_print as $comment){ ?>
                 
 
                 <div class="comment-card">
