@@ -1,21 +1,23 @@
 
-/*font-family: 'Open Sans', sans-serif; (Text)
+/*
+Font Families:
+
+font-family: 'Open Sans', sans-serif; (Text)
 font-family: 'Merriweather', serif; (Headings)
+
 */
 
 
 /*
 Primary Colors:
 
-#F0F0F0 - lightGrey, Background
-#1C3045 - NavyBlue, Headings?
+#F0F0F0 - LightGrey, Main Background
+#1C3045 - NavyBlue, Header and Footer
 
 Secondary Colors:
-#D7BCC8 - DarkPink, Header, Forms
-#A6C9C6 - WierdGreen, Sidebar
-#252525 - AlmostBlack, Text
-#60495A
-#95B8D1
+
+#252525 - AlmostBlack, Headings and Paragraphs
+#95B8D1 - LightBlue, Login, Register and Aside 
 
 */
 
@@ -26,6 +28,7 @@ h3,
 h4,
 label {
 	font-family: 'Merriweather', serif;
+	color: #252525;
 }
 
 h3 {
@@ -40,7 +43,7 @@ span {
 }
 
 a {
-	 color: #1C3045;
+	 color: #252525;
 	 font-size: 0.9em;
 }
 
@@ -161,6 +164,11 @@ body {
 
 input {
 	margin-bottom: 10px;
+}
+.error-message {
+	color: #990000;
+	font-weight: bold;
+	font-size: 1.2rem;
 }
 
 
@@ -295,21 +303,6 @@ footer {
 	display: inline;
 }
 
-/*footer {
-	margin-top: 250px;
-	height: 250px;
-	background-color: #1C3045;
-}
-
-em.pinterest{
-	background: url(images/pinterest.png);
-    background-size: 24px;
-    background-position: center;
-    height: 24px;
-    width: 24px;
-    display: block;
-}*/
-
 /* ----------------------------FORM-----------------------------------------*/
 
 
@@ -378,7 +371,13 @@ textarea:focus {
 .edit-post-image img {
 	max-width: 30em;
 }
+.card-header {
+	position: relative !important;
+}
 
+.add-post-submit{
+	float: right;
+}
 /* ----------------------------SINGLE POST-----------------------------------------*/
 
 .border-right{
@@ -392,8 +391,8 @@ textarea:focus {
     background-color: #95B8D1 !important;
 }
 .single-post-img{
-    width: 80%;
-    margin: 20px 10%;
+    width: 100%;
+    margin: 20px auto;
 }
 .text-center{
     text-align: center;
@@ -409,8 +408,9 @@ i{
     font-size: 1.5em;
 }
 
-
-
+.social-media-logo{
+    max-width: 2em;
+}
 
 /* ----------------------------MEDIAQUERIES-----------------------------------------*/
 

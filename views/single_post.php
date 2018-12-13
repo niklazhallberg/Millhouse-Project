@@ -24,20 +24,28 @@ include '../classes/call.php';
       foreach($post_to_print as $post){
        $category = $post["category_id"];  ?>
 
+          <!-- printing post title -->
            <h1 class="text-center"> <?= $post["title"]; ?> </h1>
            <hr>
            <div class="row text-center">
            <div class="col-12">
+             
+              <!-- printing created by and date -->
                <p><small class="text-muted">By <?= $post["created_by"]; ?> &nbsp; &#9679; &nbsp; <?= $post["post_date"]; ?></small></p>
            </div>
            <div class="col-12 text-center">
-           <i class="fab fa-twitter-square"></i>
-           <i class="fab fa-facebook-square"></i>
-           <i class="fab fa-instagram"></i>
-           <i class="fab fa-pinterest-square"></i>
+           
+           <!--social media logos-->
+           <a href="#"><img class="d-inline social-media-logo" src="../images/CircleColor/Facebook.svg" alt="facebook-logo"></a>
+           <a href="#"><img class="d-inline social-media-logo" src="../images/CircleColor/Instagram.svg" alt="insta-logo"></a>
+           <a href="#"><img class="d-inline social-media-logo" src="../images/CircleColor/Pinterest.svg" alt="pinterest-logo"></a>
+           <a href="#"><img class="d-inline social-media-logo" src="../images/CircleColor/Twitter.svg" alt="twitter-logo"></a>
+           
            </div>
            </div>
-
+           <div class="row justify-content-center">
+          <div class="col-12 col-md-11">
+          <!--printing post image-->
            <img class="single-post-img" src="../images/<?= $post["image"]; ?>" alt="image not found">
 
            <hr>
@@ -45,24 +53,31 @@ include '../classes/call.php';
 
            <!-- if loged in user is admin, show delete post button -->
             <?php if($user->isAdmin()){ ?>
-            <hr>
-            <a href="../views/edit_post.php?post_id=<?= $post_id ?>"><span><i class="fas fa-wrench"></i> Edit post</span></a>
             
+            <a href="../views/edit_post.php?post_id=<?= $post_id ?>"><span><i class="fas fa-wrench"></i> Edit post</span></a>
             <a href="../index.php?delete_post=<?= $post_id ?>"><span><i class="far fa-trash-alt"></i> Delete post</span></a>
        
 <?php
 } ?>
-
+</div>
+</div>
 <?php } ?>
-
-            <hr>
+           <hr>
             <?php
               //calls method to print comments and prints it with foreach loop inside a bootstrap card
                 $comments_to_print = $comments->getCommentsWithId($post_id);
+        
+              //calls method to count the comments for this post
+                $counter = $comments->countingComments($comments_to_print); ?>
+                <h3 class="text-center">This post has <?= $counter ?> comments</h3>
        
-                foreach($comments_to_print as $comment){ ?>
+            <?php 
+                //calls method to print comments and prints it with foreach loop inside a bootstrap card
+                $comments_to_print = $comments->getCommentsWithId($post_id);
+                foreach($comments_to_print as $comment){ 
+            ?>
                 
-
+                <!-- bootsrap card with comment-->
                 <div class="comment-card">
                 <div class="card border-light mb-2" style="max-width: 25rem;">
                 <div class="card-header blue-header">Commented by <?= $comment["created_by"]; ?></div>
@@ -83,13 +98,12 @@ include '../classes/call.php';
 
           <?php } ?>
 
+            
              <!-- form for user to add a comment to the post-->
               <hr>
               <form class="comment-form" id="commentarea" action="../includes/add_comment_sql.php" method="POST">
               <label for="comment-field"><h3>Leave comment as <?= $_SESSION["username"]; ?></h3></label><br />
               <textarea name="content" placeholder="Start the discussion..."></textarea><br />
-
-
 
               <input type="submit" value="Comment">
               </form>
@@ -103,8 +117,6 @@ include '../classes/call.php';
         </div>
     </div>
 </main>
-
-
 
 <?php include '../includes/footer.php'; ?>
 <?php include '../includes/javascript_tag.php'; ?>

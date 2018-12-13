@@ -1,4 +1,5 @@
-<?php foreach($index_posts as $post): ?>
+<?php foreach($index_posts as $post):
+$post_id = $post["id"]; ?>
 		<!-- <div class="col-12 col-md-6 col-lg-4 post-box pl-0 pr-0"> -->
              <div class="card">
                <a href="../views/single_post.php?post_id=<?=$post["id"]?>">
@@ -12,7 +13,13 @@
 				if( strlen($str) > 150) {
    				$str = explode( "\n", wordwrap($str, 150));
    				$str = $str[0] . '...';
-				} ?>
+				} 
+                 //calling method to get all comments with post id
+                 $comments_to_print = $comments->getCommentsWithId($post_id);
+                 //calls method to count comments
+                 $counter = $comments->countingComments($comments_to_print);
+                 
+                 ?>
 
 				<p class="card-text"><?= $str; ?></p>
 
@@ -23,7 +30,7 @@
 				<?= "Posted: " . $post["post_date"] . "<br>"; ?>
 				</small>
 				<p class="card-text"><small class="text-muted">By <?= $post["created_by"]; ?></small></p>
-                <a href="../views/single_post.php?post_id=<?=$post["id"]?>#commentarea"><small class="text-muted"><i class="far fa-comment-alt"></i></small></a>
+                <a href="../views/single_post.php?post_id=<?=$post["id"]?>#commentarea"><small class="text-muted"><i class="far fa-comment-alt d-inline"></i></small><p class="d-inline"> <?= $counter; ?></p></a>
 
 
                  </div>

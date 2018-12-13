@@ -23,33 +23,33 @@ include '../includes/head.php';
 
         <p class="error-message">
           <?php if (isset($_GET["error"])){
-            echo $_GET["error"];
+            echo "* ". $_GET["error"];
           } ?> </p>
 
 			<form action="../includes/register_sql.php" method="POST">
 
 				<label for="first_name">First name</label>
-  				<input type="text" id="first_name" name="first_name" required="true">
+  				<input type="text" id="first_name" name="first_name" required>
 
   				<label for="last_name">Last name</label>
-  				<input type="text" id="last_name" name="last_name" required="true">
+  				<input type="text" id="last_name" name="last_name" required>
 
 				<label for="email">Email</label>
-  				<input class="input" type="email" id="email" name="email" required="true">
+  				<input class="input" type="email" id="email" name="email" required>
 
   				<label for="date_of_birth">Date of birth</label>
-  				<input class="input" type="date" id="date_of_birth" name="date_of_birth" required="true">
+  				<input class="input" type="date" id="date_of_birth" name="date_of_birth" required>
 
   				<label for="username">Username</label>
-  				<input type="text" id="username" name="username" required="true">
+  				<input type="text" id="username" name="username" required>
 
   				<label for="password">Password</label>
-  				<input class="input" type="password" id="password" name="password" required="true">
+  				<input class="input" type="password" id="password" name="password" required>
 
-				<a href="login.php">Already a member? Go to login</a><br>
   				<input type="submit" value="Register">
-
-			</form>
+  				</form>
+  				
+  				<a href="login.php">Already a member? Go to login</a><br>
 
 		</div>
 

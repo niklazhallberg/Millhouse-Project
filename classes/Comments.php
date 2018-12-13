@@ -8,70 +8,74 @@ class Comments
       $this->pdo = $pdo;
     }
     
-    public function addComment($content, $created_by, $post_id, $post_date) {
- 
-            $statement = $this->pdo->prepare("INSERT INTO comments (content, created_by, post_id, comment_date) VALUES (:content, :created_by, :post_id, :comment_date)");
-            $statement->execute(
-                [
-                    ":content" => $content,
-                    ":created_by" => $created_by,
-                    ":post_id" => $post_id,
-                    ":comment_date" => $post_date
-                ]
-            );
+    public function addComment($content, $created_by, $post_id, $post_date) 
+    {
+        //insert comment into database table
+        $statement = $this->pdo->prepare("INSERT INTO comments (content, created_by, post_id, comment_date) VALUES (:content, :created_by, :post_id, :comment_date)");
+        $statement->execute(
+            [
+                ":content" => $content,
+                ":created_by" => $created_by,
+                ":post_id" => $post_id,
+                ":comment_date" => $post_date
+            ]
+        );
         
     }
     
-    public function getCommentsWithId($post_id){
+    public function getCommentsWithId($post_id)
+    {
+        //selects all comments for correct post with post_id
+        $comments_to_print = $this->pdo->prepare("SELECT * FROM comments WHERE post_id = :post_id");
+        $comments_to_print->execute(
+            [
+                ":post_id" => $post_id
+            ]
+        );
         
-        try{
-            //selects all comments for correct post with post_id
-            $comments_to_print = $this->pdo->prepare("SELECT * FROM comments WHERE post_id = :post_id");
-            $comments_to_print->execute(
-                [
-                    ":post_id" => $post_id
-                ]
-            );
-            
-            return $comments_to_print;
-            
-        }catch(PDOException $error){
-            
-            echo $error->getMessage();
-        }
+        return $comments_to_print; 
+    
     }
     
-    public function deleteCommentWithId($comment_id){
-        try{
-            //selects all comments for correct post with post_id
-            $delete_comment = $this->pdo->prepare("DELETE FROM comments WHERE comment_id = :comment_id");
-            $delete_comment->execute(
-                [
-                    ":comment_id" => $comment_id
-                ]
-            );
-            
-            return $comments_to_print;
-            
-        }catch(PDOException $error){
-            
-            echo $error->getMessage();
-        }   
+    public function deleteCommentWithId($comment_id)
+    {
+        //selects all comments for correct post with post_id
+        $delete_comment = $this->pdo->prepare("DELETE FROM comments WHERE comment_id = :comment_id");
+        $delete_comment->execute(
+            [
+                ":comment_id" => $comment_id
+            ]
+        );
+        
+        return $comments_to_print;
+         
     }
     
-    public function deleteCommentsWithPostId($post_id){
-        try{
-            //delets all comments with same post id 
-            $delete_comment_from_post = $this->pdo->prepare("DELETE FROM comments WHERE post_id = :post_id");
-            $delete_comment_from_post->execute(
-                [
-                    ":post_id" => $post_id
-                ]
-            );
-        }catch(PDOException $error){
-            
-            echo $error->getMessage();
-        }
+    public function deleteCommentsWithPostId($post_id)
+    {
+        //deletes all comments with same post id 
+        $delete_comment_from_post = $this->pdo->prepare("DELETE FROM comments WHERE post_id = :post_id");
+        $delete_comment_from_post->execute(
+            [
+                ":post_id" => $post_id
+            ]
+        );
+        
+    }
+    
+    public function countingComments($comments_to_print){
+        
+        //if post have comments, add 1 for each comments
+                 if(!empty($comments_to_print)){
+                     
+                     $count=0;
+                     foreach($comments_to_print as $comment){
+                         $count++;
+                     }
+                     
+                     return $count;
+                 }
+        
     }
     
 
