@@ -15,10 +15,10 @@ if(empty($title) || empty($description))
 {
   header('Location: ../views/edit_post.php?error= Fill in all fields, please!');
 }
-else 
+else
 {
     //check if title is longer than 100 characters, if so, redirect, else continue
-    if ((strlen($title)) <= 100) 
+    if ((strlen($title)) <= 100)
     {
       //stores image in temporary location, then upload into database
       $temporary_location = $image["tmp_name"];
@@ -30,10 +30,10 @@ else
           //if new image chosen, update content in post with new input from user
           $posts->editPost($title, $description, $new_location, $category, $post_id);
           $user->redirect('../index.php');
-    
+
         }
-        else 
-        { 
+        else
+        {
           //if user wants to keep image, update without image value
           $posts->editPost($title, $description, false, $category, $post_id);
           $user->redirect('../index.php');
@@ -41,9 +41,9 @@ else
         }
 
 
-    } else 
+    } else
     {
-      header('Location: ../views/edit_post.php?error= The title cannot be longer than 100 characters, please try again.');
+      header('Location: ../views/edit_post.php?error= The title cannot be longer than 100 characters, please try again.&post_id='. $post_id);
     }
-      
+
 }
