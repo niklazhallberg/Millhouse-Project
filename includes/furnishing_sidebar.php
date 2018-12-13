@@ -1,5 +1,5 @@
 
-          <h2>Furnishing articles</h2>
+          <h2>Furniture articles</h2>
 
           <hr>
 

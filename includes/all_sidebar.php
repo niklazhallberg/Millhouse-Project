@@ -41,7 +41,7 @@
           </div>
 
           <div class="category-box">
-          <h3><a href="furnishing.php">Furnishing articles</a></h3>
+          <h3><a href="furnishing.php">Furniture articles</a></h3>
           <ul class="list-unstyled">
             <?php 
 

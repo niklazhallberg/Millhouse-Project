@@ -16,7 +16,7 @@ if(!$user->isLoggedIn()) {
          <section class="col-12 col-md-9 blogpost-section pr-0 pl-0">
 
           <div class="row mr-0 ml-0">
-          <div class="page-heading"><h1>Furnishing articles</h1></div>
+          <div class="page-heading"><h1>Furniture articles</h1></div>
 
             <div class="col-12 card-columns pr-0 pl-0">
       
