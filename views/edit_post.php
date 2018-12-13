@@ -40,5 +40,7 @@ $post_to_edit = $posts->getPostWithId($post_id);
         height: 400
       });
     </script>
-    <?php include '../includes/footer.php'; ?>
-</body>
+
+    
+<?php include '../includes/footer.php'; ?>
+

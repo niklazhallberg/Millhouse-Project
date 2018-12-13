@@ -42,10 +42,7 @@ if(!$val->isLoggedIn()) {
 
 </main>
 
-<?php include '../includes/footer.php'; ?>
-
 <?php include '../includes/javascript_tag.php'; ?>
 
-</body>
+<?php include '../includes/footer.php'; ?>
 
-</html>

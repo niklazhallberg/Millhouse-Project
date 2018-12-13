@@ -30,5 +30,6 @@ if(!$val->isAdmin()) {
         height: 400
       });
     </script>
-    <?php include '../includes/footer.php'; ?>
-</body>
+
+<?php include '../includes/footer.php'; ?>
+

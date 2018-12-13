@@ -34,7 +34,7 @@ include '../includes/head.php';
   				<button class="button-static"><span>Login </span></button>
 			</form>
 
-			<a href="register.php">Not already a member? Register here</a>
+			<a href="register.php">Not a member yet? Register here!</a>
 
 		</div>
 

@@ -20,12 +20,10 @@ if(!$val->isLoggedIn()) {
                     
 
             <div class="col-12 card-columns pr-0 pl-0">
-      
-           <?php
 
-           /* NUMBER OF POSTS DISPLAYED IN MAIN BLOG */
+           <!-- NUMBER OF POSTS DISPLAYED IN MAIN BLOG  -->
 
-           $number_of_posts = 12;
+           <?php $number_of_posts = 12;
            $category_id = 1;
            $category_posts = $posts->getLatestCategoryPosts($category_id, $number_of_posts);
            include '../includes/views_foreach.php'; ?>
@@ -45,10 +43,6 @@ if(!$val->isLoggedIn()) {
 
 </main>
 
+<?php include '../includes/javascript_tag.php'; ?>
 <?php include '../includes/footer.php'; ?>
 
-<?php include '../includes/javascript_tag.php'; ?>
-
-</body>
-
-</html>

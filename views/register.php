@@ -49,7 +49,7 @@ include '../includes/head.php';
   				<button class="button-static"><span>Register </span></button>
   				</form>
   				
-  				<a href="login.php">Already a member? Go to login</a><br>
+  				<a href="login.php">Already a member? Go to login.</a><br>
 
 		</div>
 
