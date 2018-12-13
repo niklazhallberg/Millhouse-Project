@@ -27,7 +27,7 @@ if(!$user->isAdmin()) {
       $('#summernote').summernote({
         placeholder: 'Description..',
         tabsize: 2,
-        height: 500
+        height: 400
       });
     </script>
     <?php include '../includes/footer.php'; ?>

@@ -37,7 +37,7 @@ $post_to_edit = $posts->getPostWithId($post_id);
       $('#summernote').summernote({
         placeholder: 'Description..',
         tabsize: 2,
-        height: 500
+        height: 400
       });
     </script>
     <?php include '../includes/footer.php'; ?>

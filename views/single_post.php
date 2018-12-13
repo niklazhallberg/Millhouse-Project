@@ -12,7 +12,7 @@ include '../classes/call.php';
   <div class="col-12">
 
   <div class="row justify-content-center">
-   <div class="col-12 col-md-8 border-right">
+   <div class="col-12 col-md-8">
     <?php
 
       //save post id from get to variable and call method in class posts
@@ -25,7 +25,7 @@ include '../classes/call.php';
        $category = $post["category_id"];  ?>
 
           <!-- printing post title -->
-           <h1 class="text-center"> <?= $post["title"]; ?> </h1>
+           <h1 class="text-center word-wrap"> <?= $post["title"]; ?> </h1>
            <hr>
            <div class="row text-center">
            <div class="col-12">
