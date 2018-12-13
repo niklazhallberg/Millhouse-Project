@@ -33,7 +33,7 @@
     <!-- <input type="hidden" name="created_by" value="<?php $post['created_by']; ?>">
     <input type="hidden" name="post_date" value="<?php $post['post_date']; ?>"> -->
         <div class="button-container">
-            <button id="button" class="button-edit">Edit post</button>
+        <button class="button-static"><span>Edit post </span></button>
 
 
         </div>

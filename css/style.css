@@ -30,10 +30,13 @@ label {
 	font-family: 'Merriweather', serif;
 	color: #252525;
 }
+h2 {
+	font-size: 1.6rem;
+}
 
 h3 {
 	margin-top: 0.5rem;
-	font-size: 1.3em;
+	font-size: 1.3rem;
 }
 
 p,
@@ -139,15 +142,40 @@ body {
   }
 
 
+
+
+  .button-static span:after {
+	content: '\00bb';
+	/* position: absolute;
+	opacity: 0;
+	top: 0;
+	right: -20px;
+	transition: 0.5s;
+	margin-top: -8px; */
+	font-size: 20px;
+	color: #252525;
+  }
+  .button-static:hover {
+	  cursor: pointer;
+	  color: #1C3045;
+  }
+  .button-static span {
+	  letter-spacing: 1px;
+  }
+  .button-static {
+	  margin: .5rem 0;
+  }
+
+
 /* ---------------------------REGISTER/LOGIN--------------------------- */
 
 .register-box {
 	/* text-align: center; */
 	background-color: #95B8D1;
-	border-radius: 5%;
-	padding: 20px;
-  	margin-top: 2em;
-  	margin-bottom: 400px;
+	border-radius: 10px;
+	padding: 2rem;
+  	margin-top: 4rem;
+  	margin-bottom: 6rem;
 }
 
 /* .register-box p {
@@ -180,6 +208,10 @@ main {
     margin: 0 auto;
     padding: 2em 0;
 }
+/* .row.main {
+	margin-right: 0;
+	margin-left: 0;
+} */
 
 .card-img-top {
     height: auto;
@@ -189,10 +221,10 @@ main {
 	margin: 20px 0px;
 }
 
-.card h2 {
+/* .card h2 {
 	font-family: 'Merriweather', serif;
 	font-size: 1.6rem;
-}
+} */
 
 .card img:hover {
     opacity: 0.7;
@@ -202,29 +234,25 @@ main {
 .sidebar{
     background-color: #95B8D1;
     opacity: 20%;
-	padding:1em;
+	padding: 1.5rem;
 	margin: 20px auto;
 	height: 1500px;
-	border-radius: 1%;
+	border-radius: 10px;
 }
-.sidebar h2,
+/* .sidebar h2,
 .sidebar h3 {
 	font-family: 'Merriweather', serif;
-}
+} */
 
-.h2-sidebar {
+/* .h2-sidebar {
 	font-size: 1.6rem;
 	margin-bottom: 0.5rem;
-}
+} */
 
-
+/* 
 .category-box h3 {
 	font-size: 1.3rem;
-}
-
-.category-box li a {
-	color: #1C3045;
-}
+} */
 
 
 .category-box li {
@@ -305,6 +333,12 @@ footer {
 
 /* ----------------------------FORM-----------------------------------------*/
 
+label {
+	display: block;
+	margin-bottom: 0;
+	margin-top: .5rem;
+	font-size: 1.1rem;
+}
 
 .add-post, .comment-form, .edit-post-form {
 	text-align: left;
@@ -330,9 +364,7 @@ footer {
     width: 90%;
     margin: 0 auto;
 }
-label {
-	display: block;
-}
+
 input[type=text],
 textarea,
 .input {
@@ -347,7 +379,8 @@ textarea,
 }
 
 input[type=text]:focus,
-textarea:focus {
+textarea:focus,
+.input:focus {
     border: 3px solid #60495A;
 }
 .radio-buttons {
@@ -442,9 +475,9 @@ i{
 /* Small devices (tablets, 768px and up) */
 @media screen and (min-width: 768px) {
 
-    main{
+    /* main{
         width: 95% !important;
-    }
+    } */
 	.comment-form textarea{
 		height: 150px;
 		width: 60%;
@@ -461,7 +494,6 @@ i{
 		max-width: 30em;
 
 	}
-  
 	.comment-form textarea{
 		height: 150px;
 		width: 60%;
@@ -484,6 +516,12 @@ i{
 	.all-count {
 		column-count: 3;
 	}
+	.blogpost-section {
+		padding-right: 15px !important;
+	}
+	.sidebar {
+		padding: 1rem;
+	}
 
 	
 }
@@ -491,10 +529,13 @@ i{
 /* Medium devices (desktops, 992px and up) */
 @media screen and (min-width: 992px) {
 	.card-columns {
-		column-count: 2;
+		column-count: 3;
 	}
 	.all-count {
 		column-count: 4;
+	}
+	.sidebar {
+		padding: 1.5rem;
 	}
 
 }

@@ -105,7 +105,7 @@ include '../classes/call.php';
               <label for="comment-field"><h3>Leave comment as <?= $_SESSION["username"]; ?></h3></label><br />
               <textarea name="content" placeholder="Start the discussion..."></textarea><br />
 
-              <input type="submit" value="Comment">
+              <button class="button-static"><span>Comment </span></button>
               </form>
 
             </div>

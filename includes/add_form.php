@@ -22,7 +22,7 @@
     <br>
     <input type="file" name="image" id="image" accept="image/png, image/jpeg" required>
     <div class="add-post-submit">
-      <input type="submit" value="Create post">
+    <button class="button-static"><span>Add post </span></button>
     </div>
 
 

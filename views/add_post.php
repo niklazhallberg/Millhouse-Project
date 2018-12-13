@@ -12,15 +12,13 @@ if(!$user->isAdmin()) {
 <body>
     <?php include '../includes/header.php'; ?>
     <main class="container-fluid">
-    <div class="row">
-       <div class="col-12">
+
          <div class="row justify-content-center">
-           <section class="col-9 add-post-section">
+           <section class="col-12 col-md-9 add-post-section">
              <?php include '../includes/add_form.php'; ?>
            </section>
           </div>
-        </div>
-      </div>
+
     </main>
     <?php include '../includes/javascript_tag.php' ?>
     <script>
