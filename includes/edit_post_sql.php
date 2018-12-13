@@ -13,7 +13,7 @@ $post_id = $_SESSION["post_id"];
 
 if(empty($title) || empty($description))
 {
-  header('Location: ../views/edit_post.php?error= Fill in all fields, please!');
+  header('Location: ../views/edit_post.php?error= Fill in all fields, please!&post_id='. $post_id);
 }
 else
 {
