@@ -11,13 +11,14 @@ if(!$user->isLoggedIn()) {
   <?php include '../includes/header.php'; ?>
 
   <main class="container-fluid">
-    <div class="row justify-content-center">
+    <div class="row justify-content-center ml-0 mr-0">
 
-         <section class="col-12 blogpost-section">
+         <section class="col-12 col-md-9 blogpost-section pr-0 pl-0">
 
           <div class="row mr-0 ml-0">
+          <div class="page-heading"><h1>All posts</h1></div>
 
-            <div class="col-12 card-columns all-count pr-0 pl-0">
+            <div class="col-12 card-columns pr-0 pl-0">
       
            <?php
 
@@ -28,6 +29,12 @@ if(!$user->isLoggedIn()) {
            </div>
           </div>
          </section>
+
+         <aside class="col-12 col-md-3 sidebar with-heading">
+
+        <?php include '../includes/all_sidebar.php'; ?>
+
+        </aside>
 
          
 

@@ -21,6 +21,8 @@ $post_to_edit = $posts->getPostWithId($post_id);
 
                 <div class="row justify-content-center">
                     <section class="col-12 col-md-9 edit-post-section">
+                    <div class="page-heading"><h1>Edit post</h1></div>
+                    <hr>
 
                         <?php include '../includes/edit_post_form.php' ?>
                     

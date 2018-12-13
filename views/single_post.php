@@ -12,7 +12,7 @@ include '../classes/call.php';
   <div class="col-12">
 
   <div class="row justify-content-center">
-   <div class="col-12 col-md-7 col-lg-8 border-right">
+   <div class="col-12 col-md-8 border-right">
     <?php
 
       //save post id from get to variable and call method in class posts
@@ -44,7 +44,7 @@ include '../classes/call.php';
            </div>
            </div>
            <div class="row justify-content-center">
-          <div class="col-12 col-md-11">
+          <div class="col-12">
           <!--printing post image-->
            <img class="single-post-img" src="../images/<?= $post["image"]; ?>" alt="image not found">
 
@@ -53,9 +53,10 @@ include '../classes/call.php';
 
            <!-- if loged in user is admin, show delete post button -->
             <?php if($user->isAdmin()){ ?>
-            
-            <a href="../views/edit_post.php?post_id=<?= $post_id ?>"><span><i class="fas fa-wrench"></i> Edit post</span></a>
+            <div class="margin-top">
+            <a class="margin-right" href="../views/edit_post.php?post_id=<?= $post_id ?>"><span><i class="fas fa-wrench"></i> Edit post</span></a>
             <a href="../index.php?delete_post=<?= $post_id ?>"><span><i class="far fa-trash-alt"></i> Delete post</span></a>
+            </div>
        
 <?php
 } ?>
@@ -69,7 +70,7 @@ include '../classes/call.php';
         
               //calls method to count the comments for this post
                 $counter = $comments->countingComments($comments_to_print); ?>
-                <h3 class="text-center">This post has <?= $counter ?> comments</h3>
+                <h4 class="text-center">This post has <?= $counter ?> comments</h4>
        
             <?php 
                 //calls method to print comments and prints it with foreach loop inside a bootstrap card
@@ -79,6 +80,7 @@ include '../classes/call.php';
                 
                 <!-- bootsrap card with comment-->
                 <div class="comment-card">
+                    
                 <div class="card border-light mb-2" style="max-width: 25rem;">
                 <div class="card-header blue-header">Commented by <?= $comment["created_by"]; ?></div>
                 <div class="card-body">
@@ -89,7 +91,7 @@ include '../classes/call.php';
                 <!-- if loged in user is admin, show delete comment button in card footer -->
                 <?php if($user->isAdmin()){ ?>
                 <div class="card-footer bg-transparent">
-                    <a href="../includes/delete_comment_sql.php?delete_comment=<?=$comment["comment_id"]?>"><span><i class="far fa-trash-alt"> Delete comment</i></span></a>
+                    <a href="../includes/delete_comment_sql.php?delete_comment=<?=$comment["comment_id"]?>"><span><i class="far fa-trash-alt"></i> Delete comment</span></a>
                 </div>
                  <?php
                       }?>
@@ -102,7 +104,7 @@ include '../classes/call.php';
              <!-- form for user to add a comment to the post-->
               <hr>
               <form class="comment-form" id="commentarea" action="../includes/add_comment_sql.php" method="POST">
-              <label for="comment-field"><h3>Leave comment as <?= $_SESSION["username"]; ?></h3></label><br />
+              <label for="comment-field"><h4>Leave comment as <?= $_SESSION["username"]; ?></h4></label>
               <textarea name="content" placeholder="Start the discussion..."></textarea><br />
 
               <button class="button-static"><span>Comment </span></button>

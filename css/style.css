@@ -38,6 +38,10 @@ h3 {
 	margin-top: 0.5rem;
 	font-size: 1.3rem;
 }
+h4 {
+	font-size: 1.1rem;
+	margin: 2em 0 .5em 0;
+}
 
 p,
 span {
@@ -52,6 +56,12 @@ a {
 
 body {
 	background-color: #F0F0F0;
+}
+.margin-right {
+	margin-right: 1rem;
+}
+.margin-top {
+	margin-top: 3rem;
 }
 
 
@@ -146,12 +156,6 @@ body {
 
   .button-static span:after {
 	content: '\00bb';
-	/* position: absolute;
-	opacity: 0;
-	top: 0;
-	right: -20px;
-	transition: 0.5s;
-	margin-top: -8px; */
 	font-size: 20px;
 	color: #252525;
   }
@@ -159,9 +163,9 @@ body {
 	  cursor: pointer;
 	  color: #1C3045;
   }
-  .button-static span {
+  /* .button-static span {
 	  letter-spacing: 1px;
-  }
+  } */
   .button-static {
 	  margin: .5rem 0;
   }
@@ -170,7 +174,6 @@ body {
 /* ---------------------------REGISTER/LOGIN--------------------------- */
 
 .register-box {
-	/* text-align: center; */
 	background-color: #95B8D1;
 	border-radius: 10px;
 	padding: 2rem;
@@ -178,17 +181,6 @@ body {
   	margin-bottom: 6rem;
 }
 
-/* .register-box p {
-	text-align: center;
-} */
-
-/* .register-box input {
-	margin: 10px 20px;
-} */
-
-/* form {
-	text-align: center;
-} */
 
 input {
 	margin-bottom: 10px;
@@ -237,7 +229,7 @@ main {
 	padding: 1.5rem;
 	margin: 20px auto;
 	height: 1500px;
-	border-radius: 10px;
+	border-radius: calc(.25rem - 1px) calc(.25rem - 1px) 0 0;
 }
 /* .sidebar h2,
 .sidebar h3 {
@@ -280,7 +272,7 @@ main {
 	max-width: 100%;
 	min-height: 100%;
 }
-.test-ish {
+.with-heading {
 	margin-top: 4.8rem;
 }
 
@@ -340,9 +332,9 @@ label {
 	font-size: 1.1rem;
 }
 
-.add-post, .comment-form, .edit-post-form {
+/* .add-post, .comment-form, .edit-post-form {
 	text-align: left;
-}
+} */
 
 .add-description textarea {
 	resize: none;
@@ -354,14 +346,14 @@ label {
 	width: 100%;
 }
 
-.comment-form{
+.comment-form,
+.text-center {
     text-align: center;
 }
 
 .comment-form textarea{
-    height: 100px;
-    max-width: 600px;
-    width: 90%;
+    height: 8rem;
+    width: 85%;
     margin: 0 auto;
 }
 
@@ -421,20 +413,11 @@ textarea:focus,
     float: none;
 }
 .blue-header{
-    background-color: #95B8D1 !important;
+    background-color: #d8d8d8 !important;
 }
 .single-post-img{
     width: 100%;
     margin: 20px auto;
-}
-.text-center{
-    text-align: center;
-}
-
-.text-center-related{
-	font-size: 1.3em;
-	text-align: center;
-	margin-top: 0.5em;
 }
 
 i{
@@ -479,43 +462,27 @@ i{
         width: 95% !important;
     } */
 	.comment-form textarea{
-		height: 150px;
-		width: 60%;
+		width: 75%;
 	}
-	.radio {
+	/* .radio {
         margin-right: -12em;
     }
     .radio-buttons {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-	}
+	} */
 	.register-box {
 		max-width: 30em;
 
 	}
-	.comment-form textarea{
-		height: 150px;
-		width: 60%;
-	}
-	.radio {
-		margin-right: -12em;
-	}
-	.radio-buttons {
-		flex-direction: row;
-		justify-content: space-between;
-		align-items: center;
-	}
 		
-	.register-box {
-		max-width: 30em;
-	}
 	.card-columns {
 		column-count: 2;
 	}
-	.all-count {
+	/* .all-count {
 		column-count: 3;
-	}
+	} */
 	.blogpost-section {
 		padding-right: 15px !important;
 	}

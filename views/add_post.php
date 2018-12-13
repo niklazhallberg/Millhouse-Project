@@ -15,6 +15,8 @@ if(!$user->isAdmin()) {
 
          <div class="row justify-content-center">
            <section class="col-12 col-md-9 add-post-section">
+             <div class="page-heading"><h1>Add post</h1></div>
+             <hr>
              <?php include '../includes/add_form.php'; ?>
            </section>
           </div>
