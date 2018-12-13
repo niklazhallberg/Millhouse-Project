@@ -46,10 +46,10 @@ include '../includes/head.php';
   				<label for="password">Password</label>
   				<input class="input" type="password" id="password" name="password" required>
 
-				<a href="login.php">Already a member? Go to login</a><br>
   				<input type="submit" value="Register">
-
-			</form>
+  				</form>
+  				
+  				<a href="login.php">Already a member? Go to login</a><br>
 
 		</div>
 
