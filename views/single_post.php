@@ -65,8 +65,13 @@ include '../classes/call.php';
             <?php
               //calls method to print comments and prints it with foreach loop inside a bootstrap card
                 $comments_to_print = $comments->getCommentsWithId($post_id);
+              //calls method to count the comments for this post
+               // $counter = $comments->countingComments($comments_to_print);
+            ?>
+                
+                <!--<h3 class="text-center">This post has <?= $counter; ?> comments.</h3>-->
        
-                foreach($comments_to_print as $comment){ ?>
+            <?php foreach($comments_to_print as $comment){ ?>
                 
 
                 <div class="comment-card">
