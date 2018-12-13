@@ -11,12 +11,12 @@ $post_id = $_SESSION["post_id"];
 // $created_by = $_POST["created_by"];
 
 
-
-if(empty($title) || empty($description) || empty($image) || empty($category))
+if(empty($title) || empty($description))
 {
   header('Location: ../views/edit_post.php?error= Fill in all fields, please!');
-  } else 
-  {
+}
+else 
+{
     //check if title is longer than 100 characters, if so, redirect, else continue
     if ((strlen($title)) <= 100) 
     {
@@ -27,19 +27,23 @@ if(empty($title) || empty($description) || empty($image) || empty($category))
 
         if($upload_ok)
         {
-          //update content in post with new input from user
+          //if new image chosen, update content in post with new input from user
           $posts->editPost($title, $description, $new_location, $category, $post_id);
           $user->redirect('../index.php');
     
-        } else 
-          {
-            header('Location: ../views/edit_post.php?error= Select a picture, please!');
-          }
+        }
+        else 
+        { 
+          //if user wants to keep image, update without image value
+          $posts->editPost($title, $description, false, $category, $post_id);
+          $user->redirect('../index.php');
+
+        }
 
 
     } else 
-      {
-        header('Location: ../views/edit_post.php?error= The title cannot be longer than 100 characters, please try again.');
-      }
+    {
+      header('Location: ../views/edit_post.php?error= The title cannot be longer than 100 characters, please try again.');
+    }
       
 }
