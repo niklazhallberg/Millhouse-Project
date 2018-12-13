@@ -10,7 +10,9 @@
 
                     <div class="col-12">
                     <div class="card">
+                      <a href="../views/single_post.php?post_id=<?=$rand["id"]?>">
                        <img class="card-img-top" src="<?= $rand["image"]; ?>" alt="Card image cap">
+                      </a>
                         <div class="card-body">
                             <h3 class="card-title"> <?= $rand["title"]; ?> </h3>
                             <?php $str = $rand["description"];
