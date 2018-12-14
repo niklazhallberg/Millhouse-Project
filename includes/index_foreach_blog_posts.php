@@ -1,6 +1,5 @@
 <?php foreach($index_posts as $post):
 $post_id = $post["id"]; ?>
-		<!-- <div class="col-12 col-md-6 col-lg-4 post-box pl-0 pr-0"> -->
              <div class="card">
                <a href="../views/single_post.php?post_id=<?=$post["id"]?>">
 			   <img class="card-img-top" src="../images/<?= $post["image"]; ?>" alt="Blogpost image">
@@ -51,7 +50,7 @@ $post_id = $post["id"]; ?>
 				<?php } ?>
 
              </div>
-             <!-- </div> -->
+    
 
 
 
