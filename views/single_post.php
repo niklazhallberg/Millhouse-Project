@@ -28,7 +28,7 @@ include '../classes/call.php';
            <h1 class="text-center word-wrap"> <?= $post["title"]; ?> </h1>
            <hr>
            <div class="row text-center">
-           <div class="col-12 margin-bottom">
+           <div class="col-12">
              
               <!-- printing created by and date -->
               <?php $category_name = $posts->getPostCategory($post["category_id"]) ?> 
