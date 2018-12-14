@@ -70,7 +70,7 @@ include '../classes/call.php';
         
               //calls method to count the comments for this post
                 $counter = $comments->countingComments($comments_to_print); ?>
-                <h4 class="text-center">This post has <?= $counter ?> comments</h4>
+                <h4 class="text-center">This post has <?= $counter ?> comment(s)</h4>
        
             <?php 
                 //calls method to print comments and prints it with foreach loop inside a bootstrap card
