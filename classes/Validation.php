@@ -66,38 +66,23 @@ class Validation
 
     public function isAdmin() 
     {
-        //if user is set in session
-        if (isset($_SESSION['username'])) 
+        if (isset($_SESSION['user_id'])) 
         {
-            //get user from table and check if user has admin rights
-            $statement = $this->pdo->prepare("SELECT * FROM users WHERE username = :username");
-            $statement->execute([":username" => $_SESSION['username']]);
+            //if user is logged in and session is set - get user from table, join with admin table and check if user has admin rights. 
+            $statement = $this->pdo->prepare("SELECT id as admin_rights FROM users JOIN admin ON id = user_id");
+            $statement->execute();
 
-            $is_admin = $statement->fetch(PDO::FETCH_ASSOC);
+            $is_admin = $statement->fetch();
 
-            if ((int)$is_admin["is_admin"] == 1) 
+            if ($_SESSION["user_id"] == (int)$is_admin) 
             {
                 return true;
             }
         }
-       
-        
-        // $statement = $this->pdo->prepare("SELECT id as admin_rights FROM users JOIN admin ON id = user_id");
-        // $statement->execute();
-
-        // $is_admin = $statement->fetch();
-
-        // if ($_SESSION["user_id"] == (int)$is_admin) {
-        //     return true;
-        // }
     }
-
-
-
-
+    
     public function isLoggedIn() 
     {
-    // if (!(isset($_SESSION['user_id']) && $_SESSION['user_id'] != ''))
       if(isset($_SESSION['user_id']))
       {
          return true;

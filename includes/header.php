@@ -7,13 +7,13 @@
     <div class="header-buttons">
       <div>
        <!--shows logout button when user is logged in-->
-        <?php if($user->isLoggedIn()) {
+        <?php if($val->isLoggedIn()) {
             include 'logout_button.php';
         } ?>
       </div>
       <div>
        <!--shows add post button when admin is logged in-->
-        <?php if($user->isAdmin()) {
+        <?php if($val->isAdmin()) {
             include 'add_post_button.php';
         } ?>
       </div>

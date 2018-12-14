@@ -1,8 +1,8 @@
 <?php
 session_start();
 include '../classes/call.php';
-if(!$user->isLoggedIn()) {
-  $user->redirect('login.php');
+if(!$val->isLoggedIn()) {
+  $val->redirect('login.php');
 }
 ?>
 
@@ -11,14 +11,12 @@ if(!$user->isLoggedIn()) {
   <?php include '../includes/header.php'; ?>
 
   <main class="container-fluid">
-    <div class="row justify-content-center">
+    <div class="row justify-content-center ml-0 mr-0">
 
-         <section class="col-12 col-md-9 blogpost-section">
+         <section class="col-12 col-md-9 blogpost-section pr-0 pl-0">
 
           <div class="row mr-0 ml-0">
-              <div class="col-12">
-                  <h1>Sunglasses</h1>
-              </div>
+          <div class="page-heading"><h1>Sunglasses</h1></div>
 
             <div class="col-12 card-columns pr-0 pl-0">
       
@@ -36,7 +34,7 @@ if(!$user->isLoggedIn()) {
 
          <!-- ASIDE SECTION WITH ARTICLE CATERGORIES -->
 
-         <aside class="col-12 col-md-3 sidebar test-ish">
+         <aside class="col-12 col-md-3 sidebar with-heading">
 
           <?php include '../includes/sunglasses_sidebar.php'; ?>
 
@@ -46,10 +44,8 @@ if(!$user->isLoggedIn()) {
 
 </main>
 
-<?php include '../includes/footer.php'; ?>
-
 <?php include '../includes/javascript_tag.php'; ?>
 
-</body>
+<?php include '../includes/footer.php'; ?>
 
-</html>
+

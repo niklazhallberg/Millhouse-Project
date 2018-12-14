@@ -1,8 +1,8 @@
 <?php
 session_start();
 include '../classes/call.php';
-if($user->isLoggedIn()) {
-    $user->redirect('../index.php');
+if($val->isLoggedIn()) {
+    $val->redirect('../index.php');
 }
 ?>
 <?php
@@ -14,11 +14,11 @@ include '../includes/head.php';
 
 <div class="container-fluid">
 
-	<main class="row justify-content-center ml-0 mr-0">
+	<main class="row main justify-content-center mr-0 ml-0">
 
 			<div class="col-11 col-md-6 register-box">
 
-				<h3>Welcome to Millhouse</h3>
+				<h2>Welcome to Millhouse</h2>
 
 				<p class="error-message">
 				<?php if (isset($_GET["error"])){
@@ -31,10 +31,10 @@ include '../includes/head.php';
 
   				<label for="password">Password</label>
   				<input class="input" type="password" name="password" id="password" required>
-  				<input type="submit" value="Login">
+  				<button class="button-static"><span>Login </span></button>
 			</form>
 
-			<a href="register.php">Not already a member? Register here</a>
+			<a href="register.php">Not a member yet? Register here!</a>
 
 		</div>
 

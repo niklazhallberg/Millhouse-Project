@@ -15,7 +15,7 @@ $post_date = date("Y/m/d");
 
 if(empty($title) || empty($description) || empty($image) || empty($category))
 {
-  header('Location: ../views/add_post.php?error= Fill in all fields, please!');
+  $val->redirect('../views/add_post.php?error= Fill in all fields, please!');
 } else
   {
 
@@ -31,17 +31,17 @@ if(empty($title) || empty($description) || empty($image) || empty($category))
         {
             //inserts input from user into database and stores as new post
             $posts->addPost($title, $description, $new_location, $user_name, $category, $post_date);
-            $user->redirect('../index.php');
+            $val->redirect('../index.php');
 
         } else
           {
-            header('Location: ../views/add_post.php?error= Select a picture, please!');
+            $val->redirect('../views/add_post.php?error= Select a picture, please!');
           }
 
 
     } else
       {
-        header('Location: ../views/add_post.php?error= The title cannot be longer than 100 characters, please try again.');
+        $val->redirect('../views/add_post.php?error= The title cannot be longer than 100 characters, please try again.');
       }
 
 }

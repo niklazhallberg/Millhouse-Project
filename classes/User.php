@@ -31,24 +31,6 @@ class User
         return $get_user;
     }
 
-    public function isAdmin() 
-    {
-        //if session is set with user - get user and join with admin table to see if session is a match
-        if (isset($_SESSION['username'])) 
-        {
-            $statement = $this->pdo->prepare("SELECT id as admin_rights FROM users JOIN admin ON id = user_id");
-            $statement->execute();
-
-            $is_admin = $statement->fetch();
-
-            if ($_SESSION["user_id"] == (int)$is_admin) 
-            {
-                return true;
-            }
-            
-        }
-
-    }
 
     public function login($username,$password,$user_array) 
     {
@@ -62,21 +44,6 @@ class User
             }  
         }
        
-   }
-
-
-   public function isLoggedIn() 
-   {
-    // if (!(isset($_SESSION['user_id']) && $_SESSION['user_id'] != ''))
-      if(isset($_SESSION['user_id'])) 
-      {
-        return true;
-      }
-   }
-
-   public function redirect($url) 
-   {
-       header("Location: $url");
    }
  
    public function logout() 

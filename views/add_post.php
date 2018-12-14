@@ -1,34 +1,35 @@
 <?php
 session_start();
 include '../classes/call.php';
-if(!$user->isLoggedIn()) {
-    $user->redirect('login.php');
+if(!$val->isLoggedIn()) {
+    $val->redirect('login.php');
 }
-if(!$user->isAdmin()) {
-    $user->redirect('../index.php');
+if(!$val->isAdmin()) {
+    $val->redirect('../index.php');
 }
 ?>
 <?php include '../includes/head.php' ?>
 <body>
     <?php include '../includes/header.php'; ?>
     <main class="container-fluid">
-    <div class="row">
-       <div class="col-12">
+
          <div class="row justify-content-center">
-           <section class="col-9 add-post-section">
+           <section class="col-12 col-md-9 add-post-section">
+             <div class="page-heading"><h1>Add post</h1></div>
+             <hr>
              <?php include '../includes/add_form.php'; ?>
            </section>
           </div>
-        </div>
-      </div>
+
     </main>
     <?php include '../includes/javascript_tag.php' ?>
     <script>
       $('#summernote').summernote({
         placeholder: 'Description..',
         tabsize: 2,
-        height: 500
+        height: 400
       });
     </script>
-    <?php include '../includes/footer.php'; ?>
-</body>
+
+<?php include '../includes/footer.php'; ?>
+

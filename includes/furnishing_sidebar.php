@@ -1,16 +1,9 @@
 
-          <h2 class="">Furnishing articles</h2>
-          <p></p>
+          <h2><a href="../index.php">Back to home</a></h2>
 
           <hr>
 
-
-            <div class="category-box">
-          <h3><a href="all_posts.php">View all posts</a></h3>
-          
-          </div>
-
-
+      
           <div class="category-box">
           <h3><a href="watches.php">Watches</a></h3>
           <ul class="list-unstyled">
@@ -40,6 +33,11 @@
                   include '../includes/index_sidebar_foreach_category_post.php'; ?>
 
                 </ul>
+          </div>
+
+          <div class="category-box">
+          <h3><a href="all_posts.php">View all posts</a></h3>
+          
           </div>
 
         

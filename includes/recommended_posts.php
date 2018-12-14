@@ -1,6 +1,6 @@
 
-            <aside class="col-10 col-md-4 col-lg-3">
-             <h2 class="text-center-related">Recommended posts</h2>
+            <aside class="d-none d-md-block col-md-4 col-lg-3 border-left">
+             <h3 class="text-center">Recommended posts</h3>
              <div class="card-deck">
               <?php
                  

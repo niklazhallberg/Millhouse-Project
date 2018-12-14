@@ -1,8 +1,8 @@
 <?php
 session_start();
 include '../classes/call.php';
-if(!$user->isLoggedIn()) {
-  $user->redirect('login.php');
+if(!$val->isLoggedIn()) {
+  $val->redirect('login.php');
 }
 ?>
 
@@ -11,19 +11,19 @@ if(!$user->isLoggedIn()) {
   <?php include '../includes/header.php'; ?>
 
   <main class="container-fluid">
-    <div class="row justify-content-center">
+    <div class="row justify-content-center mr-0 ml-0">
 
-         <section class="col-12 col-md-9 blogpost-section">
+         <section class="col-12 col-md-9 blogpost-section pl-0 pr-0">
 
           <div class="row mr-0 ml-0">
+          <div class="page-heading"><h1>Watches</h1></div>
+                    
 
             <div class="col-12 card-columns pr-0 pl-0">
-      
-           <?php
 
-           /* NUMBER OF POSTS DISPLAYED IN MAIN BLOG */
+           <!-- NUMBER OF POSTS DISPLAYED IN MAIN BLOG  -->
 
-           $number_of_posts = 12;
+           <?php $number_of_posts = 12;
            $category_id = 1;
            $category_posts = $posts->getLatestCategoryPosts($category_id, $number_of_posts);
            include '../includes/views_foreach.php'; ?>
@@ -33,7 +33,7 @@ if(!$user->isLoggedIn()) {
 
          <!-- ASIDE SECTION WITH ARTICLE CATERGORIES -->
 
-         <aside class="col-12 col-md-3 sidebar">
+         <aside class="col-12 col-md-3 sidebar with-heading">
 
           <?php include '../includes/watches_sidebar.php'; ?>
 
@@ -43,10 +43,6 @@ if(!$user->isLoggedIn()) {
 
 </main>
 
+<?php include '../includes/javascript_tag.php'; ?>
 <?php include '../includes/footer.php'; ?>
 
-<?php include '../includes/javascript_tag.php'; ?>
-
-</body>
-
-</html>

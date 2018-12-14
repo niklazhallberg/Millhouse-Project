@@ -19,19 +19,19 @@ if(!empty($_POST["username"]) && !empty($_POST["password"]))
             $_SESSION["username"] = $user_array["username"];
             $_SESSION["user_id"] = $user_array["id"];
 
-            $user->redirect('../index.php');
+            $val->redirect('../index.php');
         
         } else 
             {
-                header('Location: ../views/login.php?error=Your password is incorrect');
+                $val->redirect('../views/login.php?error=Your password is incorrect');
             }
 
     } else 
         {
-            header('Location: ../views/login.php?error=There is no user with that name, try registering first or check spelling');
+            $val->redirect('../views/login.php?error=There is no user with that name, try registering first or check spelling');
         }
 
 } else 
     {
-        header('Location: ../views/login.php?error=You need to fill in both fields.');
+        $val->redirect('../views/login.php?error=You need to fill in both fields.');
     }

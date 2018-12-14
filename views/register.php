@@ -1,8 +1,8 @@
 <?php
 session_start();
 include '../classes/call.php';
-if($user->isLoggedIn()) {
-    $user->redirect('../index.php');
+if($val->isLoggedIn()) {
+    $val->redirect('../index.php');
 }
 ?>
 <?php
@@ -19,7 +19,7 @@ include '../includes/head.php';
 
 			<div class="col-11 col-md-6 register-box">
 
-				<h3>Register</h3>
+				<h2>Register</h2>
 
         <p class="error-message">
           <?php if (isset($_GET["error"])){
@@ -46,10 +46,10 @@ include '../includes/head.php';
   				<label for="password">Password</label>
   				<input class="input" type="password" id="password" name="password" required>
 
-  				<input type="submit" value="Register">
+  				<button class="button-static"><span>Register </span></button>
   				</form>
   				
-  				<a href="login.php">Already a member? Go to login</a><br>
+  				<a href="login.php">Already a member? Go to login.</a><br>
 
 		</div>
 

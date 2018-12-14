@@ -1,14 +1,8 @@
 
-          <h2 class="">Sunglasses</h2>
-          <p></p>
+          <h2><a href="../index.php">Back to home</a></h2>
 
           <hr>
 
-
-            <div class="category-box">
-            <h3><a href="all_posts.php">View all posts</a></h3>
-          
-          </div>
 
           <div class="category-box">
           <h3><a href="watches.php">Watches</a></h3>
@@ -27,7 +21,7 @@
 
 
           <div class="category-box">
-                <h3><a href="furnishing.php">Furnishing articles</a></h3>
+                <h3><a href="furnishing.php">Furniture articles</a></h3>
                 <ul class="list-unstyled">
                   <?php 
 
@@ -39,6 +33,11 @@
                   include '../includes/index_sidebar_foreach_category_post.php'; ?>
 
                 </ul>
+          </div>
+
+          <div class="category-box">
+            <h3><a href="all_posts.php">View all posts</a></h3>
+          
           </div>
 
           
