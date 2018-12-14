@@ -39,7 +39,7 @@
                        <?= "Posted: " . $rand["post_date"] . "<br>"; ?>
                        </small>
                        <p class="card-text"><small class="text-muted">By <?= $post["created_by"]; ?></small></p>
-                       <a href="../views/single_post.php?post_id=<?=$rand["id"]?>#commentarea"><small class="text-muted"><i class="far fa-comment-alt d-inline"></i></small><p class="d-inline"> <?= $counter; ?></p></a>
+                       <a href="../views/single_post.php?post_id=<?=$rand["id"]?>#commentarea"><small class="text-muted"><i class="far fa-comment-alt d-inline"></i></small><p class="d-inline text-muted comment-number align-top"> <?= $counter; ?></p></a>
                         </div>
                     </div>
                     </div>

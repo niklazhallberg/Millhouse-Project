@@ -31,9 +31,9 @@ $post_id = $post["id"]; ?>
 				
 				<p class="card-text"><small class="text-muted">By <?= $post["created_by"]; ?></small></p>
 
-				<!-- <div class="comment-counter"> -->
-				<a href="../views/single_post.php?post_id=<?=$post["id"]?>#commentarea"><small class="text-muted"><i class="far fa-comment-alt d-inline"></i></small><p class="d-inline text-muted comment-number"> <?= $counter; ?></p></a>
-				<!-- </div> -->
+				
+				<a href="../views/single_post.php?post_id=<?=$post["id"]?>#commentarea"><small class="text-muted"><i class="far fa-comment-alt d-inline"></i></small><p class="d-inline text-muted comment-number align-top"> <?= $counter; ?></p></a>
+			
 
 
                  </div>
