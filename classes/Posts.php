@@ -29,17 +29,6 @@ class Posts
         return $get_category_posts;      
 
     }
-  
-
-    // public function uploadImage($image) {
-
-    //     $temporary_location = $image["tmp_name"];
-    //     $new_location = "../images/" . $image["name"];
-    //     $upload_ok = move_uploaded_file($temporary_location, $new_location);
-
-    //     return $upload_ok;
-
-    // }
 
     public function addPost($title, $description, $image, $user_name, $category, $post_date) 
     {
@@ -109,6 +98,23 @@ class Posts
         );
     
         return $random_posts;
+    }
+
+    public function getPostCategory($category_id)
+    {
+        if ($category_id == 1)  
+        {
+            return "watches";
+        }
+        if ($category_id == 2)  
+        {
+            return "sunglasses";
+        }
+        if ($category_id == 3)  
+        {
+            return "furnishing";
+        }
+
     }
 
 }

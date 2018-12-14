@@ -28,11 +28,17 @@ include '../classes/call.php';
            <h1 class="text-center word-wrap"> <?= $post["title"]; ?> </h1>
            <hr>
            <div class="row text-center">
-           <div class="col-12">
+           <div class="col-12 margin-bottom">
              
               <!-- printing created by and date -->
-               <p><small class="text-muted">By <?= $post["created_by"]; ?> &nbsp; &#9679; &nbsp; <?= $post["post_date"]; ?></small></p>
+              <?php $category_name = $posts->getPostCategory($post["category_id"]) ?> 
+               <p><small class="text-muted">By <?= $post["created_by"]; ?> &nbsp; &#9679; &nbsp; <?= $post["post_date"]; ?> &nbsp; &#9679; &nbsp; <a href="<?= $category_name . '.php'?> "> <?= ucfirst($category_name); ?> </a></small></p>
+                
+
            </div>
+
+    
+
            <div class="col-12 text-center">
            
            <!--social media logos-->
