@@ -19,7 +19,7 @@ if(!$val->isLoggedIn()) {
           <div class="page-heading"><h1>All posts</h1></div>
 
             <div class="col-12 card-columns pr-0 pl-0">
-      
+
            <?php
 
 
@@ -36,7 +36,7 @@ if(!$val->isLoggedIn()) {
 
         </aside>
 
-         
+
 
       </div>
 
@@ -45,4 +45,3 @@ if(!$val->isLoggedIn()) {
 <?php include '../includes/javascript_tag.php'; ?>
 
 <?php include '../includes/footer.php'; ?>
-

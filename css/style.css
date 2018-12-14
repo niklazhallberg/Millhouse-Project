@@ -17,7 +17,7 @@ Primary Colors:
 Secondary Colors:
 
 #252525 - AlmostBlack, Headings and Paragraphs
-#95B8D1 - LightBlue, Login, Register and Aside 
+#95B8D1 - LightBlue, Login, Register and Aside
 #60495A - Wine red, borders on input:focus
 
 */
@@ -310,19 +310,19 @@ footer {
 }
 .footer-icons i {
 	font-size: 3em;
-	color: white;
+	color: #F0F0F0;
 	margin: 0 0.5em 0.5em 0.5em;
 }
 .footer-icons i:hover {
 	color: #95B8D1;
 }
 .footer-links li a {
-	color: white;
+	color: #F0F0F0;
 	list-style: none;
 	margin-right: 0.5em;
 }
 .footer-links li {
-	color: white;
+	color: #F0F0F0;
 	list-style: none;
 	display: inline;
 }
@@ -337,7 +337,7 @@ footer {
 		left: 0;
 		transform: none;
 		margin-left: 1em;
-	}	
+	}
 	.header-logo img {
 		max-height: 4em;
 	}
