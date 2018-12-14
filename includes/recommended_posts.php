@@ -4,14 +4,18 @@
              <div class="card-deck">
               <?php
                  
-                 //calling method to get all comments with post id
-                 $comments_to_print = $comments->getCommentsWithId($post_id);
-                 //calls method to count comments
-                 $counter = $comments->countingComments($comments_to_print);
+                 
 
                 $random_posts = $posts->getRandomPosts($category);
                 foreach($random_posts as $rand)
-                { ?>
+                { 
+                 
+                    //calling method to get all comments with post id
+                 $comments_to_print = $comments->getCommentsWithId($rand["id"]);
+                 //calls method to count comments
+                 $counter = $comments->countingComments($comments_to_print);
+                 
+                 ?>
 
                     <div class="col-12">
                     <div class="card">
