@@ -1,4 +1,5 @@
-<?php foreach($category_posts as $post): ?>
+<?php foreach($category_posts as $post):
+$post_id = $post["id"]; ?>
 	<div class="card">
 		<a href="single_post.php?post_id=<?=$post["id"]?>">
 		<img class="card-img-top" src="../images/<?= $post["image"]; ?>" alt="Blogpost image">
