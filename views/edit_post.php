@@ -1,10 +1,12 @@
 <?php
 session_start();
 include '../classes/call.php';
-if(!$val->isLoggedIn()) {
+if(!$val->isLoggedIn()) 
+{
     $val->redirect('login.php');
 }
-if(!$val->isAdmin()) {
+if(!$val->isAdmin()) 
+{
     $val->redirect('../index.php');
 }
 $post_id = $_GET["post_id"];
@@ -12,27 +14,23 @@ $_SESSION["post_id"] = $post_id;
 $post_to_edit = $posts->getPostWithId($post_id);
 ?>
 <?php include '../includes/head.php' ?>
-
 <body>
+<?php include '../includes/header.php' ?>
 
-  <?php include '../includes/header.php' ?>
+<main class="container-fluid">
+    <div class="row justify-content-center">
+        <section class="col-12 col-md-9 edit-post-section">
+            
+            <div class="page-heading">
+                <h1>Edit post</h1>
+            </div>
+            <hr>
+            <?php include '../includes/edit_post_form.php' ?>
+        </section>
+    </div>
+</main>
 
-    <main class="container-fluid">
-
-                <div class="row justify-content-center">
-                    <section class="col-12 col-md-9 edit-post-section">
-                    <div class="page-heading"><h1>Edit post</h1></div>
-                    <hr>
-
-                        <?php include '../includes/edit_post_form.php' ?>
-                    
-
-
-                    </section>
-                </div>
-
-    </main>
-    <?php include '../includes/javascript_tag.php' ?>
+<?php include '../includes/javascript_tag.php' ?>
     <script>
       $('#summernote').summernote({
         placeholder: 'Description..',
@@ -41,6 +39,5 @@ $post_to_edit = $posts->getPostWithId($post_id);
       });
     </script>
 
-    
 <?php include '../includes/footer.php'; ?>
 

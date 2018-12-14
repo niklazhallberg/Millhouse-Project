@@ -14,4 +14,3 @@ $comments->addComment($content, $created_by, $post_id, $comment_date);
 
 // redirect
 $val->redirect("../views/single_post.php?post_id=$post_id#commentarea");
-?>

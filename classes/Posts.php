@@ -72,7 +72,6 @@ class Posts
             return $statement;
 
         }
-
     }
 
     public function deletePostWithId($post_id) 
@@ -84,7 +83,6 @@ class Posts
                 ":id" => $post_id
             ]
         );
-
     }
     
     public function getRandomPosts($category) 
@@ -102,6 +100,7 @@ class Posts
 
     public function getPostCategory($category_id)
     {
+        //gets category id from post, checks value, and returns name of category to display
         if ($category_id == 1)  
         {
             return "watches";
