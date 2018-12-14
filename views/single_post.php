@@ -81,7 +81,7 @@ include '../classes/call.php';
                 <!-- bootsrap card with comment-->
                 <div class="comment-card">
                     
-                <div class="card border-light mb-2" style="max-width: 25rem;">
+                <div class="card border-light mb-2 more-width" style="max-width: 25rem;">
                 <div class="card-header blue-header">Commented by <?= $comment["created_by"]; ?></div>
                 <div class="card-body">
                 <p class="card-text"><?= $comment["content"]; ?></p>

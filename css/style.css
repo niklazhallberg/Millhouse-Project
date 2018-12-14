@@ -41,7 +41,7 @@ h3 {
 }
 h4 {
 	font-size: 1.1rem;
-	margin: 2em 0 .5em 0;
+	margin: 2em 0;
 }
 p,
 span {
@@ -259,6 +259,9 @@ main {
 }
 .comment-number {
 	font-size: 12px;
+}
+.more-width {
+	min-width: 75%;
 }
 
 /* ----------------------------SINGLE POST--------------------------------------*/
