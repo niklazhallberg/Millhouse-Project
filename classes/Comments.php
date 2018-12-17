@@ -66,16 +66,16 @@ class Comments
     public function countingComments($comments_to_print){
         
         //if post have comments, add 1 for each comments
-                 if(!empty($comments_to_print)){
-                     
-                     $count=0;
-                     foreach($comments_to_print as $comment){
-                         $count++;
-                     }
-                     
-                     return $count;
-                 }
-        
+        if(!empty($comments_to_print)){
+            
+            $count=0;
+            foreach($comments_to_print as $comment)
+            {
+                $count++;
+            }
+            
+            return $count;
+        }
     }
     
 

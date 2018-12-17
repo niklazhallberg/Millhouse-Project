@@ -1,7 +1,8 @@
 <?php
 session_start();
 include 'classes/call.php';
-if(!$val->isLoggedIn()) {
+if(!$val->isLoggedIn()) 
+{
   $val->redirect('views/login.php');
 }
 
@@ -18,7 +19,7 @@ if(isset($_GET["delete_post"])){
   <?php include 'includes/header.php'; ?>
 
   <main class="container-fluid">
-    <div class="row justify-content-center ml-0 mr-0">
+    <div class="row ml-0 mr-0">
       <section class="col-12 col-md-9 blogpost-section pl-0 pr-0">
         <div class="row mr-0 ml-0">
           <div class="col-12 card-columns pr-0 pl-0">

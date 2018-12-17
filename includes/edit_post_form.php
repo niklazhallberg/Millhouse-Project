@@ -5,10 +5,10 @@
     <?php foreach ($post_to_edit as $post) { ?>
 
         <label for="heading">Title</label>
-        <input type="text" name="title" id="heading" value="<?php echo $post['title']; ?>" required>
+        <input type="text" name="title" id="heading" value="<?= $post['title']; ?>" required>
 
-        <label for="post_content">Description</label>
-        <textarea class="textarea-add" id="summernote" id="post_content" name="description" required> <?php echo htmlspecialchars($post['description']); ?> </textarea>
+        <label for="summernote">Description</label>
+        <textarea class="textarea-add" id="summernote" name="description" required> <?= htmlspecialchars($post['description']); ?> </textarea>
 
         <div class="post-select">
         <label class="label" for="category">Current category: </label>
@@ -21,7 +21,7 @@
         </div>
 
         <h3 class="margin-top">Current image: </h3>
-        <div class="edit-post-image"><img src="../images/<?php echo $post['image']; ?>" /></div>
+        <div class="edit-post-image"><img src="../images/<?= $post['image']; ?>" /></div>
         <label class="label" for="image">If you wish to <strong>change</strong> image, make a new choice below</label>
         <input type="file" name="image" id="image" accept="image/png, image/jpeg">
     

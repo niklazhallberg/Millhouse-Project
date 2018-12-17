@@ -5,10 +5,6 @@ Font Families:
 font-family: 'Open Sans', sans-serif; (Text)
 font-family: 'Merriweather', serif; (Headings)
 
-*/
-
-
-/*
 Primary Colors:
 
 #F0F0F0 - LightGrey, Main Background
@@ -19,7 +15,6 @@ Secondary Colors:
 #252525 - AlmostBlack, Headings and Paragraphs
 #95B8D1 - LightBlue, Login, Register and Aside
 #60495A - Wine red, borders on input:focus
-
 */
 
 
@@ -152,9 +147,6 @@ body {
 .button-static:hover {
 	cursor: pointer;
 }
-  /* .button-static span {
-	  letter-spacing: 1px;
-  } */
 .button-static {
 	margin: .5rem 0;
 }
@@ -245,7 +237,6 @@ main {
 }
 .sidebar{
 	background-color: #95B8D1;
-	/* background-color: rgba(149, 183, 208, 0.7); */
 	padding: 1.5rem;
 	margin: 20px 0;
 	height: auto;

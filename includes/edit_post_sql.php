@@ -8,7 +8,6 @@ $image = $_FILES["image"];
 $category = $_POST["category"];
 $post_id = $_SESSION["post_id"];
 
-
 if(empty($title) || empty($description))
 {
   $val->redirect('../views/edit_post.php?error= Fill in all fields, please!&post_id='. $post_id);
@@ -28,20 +27,16 @@ else
           //if new image chosen, update content in post with new input from user
           $posts->editPost($title, $description, $new_location, $category, $post_id);
           $val->redirect('../index.php');
-
         }
         else
         {
           //if user wants to keep image, update without image value
           $posts->editPost($title, $description, false, $category, $post_id);
           $val->redirect('../index.php');
-
         }
-
 
     } else
     {
       $val->redirect('../views/edit_post.php?error= The title cannot be longer than 100 characters, please try again.&post_id='. $post_id);
     }
-
 }

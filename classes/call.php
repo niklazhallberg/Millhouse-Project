@@ -1,6 +1,5 @@
 <?php
 
-
 include 'db_con.php';
 include 'User.php';
 include 'Posts.php';

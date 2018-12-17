@@ -8,8 +8,6 @@ class User
       $this->pdo = $pdo;
     }
 
-    
-
     public function register($first_name,$last_name,$date_of_birth,$email,$username,$password) 
     {
         //inserts the password as hashed into database for security

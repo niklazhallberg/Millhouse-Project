@@ -11,14 +11,11 @@ $image = $_FILES["image"];
 $category = $_POST["category"];
 $post_date = date("Y/m/d");
 
-
-
 if(empty($title) || empty($description) || empty($image) || empty($category))
 {
   $val->redirect('../views/add_post.php?error= Fill in all fields, please!');
 } else
   {
-
     //check if title is longer than 100 characters, if so, redirect, else continue
     if ((strlen($title)) <= 100)
     {
@@ -34,14 +31,12 @@ if(empty($title) || empty($description) || empty($image) || empty($category))
             $val->redirect('../index.php');
 
         } else
-          {
-            $val->redirect('../views/add_post.php?error= Select a picture, please!');
-          }
-
+        {
+          $val->redirect('../views/add_post.php?error= Select a picture, please!');
+        }
 
     } else
-      {
-        $val->redirect('../views/add_post.php?error= The title cannot be longer than 100 characters, please try again.');
-      }
-
+    {
+      $val->redirect('../views/add_post.php?error= The title cannot be longer than 100 characters, please try again.');
+    }
 }
