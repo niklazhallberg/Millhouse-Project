@@ -1,6 +1,6 @@
 Grupp 4
 
-Millhouse vill lansera en ny produkt blogg för sina kunder.
+Hjälp det företaget Millhouse att lansera en ny produktblogg för sina kunder.
 
 Gruppmedlemmar:
 Fanny Schriwer, Niklaz Hallberg, Kevin Jonsson och Thérèse Scott Rossi.
