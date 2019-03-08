@@ -3,10 +3,7 @@ Grupp 4
 Millhouse vill lansera en ny produkt blogg för sina kunder.
 
 Gruppmedlemmar:
-Fanny Schriwer
-Niklaz Hallberg
-Kevin Jonsson
-Thérèse Scott Rossi
+Fanny Schriwer, Niklaz Hallberg, Kevin Jonsson och Thérèse Scott Rossi.
 
 Mål
 Målet med uppgiften är att utvärdera  kunskaper i följande moment:
