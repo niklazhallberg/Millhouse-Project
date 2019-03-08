@@ -11,11 +11,4 @@ Thérèse Scott Rossi
 Mål
 Målet med uppgiften är att utvärdera  kunskaper i följande moment:
 
-Versionshantering och samarbete med GIT
-SQL fördjupning
-Arbeta mot databas med PDO i PHP
-Formulärhantering
-GET/POST
-Sessionshantering/Användarhantering
-Funktioner i PHP
-Objektorientering i PHP
+Versionshantering och samarbete med GIT, SQL fördjupning, Arbeta mot databas med PDO i PHP, Formulärhantering, GET/POST, Sessionshantering/Användarhantering, Funktioner i PHP och Objektorientering i PHP.
